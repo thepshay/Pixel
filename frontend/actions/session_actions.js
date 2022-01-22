@@ -26,8 +26,8 @@ const receiveSessionErrors = (errors) => {
 
 export const signup = (user) => (dispatch) => {
   return SessionUtilApi.signup(user)
-    .then(() => {
-      dispatch(receiveCurrentUser(user))
+    .then((currUser) => {
+      dispatch(receiveCurrentUser(currUser))
     }, (errors) => {
       dispatch(receiveSessionErrors(errors))
     })
@@ -35,8 +35,8 @@ export const signup = (user) => (dispatch) => {
 
 export const login = (user) => (dispatch) => {
   return SessionUtilApi.login(user)
-    .then(() => {
-      dispatch(receiveCurrentUser(user))
+    .then((currUser) => {
+      dispatch(receiveCurrentUser(currUser))
     }, (errors) => {
       dispatch(receiveSessionErrors(errors))
     })
