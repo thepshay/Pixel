@@ -6,7 +6,7 @@ import {
 
 // null session, default value when no user is logged in
 const nullSession = {
-  currentUserId: null
+  currentUser: null
 }
 
 const sessionReducer = (state=nullSession, action) => {
