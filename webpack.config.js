@@ -18,7 +18,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|svg|gif|mp3)$/,
-        type: 'asset/session'
+        type: 'asset/resource'
     },
     ]
   },

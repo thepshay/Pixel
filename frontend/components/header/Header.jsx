@@ -26,7 +26,7 @@ class Header extends React.Component {
     return (
       <div className="header">
         <div className="header-content">
-          <Link to='/'>
+          <Link to='/' replace>
             <h1>Logo :)</h1>
           </Link>
           {currentUser ? loggedInDiv() : notLoggedInDiv()}
