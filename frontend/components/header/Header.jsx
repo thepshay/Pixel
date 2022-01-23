@@ -16,16 +16,18 @@ class Header extends React.Component {
     )
 
     const notLoggedInDiv = () => (
-      <div>
-        <Link to='/login'>Login</Link><br/>
-        <Link to='/signup'>Sign Up</Link>
+      <div className="signin-link-container">
+        <Link className='signup-link' to='/signup' replace>Sign Up</Link>
+        <Link className='login-link' to='/login' replace>Login</Link><br/>
       </div>
     )
 
     return (
       <div className="header">
-        <h1>Pixel</h1>
-        {currentUser ? loggedInDiv() : notLoggedInDiv()}
+        <div className="header-content">
+          <h1>Logo :)</h1>
+          {currentUser ? loggedInDiv() : notLoggedInDiv()}
+        </div>
       </div>
     )
   }

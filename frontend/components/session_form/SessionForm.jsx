@@ -18,12 +18,14 @@ class SessionForm extends React.Component{
   render() {
     const userForm = this.props.formType === 'signup' ? {
       action: 'Sign Up',
+      className: 'signup'
     } : {
-      action: 'Login'
+      action: 'Login',
+      className: 'login'
     }
 
     return(
-      <div>
+      <div className={userForm.className}>
         <h1>{userForm.action}</h1>
         <form onSubmit={(e)=>this.handleSubmit(e)}>
         <label> Username
