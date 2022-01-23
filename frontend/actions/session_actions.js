@@ -29,7 +29,7 @@ export const signup = (user) => (dispatch) => {
     .then((currUser) => {
       dispatch(receiveCurrentUser(currUser))
     }, (errors) => {
-      dispatch(receiveSessionErrors(errors))
+      dispatch(receiveSessionErrors(errors.responseJSON))
     })
 }
 
@@ -38,7 +38,7 @@ export const login = (user) => (dispatch) => {
     .then((currUser) => {
       dispatch(receiveCurrentUser(currUser))
     }, (errors) => {
-      dispatch(receiveSessionErrors(errors))
+      dispatch(receiveSessionErrors(errors.responseJSON))
     })
 }
 
@@ -47,6 +47,6 @@ export const logout = () => (dispatch) => {
     .then(() => {
       dispatch(logoutCurrentUser())
     }, (errors) => {
-      dispatch(receiveSessionErrors(errors))
+      dispatch(receiveSessionErrors(errors.responseJSON))
     })
 }

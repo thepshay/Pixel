@@ -34,6 +34,9 @@ class SessionForm extends React.Component{
           </label><br/>
           <button type='submit'>{userForm.action}</button>
         </form>
+        <ul>
+          {/* {this.props.errors.map((error, index) => <li key={index}>{error}</li>)} */}
+        </ul>
       </div>
     )
   }
