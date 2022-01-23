@@ -18,24 +18,27 @@ class SessionForm extends React.Component{
   render() {
     const userForm = this.props.formType === 'signup' ? {
       action: 'Sign Up',
-      className: 'signup'
+      className: 'signup-container'
     } : {
-      action: 'Login',
-      className: 'login'
+      action: 'Sign In',
+      className: 'login-container'
     }
 
     return(
       <div className={userForm.className}>
         <h1>{userForm.action}</h1>
-        <form onSubmit={(e)=>this.handleSubmit(e)}>
-        <label> Username
-            <input type='text' value={this.state.username} onChange={this.handleChange('username')}/>
-          </label><br/>
-          <label> Password
-            <input type='password' value={this.state.password} onChange={this.handleChange('password')}/>
-          </label><br/>
-          <button type='submit'>{userForm.action}</button>
+        <form>
+        <div className="username-input">
+          <div>Pixel account name</div>
+          <input id='username' type='text' value={this.state.username} onChange={this.handleChange('username')}/>
+        </div>
+        <div className="password-input">
+          <div>Password</div>
+          <input id='password' type='password' value={this.state.password} onChange={this.handleChange('password')}/>
+        </div>
+        {/* <button type='submit'>{userForm.action}</button> */}
         </form>
+        <div className='submit-btn' onClick={(e)=>this.handleSubmit(e)}>{userForm.action}</div>
         <ul>
           {this.props.errors.map((error, index) => <li key={index}>{error}</li>)}
         </ul>

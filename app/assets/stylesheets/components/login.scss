@@ -1,0 +1,58 @@
+.login-main-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 60vw;
+  min-height: 800px;
+  
+  > * {
+    padding: 40px;
+  }
+
+  .login-container {
+    flex-grow: 4;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 36px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    .username-input,
+    .password-input {
+      width: 300px;
+      
+      div {
+        padding: 5px 0;
+      }
+  
+      input {
+        width: 100%;
+        padding: 5px;
+      }
+    }
+
+
+    .password-input{
+      padding-bottom: 40px;
+      padding-top: 15px;
+    }
+
+    .submit-btn {
+      background-color: blue;
+      padding: 10px 80px;
+      color: white;
+      border-radius: 10px;
+    }
+
+  }
+
+  .login-info-container {
+    flex-grow: 2;
+    background-color: green;
+  }
+}
