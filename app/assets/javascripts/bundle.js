@@ -86,7 +86,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _header_HeaderContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header/HeaderContainer */ "./frontend/components/header/HeaderContainer.js");
+/* harmony import */ var _header_HeaderContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header/HeaderContainer */ "./frontend/components/header/HeaderContainer.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -253,10 +253,10 @@ var Header = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ "./frontend/components/header/HeaderContainer.js":
-/*!*******************************************************!*\
-  !*** ./frontend/components/header/HeaderContainer.js ***!
-  \*******************************************************/
+/***/ "./frontend/components/header/HeaderContainer.jsx":
+/*!********************************************************!*\
+  !*** ./frontend/components/header/HeaderContainer.jsx ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
