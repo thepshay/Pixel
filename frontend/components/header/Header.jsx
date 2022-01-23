@@ -9,9 +9,10 @@ class Header extends React.Component {
     const { currentUser, logout } = this.props;
 
     const loggedInDiv = () => (
-      <div>
-        <h1>Welcome {currentUser.username}</h1>
-        <button onClick={()=>logout(currentUser.id)}>Logout</button>
+      <div className="user-display-container">
+        <span>{currentUser.username}</span>
+        <div className="temp-img">{">:)"}</div>
+        <button className="logout-btn" onClick={()=>logout(currentUser.id)}>Logout</button>
       </div>
     )
 

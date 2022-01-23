@@ -6,7 +6,7 @@
   width: 100vw;
 
   
-  .header-content{
+  .header-content {
     width: 80%;
     height: 100%;
     display:flex;
@@ -22,7 +22,7 @@
       }
     
       // when user is not logged in
-      .signin-link-container{
+      .signin-link-container {
         position: absolute;
         top: 0;
         right: 0;
@@ -40,6 +40,31 @@
           background-color: #5c7e10;
           color: #e5e4dc;
         }
+      }
+
+      .user-display-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $headerTextColor;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+
+
+        .temp-img {
+          height: 20px;
+          width: 20px;
+          background-color: $headerTextColor;
+          margin-left: 10px;
+          color:black
+        }
+      }
+
+      .logout-btn {
+        position: absolute;
+        right: 0;
+        top: 50px;
       }
   }
 }
