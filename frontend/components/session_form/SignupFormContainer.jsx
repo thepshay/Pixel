@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
       password: '',
     },
     formType: 'signup',
-
+    errors: state.errors
   }
 }
 

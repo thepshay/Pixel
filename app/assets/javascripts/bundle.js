@@ -436,7 +436,11 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
         onChange: this.handleChange('password')
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "submit"
-      }, userForm.action)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null));
+      }, userForm.action)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, this.props.errors.map(function (error, index) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+          key: index
+        }, error);
+      })));
     }
   }]);
 
@@ -471,7 +475,8 @@ var mapStateToProps = function mapStateToProps(state) {
       username: '',
       password: ''
     },
-    formType: 'signup'
+    formType: 'signup',
+    errors: state.errors
   };
 };
 
@@ -528,7 +533,7 @@ __webpack_require__.r(__webpack_exports__);
 // wipes errors when user logs in
 
 var sessionErrorsReducer = function sessionErrorsReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments.length > 1 ? arguments[1] : undefined;
   Object.freeze(state);
 

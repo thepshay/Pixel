@@ -2,7 +2,7 @@ import { RECEIVE_CURRENT_USER, RECEIVE_SESSION_ERRORS } from '../actions/session
 
 // returns errors if incorrect login/signup
 // wipes errors when user logs in
-const sessionErrorsReducer = (state={}, action) => {
+const sessionErrorsReducer = (state=[], action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
