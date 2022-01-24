@@ -51,6 +51,16 @@
       padding: 10px 80px;
       color: white;
       border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .demo-link {
+      padding: 20px 0;
+      color: $grayTextColor;
+      cursor: pointer;
+      &:hover {
+        color:$lightBlue;
+      }
     }
 
   }
@@ -80,6 +90,7 @@
       border-radius: 5px;
       border: 1px solid white;
       color: white;
+      cursor: pointer;
     }
   }
 }

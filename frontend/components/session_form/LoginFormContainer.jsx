@@ -8,7 +8,7 @@ import LoginInfoBox from "./LoginInfoBox";
 class LoginForm extends React.Component {
 
   render() {
-    const {user, formType, errors, processForm} = this.props;
+    const {user, formType, errors, processForm, loginDemo} = this.props;
 
     return (
       <div className="login-main-container">
@@ -16,7 +16,8 @@ class LoginForm extends React.Component {
           user={user}
           formType={formType}
           errors={errors}
-          processForm={processForm} />
+          processForm={processForm}
+          loginDemo={loginDemo} />
         <LoginInfoBox />
       </div>
     )
@@ -36,7 +37,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return ({
-    processForm: (user) => dispatch(login(user))
+    processForm: (user) => dispatch(login(user)),
+    loginDemo: (user) => dispatch(login(user))
   })
 }
 

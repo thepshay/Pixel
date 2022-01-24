@@ -15,11 +15,16 @@ class SessionForm extends React.Component{
     return (e) => this.setState({[field] : e.currentTarget.value})
   }
 
+  handleDemo() {
+    const demoUser = {username: 'user1', password:'123456'};
+    this.props.loginDemo(demoUser);
+  }
+
   render() {
     const userForm = this.props.formType === 'signup' ? {
       action: 'CREATE YOUR ACCOUNT',
       className: 'signup-container',
-      submitText: 'Login'
+      submitText: 'Sign Up'
     } : {
       action: 'SIGN IN',
       className: 'login-container',
@@ -29,6 +34,9 @@ class SessionForm extends React.Component{
     return(
       <div className={userForm.className}>
         <h1 className="title">{userForm.action}</h1>
+        <ul>
+          {this.props.errors.map((error, index) => <li key={index}>{error}</li>)}
+        </ul>
         <form>
           <div className="username-input">
             <div>Pixel account name</div>
@@ -40,9 +48,7 @@ class SessionForm extends React.Component{
           </div>
         </form>
         <div className='submit-btn' onClick={(e)=>this.handleSubmit(e)}>{userForm.submitText}</div>
-        <ul>
-          {this.props.errors.map((error, index) => <li key={index}>{error}</li>)}
-        </ul>
+        <div className='demo-link' onClick={()=>this.handleDemo()}>Sign in as demo user</div>
       </div>
     )
   }
