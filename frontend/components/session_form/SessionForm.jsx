@@ -13,6 +13,7 @@ class SessionForm extends React.Component{
 
   handleSubmit(e) {
     e.preventDefault();
+    this.setState({errors: ''});
     this.props.processForm(this.state)
       .fail(() => this.setState({errors: this.props.errors[0]}));
   }
