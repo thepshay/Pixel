@@ -1,14 +1,15 @@
-@import './variables';
+@import '../variables';
 
 .header {
   background-color: $darkBackground;
   height: 100px;
   width: 100vw;
+  min-height: 100px;
 
-  
   .header-content {
     width: 60%;
     height: 100%;
+    min-width: 800px;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
