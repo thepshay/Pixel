@@ -8,13 +8,17 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <% if current_user %>
-    <script>
-      window.currentUser = {
-        'id': "<%= current_user.id %>",
-        'username': "<%= current_user.username %>",
-      }
+      <script>
+        window.currentUser = {
+          'id': "<%= current_user.id %>",
+          'username': "<%= current_user.username %>",
+        }
+      </script>
+    <% end %>
+    <script type="text/javascript">
+      window.joinPc = "<%= image_url('join_pc.png') %>";
     </script>
-  <% end %>
+  
   </head>
 
   <body>
