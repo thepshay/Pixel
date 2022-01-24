@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import pic from '../../../app/assets/images/join_pc.png'
 
 const LoginInfoBox = (props) => {
   return (

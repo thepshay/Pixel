@@ -42,7 +42,7 @@ class SessionForm extends React.Component{
         <h1 className="title">{userForm.action}</h1>
 
         <ErrorBox errors={this.state.errors} 
-          className={this.state.errors ? 'error-container' : 'error-container hidden'}/>
+          className={this.state.errors ? 'error-container show' : 'error-container'}/>
         
 
         <form>
