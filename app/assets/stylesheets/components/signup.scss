@@ -5,7 +5,6 @@
   min-width: 400px;
   min-height: 800px;
   margin: 0 auto;
-  box-sizing: border-box;
   padding: 40px;
 
   .title {
@@ -38,10 +37,12 @@
     padding: 10px 80px;
     color: white;
     border-radius: 10px;
+    border: none;
+    cursor: pointer;
   }
 
   .demo-link {
-    padding: 20px 0;
+    margin: 20px 0;
     color: $grayTextColor;
     cursor: pointer;
     &:hover {

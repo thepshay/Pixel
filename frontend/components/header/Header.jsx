@@ -18,8 +18,8 @@ class Header extends React.Component {
 
     const notLoggedInDiv = () => (
       <div className="signin-link-container">
-        <Link className='signup-link' to='/signup' replace>Sign Up</Link>
-        <Link className='login-link' to='/login' replace>Login</Link><br/>
+        <Link className='signup-link' to='/signup'>Sign Up</Link>
+        <Link className='login-link' to='/login'>Login</Link><br/>
       </div>
     )
 

@@ -1,4 +1,5 @@
 import React from "react";
+import ErrorBox from "./ErrorBox";
 
 class SessionForm extends React.Component{
   constructor(props){
@@ -6,14 +7,14 @@ class SessionForm extends React.Component{
     this.state = {
       username: props.user.username,
       password: props.user.password,
-      errors: []
+      errors: ''
     }
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state)
-      .fail(() => this.setState({errors: this.props.errors}));
+      .fail(() => this.setState({errors: this.props.errors[0]}));
   }
 
   handleChange(field) {
@@ -39,9 +40,11 @@ class SessionForm extends React.Component{
     return(
       <div className={userForm.className}>
         <h1 className="title">{userForm.action}</h1>
-        <ul>
-          {this.state.errors.map((error, index) => <li key={index}>{error}</li>)}
-        </ul>
+
+        <ErrorBox errors={this.state.errors} 
+          className={this.state.errors ? 'error-container' : 'error-container hidden'}/>
+        
+
         <form>
           <div className="username-input">
             <div>Pixel account name</div>
@@ -52,7 +55,9 @@ class SessionForm extends React.Component{
             <input id='password' type='password' value={this.state.password} onChange={this.handleChange('password')}/>
           </div>
         </form>
-        <div className='submit-btn' onClick={(e)=>this.handleSubmit(e)}>{userForm.submitText}</div>
+        <button className='submit-btn' onClick={(e)=>this.handleSubmit(e)}>
+          <span>{userForm.submitText}</span>
+        </button>
         <div className='demo-link' onClick={()=>this.handleDemo()}>Sign in as demo user</div>
       </div>
     )
