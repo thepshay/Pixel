@@ -1,0 +1,42 @@
+@import './variables';
+
+.signup-container {
+  width: 60vw;
+  min-width: 400px;
+  min-height: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 40px;
+
+  .title {
+    font-size: 36px;
+    padding-bottom: 20px;
+    text-align: left;
+    color: $whiteTextColor;
+    padding: 20px 0;
+  }
+
+  .username-input,
+  .password-input {
+    width: 300px;
+    color: $grayTextColor;
+    padding-bottom: 20px;
+    
+    div {
+      padding: 5px 0;
+    }
+
+    input {
+      width: 100%;
+      padding: 5px;
+    }
+
+  }
+  .submit-btn {
+    width: fit-content;
+    background-color: blue;
+    padding: 10px 80px;
+    color: white;
+    border-radius: 10px;
+  }
+}
