@@ -3,12 +3,17 @@ import React from "react";
 class SessionForm extends React.Component{
   constructor(props){
     super(props);
-    this.state = props.user
+    this.state = {
+      username: props.user.username,
+      password: props.user.password,
+      errors: []
+    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state);
+    this.props.processForm(this.state)
+      .fail(() => this.setState({errors: this.props.errors}));
   }
 
   handleChange(field) {
@@ -35,7 +40,7 @@ class SessionForm extends React.Component{
       <div className={userForm.className}>
         <h1 className="title">{userForm.action}</h1>
         <ul>
-          {this.props.errors.map((error, index) => <li key={index}>{error}</li>)}
+          {this.state.errors.map((error, index) => <li key={index}>{error}</li>)}
         </ul>
         <form>
           <div className="username-input">
