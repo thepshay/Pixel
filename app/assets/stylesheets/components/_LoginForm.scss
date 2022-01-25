@@ -18,42 +18,51 @@
     align-items: center;
 
     .title {
-      font-size: 36px;
-      padding-bottom: 20px;
+      font-size: 34px;
+      margin-bottom: 20px;
       text-align: center;
       color: $whiteTextColor;
+      padding: 20px 0;
+      font-weight: 200;
     }
 
-    .username-input,
-    .password-input {
-      width: 300px;
-      color: $grayTextColor;
-      
-      div {
-        padding: 5px 0;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .username-input,
+      .password-input {
+        width: 300px;
+        color: $grayTextColor;
+        
+        div {
+          padding: 5px 0;
+        }
+    
+        input {
+          width: 100%;
+          padding: 5px;
+        }
       }
   
-      input {
-        width: 100%;
-        padding: 5px;
+  
+      .password-input{
+        padding-bottom: 40px;
+        padding-top: 15px;
+      }
+  
+      .submit-btn {
+        width: fit-content;
+        background-color: blue;
+        padding: 10px 80px;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
       }
     }
 
-
-    .password-input{
-      padding-bottom: 40px;
-      padding-top: 15px;
-    }
-
-    .submit-btn {
-      width: fit-content;
-      background-color: blue;
-      padding: 10px 80px;
-      color: white;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-    }
 
     .demo-link {
       margin: 20px 0;

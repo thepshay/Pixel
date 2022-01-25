@@ -55,10 +55,10 @@ class SessionForm extends React.Component{
             <div>Password</div>
             <input id='password' type='password' value={this.state.password} onChange={this.handleChange('password')}/>
           </div>
+          <button className='submit-btn' onClick={(e)=>this.handleSubmit(e)}>
+            <span>{userForm.submitText}</span>
+          </button>
         </form>
-        <button className='submit-btn' onClick={(e)=>this.handleSubmit(e)}>
-          <span>{userForm.submitText}</span>
-        </button>
         <div className='demo-link' onClick={()=>this.handleDemo()}>Sign in as demo user</div>
       </div>
     )
