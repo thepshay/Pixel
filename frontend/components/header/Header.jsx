@@ -10,9 +10,6 @@ class Header extends React.Component {
     }
 
     window.addEventListener('click', e=>{
-      console.log(e.currentTarget.parentElement)
-      console.log(e.target)
-
       if (e.target.parentElement === null){
         this.setState({show: false})
       } else if (!e.target.parentElement.matches('div.dropdown-btn')){
@@ -48,7 +45,7 @@ class Header extends React.Component {
             currentUser={currentUser}
             className={this.state.show ? 'user-dropdown show' : 'user-dropdown'}/>
         </div>
-        <div className="temp-img">{">:)"}</div>
+        <img className="temp-img" src={currentUser.photoUrl} />
       </div>
     )
 
