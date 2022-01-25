@@ -52,6 +52,20 @@
         flex-direction: row;
         padding: 10px;
 
+        .username-display{
+          position: relative;
+        }
+
+        .dropdown-btn {
+          display: flex;
+          flex-direction: row;
+          cursor: pointer;
+
+          div:first-child {
+            margin-right: 5px;
+          }
+        }
+
 
         .temp-img {
           height: 20px;

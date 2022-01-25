@@ -9,8 +9,9 @@ class UserDropdown extends React.Component {
     return (
       <ul className={className}>
         <li onClick={()=>logout(currentUser.id)}>
-          Logout: {currentUser.username}
+          Logout: <span>{currentUser.username}</span>
         </li>
+
       </ul>
     )
   }

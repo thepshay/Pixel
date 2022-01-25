@@ -40,7 +40,7 @@ class Header extends React.Component {
           <div 
             className="dropdown-btn"
             onClick={(e)=>this.toggleDropdown(e)}>
-            <div>{currentUser.username}</div>
+            <div >{currentUser.username}</div>
             <i className='fas fa-caret-down' />
           </div>
           <UserDropdown 

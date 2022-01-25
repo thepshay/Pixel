@@ -1,12 +1,25 @@
 .user-dropdown {
-  background-color: aqua;
-  color:black;
+  background-color: #171a21;
+  color: $grayTextColor;
   display: none;
+  box-shadow: 2px 2px 5px 5px black;
+  min-width: 100px;
 
   &.show {
+    display:inline-block;
     position: absolute;
     display: block;
-    right: 40px;
+    right: 1px;
+    top: 20px;
+  }
+
+  li {
+    padding: 2px 5px;
+    white-space:nowrap;
+
+    span {
+      color: #57cbde;
+    }
   }
 }
 
