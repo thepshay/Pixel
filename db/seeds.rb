@@ -16,6 +16,5 @@ User.create([
   {username: 'user5', password:'123456'}
 ])
 
-user1 = User.find(1);
-file = open('https://wiki.teamfortress.com/w/images/5/57/Buffed_blu_soldier.jpg')
-user1.photo.attach(io: file, filename: 'blu_soldier.jpg')
+user1 = User.first
+user1.photo.attach(io: File.open(File.join(Rails.root, 'app/assets/images/profile_pictures/pfp1.jpg')), filename: 'pfp1.jpg')

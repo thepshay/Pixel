@@ -19,7 +19,10 @@ class Header extends React.Component {
   }
   
   toggleDropdown(e) {
-    if (e.currentTarget.matches("div.dropdown-btn")) {
+    console.log('target: ', e.target);
+    console.log('current target: ', e.currentTarget);
+    console.log('curre')
+    if (e.currentTarget.matches("div.dropdown-btn") || e.target.matches("div.dropdown-btn")) {
       this.setState({show: !this.state.show})
     } else {
 
