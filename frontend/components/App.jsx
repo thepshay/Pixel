@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, HashRouter, Switch } from 'react-router-dom';
+import { Route, HashRouter, Switch, Redirect } from 'react-router-dom';
 import HeaderContainer from "./header/HeaderContainer";
 import LoginFormContainer from "./session_form/LoginFormContainer";
 import SignupFormContainer from "./session_form/SignupFormContainer";
@@ -16,6 +16,7 @@ class App extends React.Component {
             <AuthRoute path="/login" component={LoginFormContainer}  />
             <AuthRoute path="/signup" component={SignupFormContainer} />
             <Route exact path='/' />
+            <Redirect to="/" />
           </Switch>
         </HashRouter>
       </div>
