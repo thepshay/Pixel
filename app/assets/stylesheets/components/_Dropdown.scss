@@ -14,8 +14,12 @@
   }
 
   li {
-    padding: 2px 5px;
+    padding: 3px 7px;
     white-space:nowrap;
+    cursor: pointer;
+    &:hover {
+      color: white;
+    }
 
     span {
       color: #57cbde;
