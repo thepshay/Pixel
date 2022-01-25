@@ -22,8 +22,9 @@ class Header extends React.Component {
     console.log('target: ', e.target);
     console.log('current target: ', e.currentTarget);
     console.log('curre')
-    if (e.currentTarget.matches("div.dropdown-btn") || e.target.matches("div.dropdown-btn")) {
-      this.setState({show: !this.state.show})
+    if (e.currentTarget.matches("div.dropdown-btn")) {
+      this.setState({show: !this.state.show});
+      console.log(this.state.show)
     } else {
 
       console.log(e.currentTarget)

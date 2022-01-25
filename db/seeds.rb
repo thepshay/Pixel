@@ -17,4 +17,5 @@ User.create([
 ])
 
 user1 = User.first
-user1.photo.attach(io: File.open(File.join(Rails.root, 'app/assets/images/profile_pictures/pfp1.jpg')), filename: 'pfp1.jpg')
+file = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/pfp1.jpg')
+user1.photo.attach(io: file, filename: 'pfp1.jpg')
