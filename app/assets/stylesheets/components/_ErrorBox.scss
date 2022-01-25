@@ -9,10 +9,10 @@
     padding: 20px;
   }
 
-}
-.show {
-  color: rgba(255, 255, 255, 1);;
-  border: 1px solid red;
-  max-height: 500px;
-  transition: max-height 1.5s linear, color 0.5s ease-out;
+  &.show {
+    color: rgba(255, 255, 255, 1);;
+    border: 1px solid red;
+    max-height: 500px;
+    transition: max-height 1.5s linear, color 0.5s ease-out;
+  }
 }

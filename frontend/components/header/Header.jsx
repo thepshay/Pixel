@@ -1,18 +1,54 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-
+import UserDropdown from "./UserDropdown";
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false,
+    }
+
+    window.addEventListener('click', e=>{
+      console.log(e.currentTarget.parentElement)
+      console.log(e.target)
+
+      if (e.target.parentElement === null){
+        this.setState({show: false})
+      } else if (!e.target.parentElement.matches('div.dropdown-btn')){
+        this.setState({show: false})
+      }
+    })
+  }
+  
+  toggleDropdown(e) {
+    if (e.currentTarget.matches("div.dropdown-btn")) {
+      this.setState({show: !this.state.show})
+    } else {
+
+      console.log(e.currentTarget)
+    }
+  }
 
   render() {
-
     const { currentUser, logout } = this.props;
+
 
     const loggedInDiv = () => (
       <div className="user-display-container">
-        <span>{currentUser.username}</span>
+        <div className="username-display">
+          <div 
+            className="dropdown-btn"
+            onClick={(e)=>this.toggleDropdown(e)}>
+            <div>{currentUser.username}</div>
+            <i className='fas fa-caret-down' />
+          </div>
+          <UserDropdown 
+            logout={logout} 
+            currentUser={currentUser}
+            className={this.state.show ? 'user-dropdown show' : 'user-dropdown'}/>
+        </div>
         <div className="temp-img">{">:)"}</div>
-        <button className="logout-btn" onClick={()=>logout(currentUser.id)}>Logout</button>
       </div>
     )
 

@@ -7,6 +7,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <!-- if current user exists sends current user to react store -->
     <% if current_user %>
       <script>
         window.currentUser = {
@@ -15,10 +17,15 @@
         }
       </script>
     <% end %>
+
+    <!-- import image scrip for react to access -->
     <script type="text/javascript">
       window.joinPc = "<%= image_url('join_pc.png') %>";
     </script>
   
+    <!-- fav icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
   </head>
 
   <body>

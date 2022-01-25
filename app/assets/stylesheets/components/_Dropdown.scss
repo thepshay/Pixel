@@ -1,0 +1,12 @@
+.user-dropdown {
+  background-color: aqua;
+  color:black;
+  display: none;
+
+  &.show {
+    position: absolute;
+    display: block;
+    right: 40px;
+  }
+}
+
