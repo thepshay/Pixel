@@ -29,18 +29,18 @@ class SessionForm extends React.Component{
 
   render() {
     const userForm = this.props.formType === 'signup' ? {
-      action: 'CREATE YOUR ACCOUNT',
+      title: 'CREATE YOUR ACCOUNT',
       className: 'signup-container',
       submitText: 'Sign Up'
     } : {
-      action: 'SIGN IN',
+      title: 'SIGN IN',
       className: 'login-container',
       submitText: 'Sign In'
     }
 
     return(
       <div className={userForm.className}>
-        <h1 className="title">{userForm.action}</h1>
+        <h1 className="title">{userForm.title}</h1>
 
         <ErrorBox errors={this.state.errors} 
           className={this.state.errors ? 'error-container show' : 'error-container'}/>
