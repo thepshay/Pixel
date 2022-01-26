@@ -1,11 +1,11 @@
-const fetchAllGames = () => {
+export const fetchAllGames = () => {
   return $.ajax({
     method: 'GET',
     url: 'api/games'
   })
 }
 
-const fetchAllGames = (gameId) => {
+export const fetchGame = (gameId) => {
   return $.ajax({
     method: 'GET',
     url: 'api/games',

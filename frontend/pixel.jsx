@@ -7,6 +7,8 @@ import configureStore from './store/store';
 import * as SessionApiUtil from './util/session_api_util'
 import * as SessionAction from './actions/session_actions'
 
+import * as GameAction from './actions/game_actions'
+
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
 
@@ -31,4 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.login = SessionAction.login;
   window.logout = SessionAction.logout;
 
+  window.fetchAllGames = GameAction.fetchAllGames;
+  window.fetchGame = GameAction.fetchGame;
 })
