@@ -1,6 +1,8 @@
-@games.each do |game|
-  json.set! game.id do
-    json.partial! 'game', game: game 
+json.games do 
+  @games.each do |game|
+    json.set! game.id do
+      json.partial! 'game', game: game 
+    end
   end
 end
 
@@ -11,4 +13,4 @@ genre_hash = Hash.new {|h, k| h[k] = []}
   genre_hash[game.genre_2].push(game.id)
 end
 
-json.genre = genre_hash
+json.genre genre_hash
