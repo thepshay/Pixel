@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import fetchAllGames from '../../actions/game_actions'
-import { Carousel } from './Carousel';
+import Carousel from './Carousel';
 
-FEATURE_ID = [1,2,3,4,5,6,7]
+const FEATURE_ID = [1,2,3,4,5,6,7]
 
 const mapStateToProps = (state) => {
   return {
