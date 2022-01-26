@@ -1,4 +1,4 @@
-json.extract! game, :id, :title, :price, :genre_1, :genre_2
+json.extract! game, :id, :title, :price
 
 json.headerUrl url_for(game.header)
 photoUrls = game.photos.map do |photo|

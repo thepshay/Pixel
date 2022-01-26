@@ -5,11 +5,11 @@ const gameReducer = (state={}, action) => {
 
   switch(action.type) {
     case RECEIVE_ALL_GAMES:
-      return action.games.genre;
+      return action.games.games;
     case RECEIVE_GAME:
       return {
         ...state,
-        [games.id]: action.game
+        [action.game.id]: action.game
       }
     default: 
       return state;

@@ -9,14 +9,6 @@ class Header extends React.Component {
       show: false,
     }
 
-    // window.addEventListener('click', e=>{
-    //   if (e.target.parentElement === null){
-    //     this.setState({show: false})
-    //   } else if (!e.target.parentElement.matches('div.dropdown-btn') || !e.target.matches('div.dropdown-btn')){
-    //     console.log('hello')
-    //     this.setState({show: false})
-    //   }
-    // })
     window.addEventListener('click', e=> {
       if (e.target.parentElement === null){
         this.setState({show: false})

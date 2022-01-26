@@ -8,7 +8,6 @@ export const fetchAllGames = () => {
 export const fetchGame = (gameId) => {
   return $.ajax({
     method: 'GET',
-    url: 'api/games',
-    data: {gameId}
+    url: `api/games/${gameId}`  
   })
 }
