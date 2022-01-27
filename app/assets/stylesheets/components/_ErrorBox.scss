@@ -1,9 +1,9 @@
 .error-container {
   color: rgba(0, 0, 0, 0.5);
-  text-align: center;
+  text-align: right;
   margin-bottom: 20px;
   max-height: 0;
-  
+  width: 350px;
 
   p {
     padding: 20px;
@@ -11,7 +11,7 @@
 
   &.show {
     color: rgba(220, 222, 223, 1);;
-    border: 1px solid $red;
+    border: 2px solid $red;
     max-height: 500px;
     transition: max-height 1.5s linear, color 0.5s ease-out;
   }
