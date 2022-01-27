@@ -5,11 +5,12 @@ div.carousel-item {
   display: flex;
   opacity: 0.25;
   transition-duration: 1s;
+  display: none;
 
   &.active {
     opacity: 1;
     transition-duration: 1s;
-  
+    display:block
   }
 
   div.item-display {

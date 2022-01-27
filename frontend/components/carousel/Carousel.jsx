@@ -14,7 +14,8 @@ class Carousel extends React.Component {
     this.props.fetchAllGames();
   }
 
-  nextSlide() {
+  nextSlide(e) {
+    e.preventDefault();
     let newPos;
     if (this.state.currPos === this.props.games.length-1) {
       newPos = 0
@@ -24,7 +25,8 @@ class Carousel extends React.Component {
     this.setState({currPos: newPos})
   }
 
-  prevSlide() {
+  prevSlide(e) {
+    e.preventDefault();
     let newPos;
     if (this.state.currPos === 0) {
       newPos = this.props.games.length-1;
@@ -46,21 +48,16 @@ class Carousel extends React.Component {
     return (
       <div className="carousel">
       
-        <button className="arrow left-btn" onClick={() => this.prevSlide()}>{'<'}</button>
-        <button className="arrow right-btn" onClick={() => this.nextSlide()}>{'>'}</button>
+        <button className="arrow left-btn" onClick={(e) => this.prevSlide(e)}>{'<'}</button>
+        <button className="arrow right-btn" onClick={(e) => this.nextSlide(e)}>{'>'}</button>
 
         {games.map((game, index) => {
           return (
-            <div key={index} className={index === this.state.currPos ? 'carousel-item active' : 'carousel-item'}>
-              {(index===this.state.currPos) && 
-                (<CarouselGameItem 
-                  game={game}
-                />)}
-              
+            <div key={game.id} className={index === this.state.currPos ? 'carousel-item active' : 'carousel-item'}>
+                <CarouselGameItem key={game.id}game={game}/>
             </div> 
           )
         })}
-
       </div>
     )
       
