@@ -35,4 +35,26 @@
       background: linear-gradient(to right, transparent 5%, rgba(255,255,255,0.3) 95%);
     }
   }
+
+  div.carousel-tab {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -50px;
+    display: flex;
+    flex-direction: row;
+
+    div.tab {
+      margin: 0 4px;
+      width: 20px;
+      height: 10px;
+      border-radius: 2px;
+      background-color: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+
+      &.active {
+        background-color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
 }

@@ -6,7 +6,7 @@ class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currPos: 0
+      currPos: 0,
     }
   }
 
@@ -34,7 +34,10 @@ class Carousel extends React.Component {
       newPos = this.state.currPos - 1
     }
     this.setState({currPos: newPos})
+  }
 
+  updatePos(e, pos) {
+    this.setState({currPos: pos})
   }
 
   render() {
@@ -44,7 +47,7 @@ class Carousel extends React.Component {
       return null
     }
 
-    console.log(games)
+    console.log(this.state.currPos)
     return (
       <div className="carousel">
       
@@ -54,10 +57,21 @@ class Carousel extends React.Component {
         {games.map((game, index) => {
           return (
             <div key={game.id} className={index === this.state.currPos ? 'carousel-item active' : 'carousel-item'}>
-                <CarouselGameItem key={game.id}game={game}/>
+                <CarouselGameItem key={game.id} game={game}/>
             </div> 
           )
         })}
+
+        <div className="carousel-tab" >
+          {[ ...Array(this.props.games.length).keys()].map( (ele, ind) => {
+            return (
+            <div 
+              className={ind === this.state.currPos ? 'tab active' : 'tab'}
+              onClick={(e) => this.updatePos(e, ele)}>
+            </div>
+            )
+          })}
+        </div>
       </div>
     )
       
