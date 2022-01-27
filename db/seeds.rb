@@ -45,6 +45,9 @@ mhw = Game.create({
   badder beasts!"
 })
 
+mhw_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mhw/mhw_feature.jpg')
+mhw.feature.attach(io: mhw_feature, filename: 'mhw_feature.jpg')
+
 mhw_header = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mhw/mhw_header.jpg')
 mhw.header.attach(io: mhw_header, filename: 'mhw_header.jpg')
 
@@ -62,6 +65,7 @@ mhw.photos.attach(io: mhw_4, filename: 'mhw_4.jpg')
 
 mhw_5 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mhw/mhw_5.jpg')
 mhw.photos.attach(io: mhw_5, filename: 'mhw_5.jpg')
+
 
 tf2 = Game.create({
   title: 'Team Fortress 2',
@@ -159,6 +163,10 @@ hk = Game.create({
   wastes; battle tainted creatures and befriend bizarre bugs; and solve ancient \
   mysteries at the kingdom's heart."
 })
+
+hk_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/hk/hk_feature.jpg')
+hk.feature.attach(io: hk_feature, filename: 'hk_feature.jpg')
+
 hk_header = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/hk/hk_header.jpg')
 hk.header.attach(io: hk_header, filename: 'hk_header.jpg')
 
@@ -233,6 +241,9 @@ y0 = Game.create({
   to pursue in the richly detailed, neon-lit world."
 })
 
+y0_feature= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/y0/y0_feature.jpg')
+y0.feature.attach(io: y0_feature, filename: 'y0_feature.jpg')
+
 y0_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/y0/y0_header.jpg')
 y0.header.attach(io: y0_header, filename: 'y0_header.jpg')
 
@@ -273,6 +284,9 @@ gris = Game.create({
   skill-based challenges will reveal themselves as more of Gris's world \
   becomes accessible."
 })
+
+gris_feature= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/gris/gris_feature.jpg')
+gris.feature.attach(io: gris_feature, filename: 'gris_feature.jpg')
 
 gris_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/gris/gris_header.jpg')
 gris.header.attach(io: gris_header, filename: 'gris_header.jpg')
@@ -346,6 +360,10 @@ furi = Game.create({
   The Toxic Avenger, Lorn, Scattle, Waveshaper and Kn1ght!"
 })
 
+furi_feature= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/furi/furi_feature.jpg')
+furi.feature.attach(io: furi_feature, filename: 'furi_feature.jpg')
+
+
 furi_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/furi/furi_header.jpg')
 furi.header.attach(io: furi_header, filename: 'furi_header.jpg')
 
@@ -409,8 +427,11 @@ mhr = Game.create({
   variety of weapons to take down fearsome monsters as part of an all-new \
   storyline.",
   extended_about: "Rise to the challenge and join the hunt! In Monster \
-  Hunter Rise, the latest installment in the award-winning and top-selling Monster Hunter series, you’ll become a hunter, explore brand new maps and use a variety of weapons to take down fearsome monsters as part of an all-new storyline. The PC release also comes packed with a number of additional visual and performance enhancing optimizations.
-  "
+  Hunter Rise, the latest installment in the award-winning and top-selling \
+  Monster Hunter series, you'll become a hunter, explore brand new maps and \
+  use a variety of weapons to take down fearsome monsters as part of an \
+  all-new storyline. The PC release also comes packed with a number of \
+  additional visual and performance enhancing optimizations."
 })
 
 mhr_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mhr/mhr_header.jpg')
@@ -487,6 +508,9 @@ ff15 = Game.create({
   and together with your comrades, master the skills of weaponry, magic \
   and team-based attacks."
 })
+
+ff15_feature= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/ff15/ff15_feature.jpg')
+ff15.feature.attach(io: ff15_feature, filename: 'ff15_feature.jpg')
 
 ff15_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/ff15/ff15_header.jpg')
 ff15.header.attach(io: ff15_header, filename: 'ff15_header.jpg')
@@ -648,6 +672,9 @@ bye = Game.create({
   you deeper into the dark recesses of your most repressed memories, \
   ultimately revealing a heartbreaking truth."
 })
+
+bye_feature= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/bye/bye_feature.jpg')
+bye.feature.attach(io: bye_feature, filename: 'bye_feature.jpg')
 
 bye_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/bye/bye_header.jpg')
 bye.header.attach(io: bye_header, filename: 'bye_header.jpg')
