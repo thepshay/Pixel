@@ -1,6 +1,6 @@
 .user-dropdown {
-  background-color: #171a21;
-  color: $grayTextColor;
+  background-color: $darkestBlue;
+  color: $lighterGray;
   display: none;
   box-shadow: 2px 2px 5px 5px black;
   min-width: 100px;
@@ -18,11 +18,11 @@
     white-space:nowrap;
     cursor: pointer;
     &:hover {
-      color: white;
+      color: $lightestGray;
     }
 
     span {
-      color: #57cbde;
+      color: $lightBlue;
     }
   }
 }

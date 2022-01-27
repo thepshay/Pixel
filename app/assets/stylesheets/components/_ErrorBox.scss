@@ -10,8 +10,8 @@
   }
 
   &.show {
-    color: rgba(255, 255, 255, 1);;
-    border: 1px solid red;
+    color: rgba(220, 222, 223, 1);;
+    border: 1px solid $red;
     max-height: 500px;
     transition: max-height 1.5s linear, color 0.5s ease-out;
   }

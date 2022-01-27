@@ -21,7 +21,7 @@
       font-size: 34px;
       margin-bottom: 20px;
       text-align: center;
-      color: $whiteTextColor;
+      color: $lightestGray;
       padding: 20px 0;
       font-weight: 200;
     }
@@ -34,7 +34,7 @@
       .username-input,
       .password-input {
         width: 300px;
-        color: $grayTextColor;
+        color: $lightestGray;
         
         div {
           padding: 5px 0;
@@ -54,7 +54,7 @@
   
       .submit-btn {
         width: fit-content;
-        background-color: blue;
+        background-color: $skyBlueLight;
         padding: 10px 80px;
         color: white;
         border-radius: 10px;
@@ -66,10 +66,10 @@
 
     .demo-link {
       margin: 20px 0;
-      color: $grayTextColor;
+      color: $lighterGray;
       cursor: pointer;
       &:hover {
-        color:$lightBlue;
+        color:$lighterBlue;
       }
     }
 
@@ -85,7 +85,7 @@
     p {
       width: 200px;
       text-align: center;
-      color: $grayTextColor;
+      color: $lighterGray;
     }
 
     .join-img {
@@ -98,8 +98,8 @@
       margin-top: 20px;
       padding: 5px 10px;
       border-radius: 5px;
-      border: 1px solid white;
-      color: white;
+      border: 1px solid $lightestGray;
+      color: $lightestGray;
       cursor: pointer;
     }
   }

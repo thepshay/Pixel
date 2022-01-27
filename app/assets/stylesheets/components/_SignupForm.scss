@@ -11,7 +11,7 @@
     font-size: 34px;
     margin-bottom: 20px;
     text-align: left;
-    color: $whiteTextColor;
+    color: $lightestGray;
     padding: 20px 0;
     font-weight: 200;
   }
@@ -19,7 +19,7 @@
   .username-input,
   .password-input {
     width: 300px;
-    color: $grayTextColor;
+    color: $lighterGray;
     padding-bottom: 20px;
     
     div {
@@ -34,9 +34,9 @@
   }
   .submit-btn {
     width: fit-content;
-    background-color: blue;
+    background-color: $skyBlueLight;
     padding: 10px 80px;
-    color: white;
+    color: $lightestGray;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -44,10 +44,10 @@
 
   .demo-link {
     margin: 20px 0;
-    color: $grayTextColor;
+    color: $lighterGray;
     cursor: pointer;
     &:hover {
-      color:$lightBlue;
+      color:$lighterBlue;
     }
   }
 }
