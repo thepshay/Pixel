@@ -4,6 +4,7 @@
   width: 900px;
   margin: 0 auto;
   position: relative;
+  cursor: pointer;
 
   button.arrow{
     position: absolute;
@@ -17,10 +18,22 @@
   .left-btn {
     top: 50%;
     left: -45px;
+    border: none;
+    background: linear-gradient(to left, transparent 5%, rgba(0,0,0,0.3) 95%);
+    &:hover {
+      background: linear-gradient(to left, transparent 5%, rgba(255,255,255,0.3) 95%);
+    }
+
   }
 
   .right-btn {
     top: 50%;
     right: -45px;
+    border: none;
+    background: linear-gradient(to right, transparent 5%, rgba(0,0,0,0.3) 95%);
+
+    &:hover {
+      background: linear-gradient(to right, transparent 5%, rgba(255,255,255,0.3) 95%);
+    }
   }
 }
