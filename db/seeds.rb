@@ -87,6 +87,10 @@ tf2 = Game.create({
   King of the Hill and more."
 })
 
+temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
+tf2.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+
+
 tf2_header = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/tf2/tf2_header.jpg')
 tf2.header.attach(io: tf2_header, filename: 'tf2_header.jpg')
 
@@ -131,6 +135,9 @@ sd = Game.create({
   illegal street races and tear it up in explosive firearms action. Sleeping \
   Dogs' Hong Kong is the ultimate playground."
 })
+
+temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
+sd.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
 
 sd_header = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/sd/sd_header.jpg')
 sd.header.attach(io: sd_header, filename: 'sd_header.jpg')
@@ -200,6 +207,9 @@ p4g = Game.create({
   one's self.
   Persona 4 Golden promises meaningful bonds and experiences shared together with friends."
 })
+
+temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
+p4g.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
 
 p4g_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/p4g/p4g_header.jpg')
 p4g.header.attach(io: p4g_header, filename: 'p4g_header.jpg')
@@ -306,7 +316,6 @@ gris.photos.attach(io: gris_4, filename: 'gris_4.jpg')
 gris_5= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/gris/gris_5.jpg')
 gris.photos.attach(io: gris_5, filename: 'gris_5.jpg')
 
-
 mgrr = Game.create({
   title: "METAL GEAR RISING: REVENGEANCE",
   price: 29.99,
@@ -326,6 +335,9 @@ mgrr = Game.create({
   REVENGEANCE comes to PC with all the famed moves and action running within \
   a beautifully-realised HD environment."
 })
+
+temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
+mgrr.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
 
 mgrr_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mgrr/mgrr_header.jpg')
 mgrr.header.attach(io: mgrr_header, filename: 'mgrr_header.jpg')
@@ -363,7 +375,6 @@ furi = Game.create({
 furi_feature= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/furi/furi_feature.jpg')
 furi.feature.attach(io: furi_feature, filename: 'furi_feature.jpg')
 
-
 furi_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/furi/furi_header.jpg')
 furi.header.attach(io: furi_header, filename: 'furi_header.jpg')
 
@@ -397,6 +408,9 @@ dc = Game.create({
   Roguelite (Rogue Legacy, Binding of Isaac, Enter the Gungeon, Spelunky, \
   etc.) and an old-school MetroidVania (Castlevania: SotN and its ilk)."
 })
+
+temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
+dc.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
 
 dc_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/dc/dc_header.jpg')
 dc.header.attach(io: dc_header, filename: 'dc_header.jpg')
@@ -434,6 +448,9 @@ mhr = Game.create({
   additional visual and performance enhancing optimizations."
 })
 
+temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
+mhr.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+
 mhr_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mhr/mhr_header.jpg')
 mhr.header.attach(io: mhr_header, filename: 'mhr_header.jpg')
 
@@ -452,8 +469,6 @@ mhr.photos.attach(io: mhr_4, filename: 'mhr_4.jpg')
 mhr_5= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mhr/mhr_5.jpg')
 mhr.photos.attach(io: mhr_5, filename: 'mhr_5.jpg')
 
-
-
 w3 = Game.create({
   title: "The Witcher® 3: Wild Hunt",
   price: 39.99,
@@ -469,6 +484,9 @@ w3 = Game.create({
   open world rich with merchant cities, pirate islands, dangerous mountain \
   passes, and forgotten caverns to explore."
 })
+
+temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
+w3.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
 
 w3_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/w3/w3_header.jpg')
 w3.header.attach(io: w3_header, filename: 'w3_header.jpg')
@@ -530,7 +548,6 @@ ff15.photos.attach(io: ff15_4, filename: 'ff15_4.jpg')
 ff15_5= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/ff15/ff15_5.jpg')
 ff15.photos.attach(io: ff15_5, filename: 'ff15_5.jpg')
 
-
 sekiro = Game.create({
   title: "Sekiro™: Shadows Die Twice - GOTY Edition",
   price: 59.99,
@@ -550,6 +567,9 @@ sekiro = Game.create({
   When the young lord is captured, nothing will stop you on a perilous quest \
   to regain your honor, not even death itself."
 })
+
+temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
+sekiro.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
 
 sekiro_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/sekiro/sekiro_header.jpg')
 sekiro.header.attach(io: sekiro_header, filename: 'sekiro_header.jpg')
@@ -588,6 +608,10 @@ bio = Game.create({
   high-speed Sky-Lines, and down in the streets of Columbia, all while \
   surviving the threats of the air-city and uncovering its dark secret."
 })
+
+temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
+bio.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+
 
 bio_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/bio/bio_header.jpg')
 bio.header.attach(io: bio_header, filename: 'bio_header.jpg')
@@ -628,6 +652,9 @@ ttm = Game.create({
   old man chose his dying wish to be what it is."
 })
 
+temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
+ttm.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+
 ttm_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/ttm/ttm_header.jpg')
 ttm.header.attach(io: ttm_header, filename: 'ttm_header.jpg')
 
@@ -645,7 +672,6 @@ ttm.photos.attach(io: ttm_4, filename: 'ttm_4.jpg')
 
 ttm_5= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/ttm/ttm_5.jpg')
 ttm.photos.attach(io: ttm_5, filename: 'ttm_5.jpg')
-
 
 bye = Game.create({
   title: "Before Your Eyes",

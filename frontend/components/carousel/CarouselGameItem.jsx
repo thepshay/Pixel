@@ -8,7 +8,7 @@ class CarouselGameItem extends React.Component {
     return (
       <div className="item-display">
         
-        <img className='main-image' src={game.headerUrl}/>
+        <img className='main-image' src={game.featureUrl}/>
         <div  className='info-container' style={{backgroundColor: color}}>
 
         </div> 
