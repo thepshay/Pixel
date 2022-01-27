@@ -1,34 +1,13 @@
 .carousel {
   padding-top: 30px;
-  height: 400px;
-  width: 870px;
+  height: 353px;
+  width: 900px;
   margin: 0 auto;
   position: relative;
-  
-  .carousel-item {
-    width: 870px;
-    height: 100%;
-    position: absolute;
-    display: flex;
-
-    .item-display {
-      height: 100%;
-      width: 100%;
-      display: flex;
-
-      .main-image {
-        flex-grow: 2;
-      }
-
-      .info-container {
-        flex-grow: 1;
-      }
-    }
-  }
 
   button.arrow{
     position: absolute;
-    width: 50px;
+    width: 45px;
     height: 120px;
     z-index: 5;
     transform: translateY(-35%);
@@ -37,11 +16,11 @@
 
   .left-btn {
     top: 50%;
-    left: -50px;
+    left: -45px;
   }
 
   .right-btn {
     top: 50%;
-    right: -50px;
+    right: -45px;
   }
 }

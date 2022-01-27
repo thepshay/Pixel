@@ -2,8 +2,6 @@ import React from "react";
 
 import CarouselGameItem from './CarouselGameItem'
 
-const tempCarouselColor = ['#F7FF33', '#FF6633', '#33DDFF', '#5E33FF', '#33FF4A', '#143D18', '#A3B0DA']
-
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +54,6 @@ class Carousel extends React.Component {
             <div key={index} className={index === this.state.currPos ? 'carousel-item active' : 'carousel-item'}>
               {(index===this.state.currPos) && 
                 (<CarouselGameItem 
-                  color={tempCarouselColor[index]} 
                   game={game}
                 />)}
               
