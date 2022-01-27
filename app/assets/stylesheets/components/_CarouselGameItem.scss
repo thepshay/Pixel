@@ -14,17 +14,17 @@ div.carousel-item {
   }
 
   div.item-display {
-    height: 100%;
-    width: 100%;
     display: flex;
+    overflow: hidden;
 
     img.main-image {
       width: 616px;
       height: 353px;
+      object-fit: cover;
     }
 
     div.info-container {
-      flex-grow: 1;
+      width: calc(900px - 616px);
       color: $lightestGray;
       background-color: #1b2838;
       display: flex;
@@ -44,7 +44,7 @@ div.carousel-item {
         grid-gap: 8px;
 
 
-        img {
+        img.screenshot-img {
           width: 100%;
           height: auto;
         }

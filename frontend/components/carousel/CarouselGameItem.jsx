@@ -11,12 +11,10 @@ class CarouselGameItem extends React.Component {
   }
 
   changeToSelectedImg(e, url) {
-    console.log('enter')
     this.setState({featureUrl: url});
   }
 
   changeBackToFeature() {
-    console.log('leave')
     this.setState({featureUrl: this.props.game.featureUrl});
   }
 
@@ -27,17 +25,14 @@ class CarouselGameItem extends React.Component {
       <div className="item-display">
         
         <img className='main-image' src={this.state.featureUrl} alt={`${game.title}'s feature image` }/>
-        {console.log(this.state.featureUrl)}
         <div  className='info-container'>
           <h1 className="title">{game.title}</h1>
-
           <div className="screenshot-container">
             {game.photoUrls.slice(0, 4).map((screenshotUrl, index) => {
               return (
                 <img className="screenshot-img"
                   key={game.id+index} 
                   src={screenshotUrl} 
-                  onClick={()=> console.log('hello')}
                   onMouseEnter={(e) => this.changeToSelectedImg(e, screenshotUrl)}
                   onMouseLeave={() => this.changeBackToFeature()}
                 />
