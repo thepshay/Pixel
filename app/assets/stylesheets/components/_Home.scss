@@ -1,6 +1,9 @@
 div.home-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  .carousel-title {
-    position: absolute;
+  div.home-game-list {
+    padding-top: 100px;
   }
 }

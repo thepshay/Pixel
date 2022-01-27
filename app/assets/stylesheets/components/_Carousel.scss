@@ -1,14 +1,15 @@
 .carousel {
-  padding-top: 30px;
-  height: 353px;
+  height: calc(353px + 15px + 1rem);
   width: 900px;
   margin: 0 auto;
   position: relative;
+  margin-top: 30px;
 
   .title {
     color: $lightestGray;
     font-weight: 300;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-size: 1rem;
   }
 
   button.arrow{
@@ -46,7 +47,7 @@
     position: absolute;
     right: 50%;
     transform: translateX(50%);
-    bottom: -50px;
+    bottom: -25px;
     display: flex;
     flex-direction: row;
 
