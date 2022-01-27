@@ -46,26 +46,24 @@ class Carousel extends React.Component {
 
     console.log(games)
     return (
-      <div className="page-carousel-content">
-        <div className="carousel-container">
-        
-          <button className="left-arrow" onClick={() => this.prevSlide()}>{'<'}</button>
-          <button className="right-arrow" onClick={() => this.nextSlide()}>{'>'}</button>
+      <div className="carousel">
+      
+        <button className="arrow left-btn" onClick={() => this.prevSlide()}>{'<'}</button>
+        <button className="arrow right-btn" onClick={() => this.nextSlide()}>{'>'}</button>
 
-          {games.map((game, index) => {
-            return (
-              <div key={index} className={index === this.state.currPos ? 'carousel-item active' : 'carousel-item'}>
-                {(index===this.state.currPos) && 
-                  (<CarouselGameItem 
-                    color={tempCarouselColor[index]} 
-                    game={game}
-                  />)}
-                
-              </div> 
-            )
-          })}
+        {games.map((game, index) => {
+          return (
+            <div key={index} className={index === this.state.currPos ? 'carousel-item active' : 'carousel-item'}>
+              {(index===this.state.currPos) && 
+                (<CarouselGameItem 
+                  color={tempCarouselColor[index]} 
+                  game={game}
+                />)}
+              
+            </div> 
+          )
+        })}
 
-        </div>
       </div>
     )
       

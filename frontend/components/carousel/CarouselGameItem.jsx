@@ -4,18 +4,18 @@ class CarouselGameItem extends React.Component {
 
   render() {
     const {game, color} = this.props;
+    console.log(game)
     return (
-      <div style={{backgroundColor: color}}>{game.title}</div>
+      <div className="item-display">
+        
+        <img className='main-image' src={game.headerUrl}/>
+        <div  className='info-container' style={{backgroundColor: color}}>
+
+        </div> 
+      </div>
     )
   }
 
-
-  // render() {
-  //   const {className, color} = this.props;
-  //   return (
-  //     <div className={className} style={{backgroundColor: color}}>{color}</div>
-  //   )
-  // }
 }
 
 export default CarouselGameItem;
