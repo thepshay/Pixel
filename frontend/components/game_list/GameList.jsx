@@ -3,9 +3,12 @@ import React from 'react';
 class GameList extends React.Component {
 
   render() {
+
+    const { className } = this.props;
+
     return (
-      <div>
-        item
+      <div className={className}>
+        game list
       </div>
     )
   }
