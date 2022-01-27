@@ -5,6 +5,12 @@
   margin: 0 auto;
   position: relative;
 
+  .title {
+    color: $lightestGray;
+    font-weight: 300;
+    padding-bottom: 15px;
+  }
+
   button.arrow{
     position: absolute;
     width: 45px;
