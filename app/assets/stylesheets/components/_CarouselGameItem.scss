@@ -3,13 +3,11 @@ div.home-carousel-item {
   height: 100%;
   position: absolute;
   display: flex;
-  opacity: 0.25;
-  transition-duration: 1s;
+  animation: fadeVisibility 1s;
   display: none;
 
   &.active {
-    opacity: 1;
-    transition-duration: 1s;
+    animation: fadeVisibility 1s;
     display:block
   }
 
@@ -73,6 +71,14 @@ div.home-carousel-item {
         font-size: .75rem;
         color: $lighterBlue;
       }
+    }
+  }
+  @keyframes fadeVisibility {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }
