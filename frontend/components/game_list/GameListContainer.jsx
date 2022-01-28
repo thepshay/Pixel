@@ -5,8 +5,11 @@ import GameList from './GameList';
 
 
 const mapStateToProps = (state, ownProps) => {
+  const gameListGames = ownProps.displayGameId.map(id =>{
+    return state.entities.games[id]
+  })
   return {
-    games: state.entities.games,
+    games: gameListGames,
     className: ownProps.className,
   }
 }

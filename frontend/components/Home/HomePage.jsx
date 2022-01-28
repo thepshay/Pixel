@@ -16,6 +16,7 @@ class HomePage extends React.Component {
         />
         <GameListContainer 
           className={'game-list home-game-list'}
+          displayGameId={ [2,3,5,8,10,11,12,14,15,16] }
         />
       </div>
     )

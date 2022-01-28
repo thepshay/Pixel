@@ -1,23 +1,28 @@
 import React from 'react';
+import GameListItem from './GameListItem';
 
 class GameList extends React.Component {
 
   componentDidMount() {
-    if (Object.keys(this.props.games).length === 0) {
+    // if (Object.keys(this.props.games).length === 0) {
       this.props.fetchAllGames();
-    }
+    // }
   }
 
   render() {
+    const { className, games } = this.props;
+    console.log(this.props)
+    
+    if (!games[0]) {
+      return null
+    }
 
-    const { className } = this.props;
-    console.log(this.props.games)
     return (
       <div className={className}>
         <ul>
-          {Object.values(this.props.games).map(game => {
+          {games.map(game => {
             return (
-              <li>{game.title}</li>
+              <GameListItem game={game} key={game.id} />
             )
           })}
         </ul>
