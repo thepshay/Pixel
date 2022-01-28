@@ -6,7 +6,7 @@ class GameList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currGame: null
+      currGame: 0
     }
   }
 
@@ -15,18 +15,11 @@ class GameList extends React.Component {
   }
 
   setCurrGame(e, game) {
-    console.log('hello')
     this.setState({currGame: game})
-  }
-
-  removeCurrGame() {
-    console.log('bye')
-    this.setState({currGame: null})
   }
 
   render() {
     const { className, games } = this.props;
-    console.log(this.props)
     
     if (!games[0]) {
       return null
@@ -35,18 +28,29 @@ class GameList extends React.Component {
     return (
       <div className={className}>
         <ul>
-          {games.map(game => {
+          {games.map((game, index) => {
             return (
               <GameListItem 
+                className={(index === this.state.currGame) ? 'game-list-item active' : 'game-list-item'}
                 game={game} 
                 key={game.id} 
-                onMouseEnter={(e) => this.setCurrGame(e, game)}
-                onMouseLeave={() => this.removeCurrGame()}
+                onMouseEnter={(e) => this.setCurrGame(e, index)}
+                gap={index === this.state.currGame}
               />
             )
           })}
         </ul>
-        {(this.state.currGame) && <InfoDisplay game={this.state.currGame} />}
+        <ul>
+          {games.map((game, index) => {
+            return (
+              <InfoDisplay 
+                className={(index === this.state.currGame) ? 'info-display active' : 'info-display'}
+                game={game} 
+                key={game.id} 
+              />
+            )
+          })}
+        </ul>
       </div>
     )
   }

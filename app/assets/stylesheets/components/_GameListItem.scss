@@ -6,16 +6,33 @@
   display: flex;
   flex-direction: row;
   align-self: right;
+  position: relative;
 
+  &.active {
+    background: none;
+    background-color: $lighterBlue;
+    ;
+
+    div.list-info-container {
+
+      h3.game-title,
+      p.game-genre,
+      p.price-tag {
+        color: $darkGray;
+      }
+    }
+
+  }
+  
   img.header-img {
     height: 70px;
     width: auto;
   }
-
+  
   div.list-info-container {
     flex: 1;
     position: relative;
-
+    
     h3.game-title {
       position: absolute;
       font-size: 1rem;
@@ -23,14 +40,14 @@
       left: 10px;
       color: $lightestGray
     }
-
+    
     p.game-genre {
       position: absolute;
       bottom: 5px;
       left: 10px;
       color: $lightGray
     }
-
+    
     p.price-tag {
       position: absolute;
       top: 50%;
@@ -38,5 +55,12 @@
       transform: translateY(-50%);
       color: $lighterBlue;
     }
+  }
+  .gap {
+    position: absolute;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    background-color: $lighterBlue;
   }
 }

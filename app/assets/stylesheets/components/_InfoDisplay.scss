@@ -1,0 +1,42 @@
+div.info-display {
+  background: rgba(102, 192, 244, 1);
+  background: linear-gradient(to right, rgba(102, 192, 244, 1) 30%, rgba(102, 192, 244, 0.6) 70%);
+  display: none;
+  flex-direction: column;
+  width: 300px;
+  color: $darkGray;
+  height: fit-content;
+  margin-left: 15px;
+
+  &.active {
+    display: flex;
+  }
+
+  h3.info-title {
+    margin: 10px;
+    font-size: 1.5rem;
+  }
+
+  ul.genre-list {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+
+    li.genre {
+      margin-right: 5px;
+      margin-bottom: 5px;
+      padding: 4px 8px;
+      font-size: .75rem;
+      background-color: $darkGray;
+      color: $lightestGray;
+      border-radius: 2px;
+    }
+  }
+
+  img.display-screenshot {
+    margin-bottom: 5px;
+    width: 280px;
+    height: auto;
+    align-self: center;
+  }
+}
