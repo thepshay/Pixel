@@ -27,6 +27,9 @@ class GameList extends React.Component {
 
     return (
       <div className={className}>
+        <div className='game-list-header'>
+          <h3 className='game-list-title'>More Games</h3>
+        </div>
         <ul>
           {games.map((game, index) => {
             return (

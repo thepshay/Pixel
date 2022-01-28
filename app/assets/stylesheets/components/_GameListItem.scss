@@ -35,15 +35,26 @@
     
     h3.game-title {
       position: absolute;
-      font-size: 1rem;
-      top: 5px;
+      font-size: .9rem;
+      top: 10px;
       left: 10px;
-      color: $lightestGray
+      color: $lightestGray;
+      font-weight: 200;
     }
     
+    p.windows {
+      position: absolute;
+      font-size: .9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      color: $lightGray
+    }
+
     p.game-genre {
       position: absolute;
-      bottom: 5px;
+      font-size: 0.75rem;
+      bottom: 10px;
       left: 10px;
       color: $lightGray
     }
@@ -51,7 +62,8 @@
     p.price-tag {
       position: absolute;
       top: 50%;
-      right: 5px;
+      right: 10px;
+      font-size: 0.75rem;
       transform: translateY(-50%);
       color: $lighterBlue;
     }

@@ -31,8 +31,8 @@ user5.photo.attach(io: pfp5, filename: 'pfp5.jpg')
 mhw = Game.create({
   title: 'Monster Hunter: World',
   price: 29.99,
-  genre_1: 'Action',
-  genre_2: 'Multiplayer',
+  genre_1: 'action',
+  genre_2: 'multiplayer',
   short_about: "Welcome to a new world! In Monster Hunter: World, the \
   latest installment in the series, you can enjoy the ultimate hunting \
   experience, using everything at your disposal to hunt monsters in a new \
@@ -70,8 +70,8 @@ mhw.photos.attach(io: mhw_5, filename: 'mhw_5.jpg')
 tf2 = Game.create({
   title: 'Team Fortress 2',
   price: 0,
-  genre_1: 'Hero Shooter',
-  genre_2: 'Multiplayer',
+  genre_1: 'hero-shooter',
+  genre_2: 'multiplayer',
   short_about: "Nine distinct classes provide a broad range of tactical \
   abilities and personalities. Constantly updated with new game modes, \
   maps, equipment and, most importantly, hats!",
@@ -109,8 +109,8 @@ tf2.photos.attach(io: tf2_4, filename: 'tf2_4.jpg')
 sd = Game.create({
   title: "Sleeping Dogs: Definitive Edition",
   price: 19.99,
-  genre_1: "Open World",
-  genre_2: "Action",
+  genre_1: "open-world",
+  genre_2: "action",
   short_about: "The Definitive Edition of the critically acclaimed, \
   award winning open-world action adventure, reworked, rebuilt and \
   re-mastered for the new generation. With all previously available \
@@ -156,8 +156,8 @@ sd.photos.attach(io: sd_5, filename: 'sd_5.jpg')
 hk = Game.create({
   title: "Hollow Knight",
   price: 14.99,
-  genre_1: "Metroidvania",
-  genre_2: "Souls-like",
+  genre_1: "metroidvania",
+  genre_2: "souls-like",
   short_about: "Forge your own path in Hollow Knight! An epic action adventure \
   through a vast ruined kingdom of insects and heroes. Explore twisting \
   caverns, battle tainted creatures and befriend bizarre bugs, all in a \
@@ -196,7 +196,7 @@ p4g = Game.create({
   title: "Persona 4 Golden",
   price: 19.99,
   genre_1: "JRPG",
-  genre_2: "Story Rich",
+  genre_2: "story-rich",
   short_about: "A coming of age story that sets the protagonist and his \
   friends on a journey kickstarted by a chain of serial murders.",
   extended_about: "Inaba—a quiet town in rural Japan sets the scene for \
@@ -233,8 +233,8 @@ p4g.photos.attach(io: p4g_5, filename: 'p4g_5.jpg')
 y0 = Game.create({
   title: "Yakuza 0",
   price: 19.99,
-  genre_1: "Action",
-  genre_2: "Story Rich",
+  genre_1: "action",
+  genre_2: "story-rich",
   short_about: "SEGA's legendary Japanese series finally comes to PC. \
   Fight like hell through Tokyo and Osaka as junior yakuza Kiryu and Majima. \
   Take a front row seat to 1980s life in Japan in an experience unlike \
@@ -275,8 +275,8 @@ y0.photos.attach(io: y0_5, filename: 'y0_5.jpg')
 gris = Game.create({
   title: "GRIS",
   price: 16.99,
-  genre_1: "Beautiful",
-  genre_2: "Atmospheric",
+  genre_1: "beautiful",
+  genre_2: "atmospheric",
   short_about: "Gris is a hopeful young girl lost in her own world, dealing \
   with a painful experience in her life. Her journey through sorrow is \
   manifested in her dress, which grants new abilities to better navigate \
@@ -319,8 +319,8 @@ gris.photos.attach(io: gris_5, filename: 'gris_5.jpg')
 mgrr = Game.create({
   title: "METAL GEAR RISING: REVENGEANCE",
   price: 29.99,
-  genre_1: "Action",
-  genre_2: "Hack and Slash",
+  genre_1: "action",
+  genre_2: "hack-and-slash",
   short_about: "PlatinumGames, METAL GEAR RISING: REVENGEANCE takes the \
   renowned METAL GEAR franchise into exciting new territory with an all-new \
   action experience.",
@@ -361,8 +361,8 @@ mgrr.photos.attach(io: mgrr_5, filename: 'mgrr_5.jpg')
 furi = Game.create({
   title: "Furi",
   price: 19.99,
-  genre_1: "Action",
-  genre_2: "Difficult",
+  genre_1: "action",
+  genre_2: "difficult",
   short_about: "The jailer is the key, kill him and you'll be free.",
   extended_about: "You were captured. Look what they've done to you… The jailer \
   is the key, kill him and you'll be free.
@@ -396,8 +396,8 @@ furi.photos.attach(io: furi_5, filename: 'furi_5.jpg')
 dc = Game.create({
   title: "Dead Cells",
   price: 24.99,
-  genre_1: "Roguelite",
-  genre_2: "Pixel Graphics",
+  genre_1: "roguelite",
+  genre_2: "pixel-graphics",
   short_about: "Dead Cells is a rogue-lite, metroidvania inspired, \
   action-platformer. You'll explore a sprawling, ever-changing castle... \
   assuming you're able to fight your way past its keepers in 2D souls-lite \
@@ -433,8 +433,8 @@ dc.photos.attach(io: dc_5, filename: 'dc_5.jpg')
 mhr = Game.create({
   title: "MONSTER HUNTER RISE",
   price: 59.99,
-  genre_1: "Action",
-  genre_2: "Multiplayer",
+  genre_1: "action",
+  genre_2: "multiplayer",
   short_about: "Rise to the challenge and join the hunt! In Monster Hunter \
   Rise, the latest installment in the award-winning and top-selling Monster \
   Hunter series, you'll become a hunter, explore brand new maps and use a \
@@ -472,8 +472,8 @@ mhr.photos.attach(io: mhr_5, filename: 'mhr_5.jpg')
 w3 = Game.create({
   title: "The Witcher® 3: Wild Hunt",
   price: 39.99,
-  genre_1: "Open World",
-  genre_2: "Story Rich",
+  genre_1: "open-world",
+  genre_2: "story-rich",
   short_about: "As war rages on throughout the Northern Realms, you take on \
   the greatest contract of your life — tracking down the Child of Prophecy, \
   a living weapon that can alter the shape of the world.",
@@ -509,7 +509,7 @@ w3.photos.attach(io: w3_5, filename: 'w3_5.jpg')
 ff15 = Game.create({
   title: "FINAL FANTASY XV WINDOWS EDITION",
   price: 34.99,
-  genre_1: "Open World",
+  genre_1: "open-world",
   genre_2: "JRPG",
   short_about: "Take the journey, now in ultimate quality. Boasting a wealth \
   of bonus content and supporting ultra high-resolution graphical options and \
@@ -551,8 +551,8 @@ ff15.photos.attach(io: ff15_5, filename: 'ff15_5.jpg')
 sekiro = Game.create({
   title: "Sekiro™: Shadows Die Twice - GOTY Edition",
   price: 59.99,
-  genre_1: "Souls-like",
-  genre_2: "Difficult",
+  genre_1: "souls-like",
+  genre_2: "difficult",
   short_about: "Game of the Year - The Game Awards 2019 Best Action Game of \
   2019 - IGN Carve your own clever path to vengeance in the award winning \
   adventure from developer FromSoftware, creators of Bloodborne and the Dark \
@@ -592,8 +592,8 @@ sekiro.photos.attach(io: sekiro_5, filename: 'sekiro_5.jpg')
 bio = Game.create({
   title: "BioShock Infinite",
   price: 29.99,
-  genre_1: "Story Rich",
-  genre_2: "Action",
+  genre_1: "story-rich",
+  genre_2: "action",
   short_about: "Indebted to the wrong people, with his life on the line, \
   veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one \
   opportunity to wipe his slate clean. He must rescue Elizabeth, a mysterious \
@@ -634,8 +634,8 @@ bio.photos.attach(io: bio_5, filename: 'bio_5.jpg')
 ttm = Game.create({
   title: "To the Moon",
   price: 9.99,
-  genre_1: "Story Rich",
-  genre_2: "Emotional",
+  genre_1: "story-rich",
+  genre_2: "emotional",
   short_about: "A story-driven experience about two doctors traversing \
   backwards through a dying man's",
   extended_about: "Dr. Rosalene and Dr. Watts have peculiar jobs: They give \
@@ -676,8 +676,8 @@ ttm.photos.attach(io: ttm_5, filename: 'ttm_5.jpg')
 bye = Game.create({
   title: "Before Your Eyes",
   price: 9.99,
-  genre_1: "Story Rich",
-  genre_2: "Emotional",
+  genre_1: "story-rich",
+  genre_2: "emotional",
   short_about: "Embark on an emotional first-person narrative adventure \
   where you control the story—and affect its outcomes—with your real-life \
   blinks. With this innovative technique you will fully immerse yourself in \
