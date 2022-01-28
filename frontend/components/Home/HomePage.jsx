@@ -1,14 +1,16 @@
 import React from 'react';
-import FeatureCarouselContainer from '../carousel/FeatureCarouselContainer';
-import GameList from '../game_list/GameList';
+import CarouselContainer from '../carousel/CarouselContainer';
+import Footer from '../footer/Footer';
 import GameListContainer from '../game_list/GameListContainer';
+import GenreSidebarContainer from '../genre/GenreSidebarContainer';
 
 class HomePage extends React.Component {
 
   render() {
     return (
       <div className='home-page-container'>
-        <FeatureCarouselContainer 
+        <GenreSidebarContainer />
+        <CarouselContainer 
           title={'FEATURE & RECOMMENDED'}
           className={'carousel home-carousel'}
           itemClassName={'home-carousel-item'}
@@ -18,6 +20,7 @@ class HomePage extends React.Component {
           className={'game-list home-game-list'}
           displayGameId={ [2,3,5,8,10,11,12,14,15,16] }
         />
+        <Footer />
       </div>
     )
   }
