@@ -1,6 +1,29 @@
 .genre-sidebar {
   position: absolute;
-  top: 60px;
-  left: 200px;
-  width: 200px;
+  top: 20px;
+  left: -175px;
+  width: -175px;
+  float: left;
+
+  img.steam-cash-img {
+    width: auto;
+    height: 120px;
+    align-self: right;
+    padding-right: 30px;
+    border-bottom: 1px solid $lighterBlue;
+  }
+
+  h2.genre-title {
+    margin-top: 10px;
+    font-size: .75rem;
+    color: $lightestGray
+  }
+
+  ul.genre-list {
+    li.genre-name {
+      margin-top: 10px;
+      font-size: .75rem;
+      color:  $lighterBlue;
+    }
+  }
 }
