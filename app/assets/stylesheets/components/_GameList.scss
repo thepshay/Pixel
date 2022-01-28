@@ -1,0 +1,41 @@
+.game-list-item {
+  background: linear-gradient(45deg, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.3) 80%);
+  width: 550px;
+  height: 70px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+
+  img.header-img {
+    height: 70px;
+    width: auto;
+  }
+
+  div.list-info-container {
+    flex: 1;
+    position: relative;
+
+    h3.game-title {
+      position: absolute;
+      font-size: 1rem;
+      top: 5px;
+      left: 10px;
+      color: $lightestGray
+    }
+
+    p.game-genre {
+      position: absolute;
+      bottom: 5px;
+      left: 10px;
+      color: $lightGray
+    }
+
+    p.price-tag {
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%);
+      color: $lighterBlue;
+    }
+  }
+}

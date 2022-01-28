@@ -7,11 +7,11 @@ class GameListItem extends React.Component {
 
     return (
       <li className='game-list-item'>
-        <img src={game.headerUrl} alt={`${game.title}'s feature image`}/>
+        <img className='header-img' src={game.headerUrl} alt={`${game.title}'s feature image`}/>
         <div className='list-info-container'>
           <h3 className='game-title'>{game.title}</h3>
-          <div>{`${game.genre_1}, ${game.genre_2}`}</div>
-          <div className="price-tag">{`$${game.price}`}</div>
+          <p className='game-genre'>{`${game.genre_1}, ${game.genre_2}`}</p>
+          <p className="price-tag">{`$${game.price}`}</p>
         </div>
       </li>
     )

@@ -1,4 +1,4 @@
-json.extract! game, :id, :title, :price
+json.extract! game, :id, :title, :price, :genre_1, :genre_2
 
 json.headerUrl url_for(game.header)
 json.featureUrl url_for(game.feature)
