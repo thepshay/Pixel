@@ -9,15 +9,18 @@ class Carousel extends React.Component {
       currPos: 0,
     }
 
-    setInterval(()=>{
-      let newPos;
-      if (this.state.currPos === this.props.displayGameId.length-1) {
-        newPos = 0
-      } else {
-        newPos = this.state.currPos + 1
-      }
-      this.setState({currPos: newPos})
-    }, 7000)
+    // Temporary disabled, need to reset interval when user clicks next/back 
+    // Clear interval? 
+
+    // setInterval(()=>{
+    //   let newPos;
+    //   if (this.state.currPos === this.props.displayGameId.length-1) {
+    //     newPos = 0
+    //   } else {
+    //     newPos = this.state.currPos + 1
+    //   }
+    //   this.setState({currPos: newPos})
+    // }, 7000)
   }
 
   componentDidMount() {

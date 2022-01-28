@@ -1,12 +1,27 @@
 import React from 'react';
 import GameListItem from './GameListItem';
+import InfoDisplay from './InfoDisplay';
 
 class GameList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currGame: null
+    }
+  }
 
   componentDidMount() {
-    // if (Object.keys(this.props.games).length === 0) {
-      this.props.fetchAllGames();
-    // }
+    this.props.fetchAllGames();
+  }
+
+  setCurrGame(e, game) {
+    console.log('hello')
+    this.setState({currGame: game})
+  }
+
+  removeCurrGame() {
+    console.log('bye')
+    this.setState({currGame: null})
   }
 
   render() {
@@ -22,10 +37,16 @@ class GameList extends React.Component {
         <ul>
           {games.map(game => {
             return (
-              <GameListItem game={game} key={game.id} />
+              <GameListItem 
+                game={game} 
+                key={game.id} 
+                onMouseEnter={(e) => this.setCurrGame(e, game)}
+                onMouseLeave={() => this.removeCurrGame()}
+              />
             )
           })}
         </ul>
+        {(this.state.currGame) && <InfoDisplay game={this.state.currGame} />}
       </div>
     )
   }

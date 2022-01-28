@@ -6,7 +6,10 @@ class GameListItem extends React.Component {
     const {game} = this.props;
 
     return (
-      <li className='game-list-item'>
+      <li 
+        className='game-list-item'
+        onMouseEnter={this.props.onMouseEnter}
+        onMouseLeave={this.props.onMouseLeave} >
         <img className='header-img' src={game.headerUrl} alt={`${game.title}'s feature image`}/>
         <div className='list-info-container'>
           <h3 className='game-title'>{game.title}</h3>
