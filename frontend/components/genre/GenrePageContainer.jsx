@@ -6,7 +6,8 @@ const mapStateToProps = (state, ownProps) => {
   const genre = ownProps.match.params.genreName;
 
   return {
-    genreId: state.entities.genre[genre]
+    genreId: state.entities.genre[genre],
+    games: state.entities.games
   }
 }
 

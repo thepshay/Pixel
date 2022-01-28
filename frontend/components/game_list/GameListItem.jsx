@@ -21,7 +21,7 @@ class GameListItem extends React.Component {
       <li 
         className={className}
         onMouseEnter={this.props.onMouseEnter}
-        >
+      >
         <img className='header-img' src={game.headerUrl} alt={`${game.title}'s feature image`}/>
         <div className='list-info-container'>
           <h3 className='game-title'>{game.title}</h3>
