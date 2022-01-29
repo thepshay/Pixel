@@ -7,6 +7,7 @@ import HomePage from "./Home/HomePage";
 import Footer from './footer/Footer'
 import { AuthRoute } from '../util/route_util'
 import GenrePageContainer from "./genre/GenrePageContainer";
+import ShowGameContainer from "./show_page/ShowGameContainer";
 
 class App extends React.Component {
 
@@ -19,6 +20,7 @@ class App extends React.Component {
             <AuthRoute path="/login" component={LoginFormContainer}  />
             <AuthRoute path="/signup" component={SignupFormContainer} />
             <Route path='/genre/:genreName' component={GenrePageContainer} />
+            <Route path='/game/:gameId' component={ShowGameContainer} />
             <Route exact path='/' component={HomePage}/>
             <Redirect to="/" />
           </Switch>
