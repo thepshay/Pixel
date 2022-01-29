@@ -24,9 +24,9 @@ class GameDisplay extends React.Component {
             })}
           </ul>
         </div>
-        {/* <GameInfo 
+        <GameInfo 
           game={game}
-        /> */}
+        />
       </div>
     )
   }
