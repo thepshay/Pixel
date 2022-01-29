@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import CarouselGameItem from './CarouselGameItem'
 
@@ -70,7 +71,9 @@ class Carousel extends React.Component {
         {games.map((game, index) => {
           return (
             <div key={game.id} className={index === this.state.currPos ? `${itemClassName} active` : `${itemClassName}`}>
-                <CarouselGameItem key={game.id} game={game}/>
+                <Link to={`game/${game.id}`}>
+                  <CarouselGameItem key={game.id} game={game}/>
+                </Link>
             </div> 
           )
         })}

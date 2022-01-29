@@ -1,6 +1,7 @@
 import React from 'react';
 import GameListItem from './GameListItem';
 import InfoDisplay from './InfoDisplay';
+import { Link } from "react-router-dom";
 
 class GameList extends React.Component {
   constructor(props) {
@@ -47,13 +48,15 @@ class GameList extends React.Component {
         <ul>
           {games.map((game, index) => {
             return (
-              <GameListItem 
-                className={(index === this.state.currGame && infoBox) ? 'game-list-item active' : 'game-list-item'}
-                game={game} 
-                key={game.id} 
-                onMouseEnter={(e) => this.setCurrGame(e, index)}
-                gap={(index === this.state.currGame && infoBox)}
-              />
+              <Link to={`game/${game.id}`}>
+                <GameListItem 
+                  className={(index === this.state.currGame && infoBox) ? 'game-list-item active' : 'game-list-item'}
+                  game={game} 
+                  key={game.id} 
+                  onMouseEnter={(e) => this.setCurrGame(e, index)}
+                  gap={(index === this.state.currGame && infoBox)}
+                />
+              </Link>
             )
           })}
         </ul>
