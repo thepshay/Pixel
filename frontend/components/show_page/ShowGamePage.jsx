@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutSection from './AboutSection';
 import GameDisplay from './GameDisplay';
 
 class ShowGame extends React.Component {
@@ -21,6 +22,9 @@ class ShowGame extends React.Component {
           <h1 className='game-title'>{game.title}</h1>
           <GameDisplay 
             game={game}
+          />
+          <AboutSection 
+            game={game}  
           />
         </div>
       </div>
