@@ -87,9 +87,8 @@ tf2 = Game.create({
   King of the Hill and more."
 })
 
-temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
-tf2.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
-
+tf2_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/tf2/tf2_feature.jpg')
+tf2.feature.attach(io: tf2_feature, filename: 'tf2_feature.jpg')
 
 tf2_header = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/tf2/tf2_header.jpg')
 tf2.header.attach(io: tf2_header, filename: 'tf2_header.jpg')
@@ -136,8 +135,8 @@ sd = Game.create({
   Dogs' Hong Kong is the ultimate playground."
 })
 
-temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
-sd.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+sd_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/sd/sd_feature.jpg')
+sd.feature.attach(io: sd_feature, filename: 'sd_feature.jpg')
 
 sd_header = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/sd/sd_header.jpg')
 sd.header.attach(io: sd_header, filename: 'sd_header.jpg')
@@ -208,8 +207,8 @@ p4g = Game.create({
   Persona 4 Golden promises meaningful bonds and experiences shared together with friends."
 })
 
-temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
-p4g.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+p4g_feature= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/p4g/p4g_feature.jpg')
+p4g.feature.attach(io: p4g_feature, filename: 'p4g_feature.jpg')
 
 p4g_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/p4g/p4g_header.jpg')
 p4g.header.attach(io: p4g_header, filename: 'p4g_header.jpg')
@@ -336,8 +335,8 @@ mgrr = Game.create({
   a beautifully-realised HD environment."
 })
 
-temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
-mgrr.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+mgrr_feature= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mgrr/mgrr_feature.jpg')
+mgrr.feature.attach(io: mgrr_feature, filename: 'mgrr_feature.jpg')
 
 mgrr_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mgrr/mgrr_header.jpg')
 mgrr.header.attach(io: mgrr_header, filename: 'mgrr_header.jpg')
@@ -409,8 +408,8 @@ dc = Game.create({
   etc.) and an old-school MetroidVania (Castlevania: SotN and its ilk)."
 })
 
-temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
-dc.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+dc_feature= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/dc/dc_feature.jpg')
+dc.feature.attach(io: dc_feature, filename: 'dc_feature.jpg')
 
 dc_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/dc/dc_header.jpg')
 dc.header.attach(io: dc_header, filename: 'dc_header.jpg')
@@ -448,8 +447,8 @@ mhr = Game.create({
   additional visual and performance enhancing optimizations."
 })
 
-temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
-mhr.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+mhr_feature= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mhr/mhr_feature.jpg')
+mhr.feature.attach(io: mhr_feature, filename: 'mhr_feature.jpg')
 
 mhr_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mhr/mhr_header.jpg')
 mhr.header.attach(io: mhr_header, filename: 'mhr_header.jpg')
@@ -485,8 +484,8 @@ w3 = Game.create({
   passes, and forgotten caverns to explore."
 })
 
-temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
-w3.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+w3_feature= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/w3/w3_feature.jpg')
+w3.feature.attach(io: w3_feature, filename: 'w3_feature.jpg')
 
 w3_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/w3/w3_header.jpg')
 w3.header.attach(io: w3_header, filename: 'w3_header.jpg')
@@ -568,8 +567,8 @@ sekiro = Game.create({
   to regain your honor, not even death itself."
 })
 
-temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
-sekiro.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+sekiro_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/sekiro/sekiro_feature.jpg')
+sekiro.feature.attach(io: sekiro_feature, filename: 'sekiro_feature.jpg')
 
 sekiro_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/sekiro/sekiro_header.jpg')
 sekiro.header.attach(io: sekiro_header, filename: 'sekiro_header.jpg')
@@ -609,9 +608,8 @@ bio = Game.create({
   surviving the threats of the air-city and uncovering its dark secret."
 })
 
-temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
-bio.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
-
+bio_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/bio/bio_feature.jpg')
+bio.feature.attach(io: bio_feature, filename: 'bio_feature.jpg')
 
 bio_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/bio/bio_header.jpg')
 bio.header.attach(io: bio_header, filename: 'bio_header.jpg')
@@ -652,8 +650,8 @@ ttm = Game.create({
   old man chose his dying wish to be what it is."
 })
 
-temp_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/placeholder.jpg')
-ttm.feature.attach(io: temp_feature, filename: 'temp_feature.jpg')
+ttm_feature = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/ttm/ttm_feature.jpg')
+ttm.feature.attach(io: ttm_feature, filename: 'ttm_feature.jpg')
 
 ttm_header= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/ttm/ttm_header.jpg')
 ttm.header.attach(io: ttm_header, filename: 'ttm_header.jpg')
