@@ -57,7 +57,7 @@ class Carousel extends React.Component {
   render() {
     const {games, className, itemClassName, title, displayGameId} = this.props
     
-    if (!games[0]) {
+    if (!games || !games[0]) {
       return null
     }
 
