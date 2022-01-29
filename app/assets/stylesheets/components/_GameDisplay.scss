@@ -1,0 +1,29 @@
+.game-display {
+  width: 940px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  div.img-container {
+    width: 600px;
+    
+    img.main-img {
+      width: 100%;
+      height: auto;
+    }
+    ul.screenshot-list {
+      display: flex;
+      flex-direction: row;
+
+      
+      img.screenshot-img {
+        width: calc(100% - 2px);
+        height: auto;
+        margin: 2px;
+
+      }
+
+
+    }
+  }
+}

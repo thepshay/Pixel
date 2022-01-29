@@ -16,11 +16,13 @@ class ShowGame extends React.Component {
 
 
     return (
-      <div>
-        <h1>{game.title}</h1>
-        <GameDisplay 
-          game={game}
-        />
+      <div className='show-page'>
+        <div className='show-main-content'>
+          <h1 className='game-title'>{game.title}</h1>
+          <GameDisplay 
+            game={game}
+          />
+        </div>
       </div>
     )
   }

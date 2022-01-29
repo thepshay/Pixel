@@ -1,0 +1,16 @@
+div.show-page {
+  width: 100%;
+
+
+  div.show-main-content {
+    width: fit-content;
+    margin: 0 auto;
+
+    h1.game-title {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: $lightestGray;
+    }
+  }
+}

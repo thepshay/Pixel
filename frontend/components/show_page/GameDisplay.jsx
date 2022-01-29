@@ -9,22 +9,24 @@ class GameDisplay extends React.Component {
     return (
       <div className='game-display'>
         
-        <img className='main-img' src={game.photoUrls[0]}/>
-        <ul className='screenshot-list'>
-          {game.photoUrls.map((url, index) => {
-            return (
-              <li key={index}>
-                <img 
-                  className="screenshot-img"
-                  src={url}
-                />
-              </li>
-            )
-          })}
-        </ul>
-        <GameInfo 
+        <div className='img-container'>
+          <img className='main-img' src={game.photoUrls[0]}/>
+          <ul className='screenshot-list'>
+            {game.photoUrls.map((url, index) => {
+              return (
+                <li key={index}>
+                  <img 
+                    className="screenshot-img"
+                    src={url}
+                  />
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+        {/* <GameInfo 
           game={game}
-        />
+        /> */}
       </div>
     )
   }

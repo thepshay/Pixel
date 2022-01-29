@@ -1,6 +1,6 @@
 import { connect, connectAdvanced } from "react-redux";
 import { fetchGame } from "../../actions/game_actions";
-import ShowGame from './ShowGame'
+import ShowGamePage from './ShowGamePage'
 
 const mapStateToProps= (state, ownProps) => {
   return {
@@ -15,4 +15,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ShowGame)
+export default connect(mapStateToProps, mapDispatchToProps)(ShowGamePage)
