@@ -9,4 +9,14 @@ div.genre-page {
     align-items: center;
     width: fit-content;
   }
+
+  div.genre-carousel {
+    margin-bottom: 100px;
+    height: calc(353px + 15px + 2.5rem);
+
+    h1.title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+  }
 }

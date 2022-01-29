@@ -39,8 +39,6 @@ class GameList extends React.Component {
         </ul>
     )
 
-    console.log(infoBox)
-
     return (
       <div className={className}>
         <div className='game-list-header'>
@@ -50,7 +48,7 @@ class GameList extends React.Component {
           {games.map((game, index) => {
             return (
               <GameListItem 
-                className={(index === this.state.currGame) ? 'game-list-item active' : 'game-list-item'}
+                className={(index === this.state.currGame && infoBox) ? 'game-list-item active' : 'game-list-item'}
                 game={game} 
                 key={game.id} 
                 onMouseEnter={(e) => this.setCurrGame(e, index)}
