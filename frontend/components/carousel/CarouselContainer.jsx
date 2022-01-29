@@ -14,6 +14,7 @@ const mapStateToProps = (state, ownProps) => {
     className: ownProps.className,
     itemClassName: ownProps.itemClassName,
     title: ownProps.title,
+    source: ownProps.source
   }
 }
 

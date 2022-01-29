@@ -20,7 +20,7 @@ class GameList extends React.Component {
   }
 
   render() {
-    const { className, games, infoBox } = this.props;
+    const { className, games, infoBox, source } = this.props;
     
     if (!games[0]) {
       return null
@@ -48,7 +48,7 @@ class GameList extends React.Component {
         <ul>
           {games.map((game, index) => {
             return (
-              <Link to={`game/${game.id}`}>
+              <Link to={source === 'home' ? `game/${game.id}` : `../game/${game.id}`}>
                 <GameListItem 
                   className={(index === this.state.currGame && infoBox) ? 'game-list-item active' : 'game-list-item'}
                   game={game} 

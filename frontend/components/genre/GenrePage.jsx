@@ -24,11 +24,13 @@ class GenrePage extends React.Component {
           className={'carousel genre-carousel'}
           itemClassName={'carousel-item'}
           displayGameId={genreGameId.slice(0, 4)}
+          source={'genre'}
         />
         <GameListContainer 
           className={'game-list home-game-list'}
           displayGameId={ genreGameId.slice(4) }
           infoBox={false}
+          source={'genre'}
         />
       </div>
     )
@@ -40,6 +42,7 @@ class GenrePage extends React.Component {
           className={'carousel genre-carousel'}
           itemClassName={'carousel-item'}
           displayGameId={genreGameId}
+          source={'genre'}
         />
       </div>
     )

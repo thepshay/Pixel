@@ -55,9 +55,12 @@ class Carousel extends React.Component {
   }
 
   render() {
-    const {games, className, itemClassName, title, displayGameId} = this.props
+    const {games, className, itemClassName, title, source} = this.props
     
-    if (!games || !games[0]) {
+    console.log(games)
+
+    const filled = games.some((ele) => !ele)
+    if (!games || filled) {
       return null
     }
 
@@ -71,7 +74,7 @@ class Carousel extends React.Component {
         {games.map((game, index) => {
           return (
             <div key={game.id} className={index === this.state.currPos ? `${itemClassName} active` : `${itemClassName}`}>
-                <Link to={`game/${game.id}`}>
+                <Link to={source === 'home' ? `game/${game.id}` : `../game/${game.id}`}>
                   <CarouselGameItem key={game.id} game={game}/>
                 </Link>
             </div> 

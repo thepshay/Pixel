@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     games: gameListGames,
     className: ownProps.className,
-    infoBox: ownProps.infoBox
+    infoBox: ownProps.infoBox,
+    source: ownProps.source
   }
 }
 
