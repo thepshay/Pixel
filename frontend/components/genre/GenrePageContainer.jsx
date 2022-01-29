@@ -5,8 +5,15 @@ import {fetchAllGames} from '../../actions/game_actions'
 const mapStateToProps = (state, ownProps) => {
   const genre = ownProps.match.params.genreName;
 
+  const toTitle = (str) => {
+    return str.split('-').map(word => {
+      return word.toUpperCase();
+    }).join(' ')
+  }
+
   return {
-    genreId: state.entities.genre[genre],
+    genre: toTitle(genre),
+    genreGameId: state.entities.genre[genre],
     games: state.entities.games
   }
 }

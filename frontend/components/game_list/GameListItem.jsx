@@ -16,7 +16,6 @@ class GameListItem extends React.Component {
   render() {
     const {game, className, gap} = this.props;
 
-    console.log(gap)
     return (
       <li 
         className={className}
@@ -25,7 +24,7 @@ class GameListItem extends React.Component {
         <img className='header-img' src={game.headerUrl} alt={`${game.title}'s feature image`}/>
         <div className='list-info-container'>
           <h3 className='game-title'>{game.title}</h3>
-          <p className='windows'><i class="fab fa-windows"></i></p>
+          <p className='windows'><i className="fab fa-windows"></i></p>
           <p className='game-genre'>{`${this.changeToTitle(game.genre_1)}, ${this.changeToTitle(game.genre_2)}`}</p>
           <p className="price-tag">{`$${game.price}`}</p>
         </div>

@@ -19,11 +19,27 @@ class GameList extends React.Component {
   }
 
   render() {
-    const { className, games } = this.props;
+    const { className, games, infoBox } = this.props;
     
     if (!games[0]) {
       return null
     }
+
+    const infoDisplayShow = (
+      <ul>
+          {games.map((game, index) => {
+            return (
+              <InfoDisplay 
+                className={(index === this.state.currGame) ? 'info-display active' : 'info-display'}
+                game={game} 
+                key={game.id} 
+              />
+            )
+          })}
+        </ul>
+    )
+
+    console.log(infoBox)
 
     return (
       <div className={className}>
@@ -38,22 +54,13 @@ class GameList extends React.Component {
                 game={game} 
                 key={game.id} 
                 onMouseEnter={(e) => this.setCurrGame(e, index)}
-                gap={index === this.state.currGame}
+                gap={(index === this.state.currGame && infoBox)}
               />
             )
           })}
         </ul>
-        <ul>
-          {games.map((game, index) => {
-            return (
-              <InfoDisplay 
-                className={(index === this.state.currGame) ? 'info-display active' : 'info-display'}
-                game={game} 
-                key={game.id} 
-              />
-            )
-          })}
-        </ul>
+
+        {infoBox && infoDisplayShow}
       </div>
     )
   }

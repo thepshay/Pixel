@@ -10,17 +10,18 @@ class HomePage extends React.Component {
     return (
       <div className='home-page-container'>
 
-        <div className='main'>
+        <div className='home-main-content'>
           <GenreSidebarContainer />
           <CarouselContainer 
             title={'FEATURE & RECOMMENDED'}
             className={'carousel home-carousel'}
-            itemClassName={'home-carousel-item'}
+            itemClassName={'carousel-item'}
             displayGameId={[1,4,13,7,9,17,6]}
           />
           <GameListContainer 
             className={'game-list home-game-list'}
             displayGameId={ [2,3,5,8,10,11,12,14,15,16] }
+            infoBox={true}
           />
         </div>
         <Footer />

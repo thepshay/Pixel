@@ -1,4 +1,6 @@
 import React from "react";
+import CarouselContainer from '../carousel/CarouselContainer';
+import GameListContainer from '../game_list/GameListContainer';
 
 class GenrePage extends React.Component {
 
@@ -9,20 +11,42 @@ class GenrePage extends React.Component {
   }
 
   render() {
-    const { genreId, games } = this.props;
+    const { genre, genreGameId, games } = this.props;
     
-    if (!genreId) {
+    if (!genreGameId) {
       return null;
     }
-    console.log(genreId)
+    
+    const moreThanFourGames = (
+      <div className="genre-main-content">
+        <CarouselContainer 
+          title={genre}
+          className={'carousel genre-carousel'}
+          itemClassName={'carousel-item'}
+          displayGameId={genreGameId.slice(0, 4)}
+        />
+        <GameListContainer 
+          className={'game-list home-game-list'}
+          displayGameId={ genreGameId.slice(4) }
+          infoBox={false}
+        />
+      </div>
+    )
+
+    const fourOrLess = (
+      <div className="genre-main-content">
+        <CarouselContainer 
+          title={genre}
+          className={'carousel genre-carousel'}
+          itemClassName={'carousel-item'}
+          displayGameId={genreGameId}
+        />
+      </div>
+    )
 
     return (
-      <div>
-        <ul>
-          {genreId.map((id, index) => {
-            return <li key={index}>{games[id].title}</li>
-          })}
-        </ul>
+      <div className="genre-page">
+        {genreGameId.length > 4 ? moreThanFourGames : fourOrLess}
       </div>
     )
   }

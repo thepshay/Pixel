@@ -1,16 +1,12 @@
-div.home-page-container {
+div.genre-page {
   width: 100%;
 
-
-  .home-main-content {
+  div.genre-main-content {
     margin: 0 auto;
     position: relative;    
     display: flex;
     flex-direction: column;
     align-items: center;
     width: fit-content;
-  }
-  div.home-game-list {
-    margin-top: 100px;
   }
 }
