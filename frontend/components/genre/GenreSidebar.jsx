@@ -22,6 +22,10 @@ class GenreSidebar extends React.Component {
 
   render() {
     const {genres} = this.props;
+    
+    if (genres.length === 0) {
+      return null;
+    }
 
     return (
       <div className="genre-sidebar">

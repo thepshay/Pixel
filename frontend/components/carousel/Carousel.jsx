@@ -25,7 +25,10 @@ class Carousel extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllGames();
+    const notFilled = this.props.games.some((ele) => !ele)
+    if (notFilled) {
+      this.props.fetchAllGames();
+    }
   }
 
   nextSlide(e) {
@@ -57,8 +60,8 @@ class Carousel extends React.Component {
   render() {
     const {games, className, itemClassName, title, source} = this.props
     
-    const filled = games.some((ele) => !ele)
-    if (!games || filled) {
+    const notFilled = games.some((ele) => !ele)
+    if (!games || notFilled) {
       return null
     }
 

@@ -12,7 +12,10 @@ class GameList extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllGames();
+    const notFilled = this.props.games.some((ele) => !ele)
+    if (notFilled) {
+      this.props.fetchAllGames();
+    }
   }
 
   setCurrGame(e, game) {
@@ -21,7 +24,7 @@ class GameList extends React.Component {
 
   render() {
     const { className, games, infoBox, source } = this.props;
-    
+
     if (!games[0]) {
       return null
     }
