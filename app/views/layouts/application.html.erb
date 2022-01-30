@@ -9,12 +9,10 @@
     <%= javascript_include_tag 'application' %>
 
     <!-- if current user exists sends current user to react store -->
-    <% if current_user %>
-      <script>
-        window.currentUser = {
-          'id': "<%= current_user.id %>",
-          'username': "<%= current_user.username %>",
-        }
+    <% if logged_in? %>
+      <script id="bootstrap-current-user" type="text/javascript">
+        window.currentUser = <%= render("api/users/user.json.jbuilder",
+          user: current_user).html_safe %>
       </script>
     <% end %>
 
