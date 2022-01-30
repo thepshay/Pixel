@@ -21,7 +21,7 @@ class App extends React.Component {
             <AuthRoute path="/signup" component={SignupFormContainer} />
             <Route path='/genre/:genreName' component={GenrePageContainer} />
             <Route path='/game/:gameId' component={ShowGameContainer} />
-            <Route exact path='/' component={HomePage}/>
+            {/* <Route exact path='/' component={HomePage}/> */}
             <Redirect to="/" />
           </Switch>
         </HashRouter>

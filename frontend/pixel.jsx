@@ -6,8 +6,8 @@ import configureStore from './store/store';
 // testings
 import * as SessionApiUtil from './util/session_api_util'
 import * as SessionAction from './actions/session_actions'
-
 import * as GameAction from './actions/game_actions'
+import * as CartApiUtil from './util/cart_api_util'
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -35,4 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.fetchAllGames = GameAction.fetchAllGames;
   window.fetchGame = GameAction.fetchGame;
+
+  window.fetchAllCartItems = CartApiUtil.fetchAllCartItems;
+  window.postCartItem = CartApiUtil.postCartItem;
+  window.deleteCartItem = CartApiUtil.deleteCartItem;
 })
