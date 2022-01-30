@@ -18,7 +18,6 @@ class GameDisplay extends React.Component {
 
     return (
       <div className='game-display'>
-        
         <div className='img-container'>
           <img className='main-img' src={game.photoUrls[this.state.currIndex]}/>
           <ul className='screenshot-list'>

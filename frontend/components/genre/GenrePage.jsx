@@ -17,7 +17,7 @@ class GenrePage extends React.Component {
       return null;
     }
     
-    const moreThanFourGames = (
+    const moreThanFourGames = () => (
       <div className="genre-main-content">
         <CarouselContainer 
           title={genre}
@@ -35,7 +35,7 @@ class GenrePage extends React.Component {
       </div>
     )
 
-    const fourOrLess = (
+    const fourOrLess = () => (
       <div className="genre-main-content">
         <CarouselContainer 
           title={genre}
@@ -49,7 +49,7 @@ class GenrePage extends React.Component {
 
     return (
       <div className="genre-page">
-        {genreGameId.length > 4 ? moreThanFourGames : fourOrLess}
+        {genreGameId.length > 4 ? moreThanFourGames() : fourOrLess()}
       </div>
     )
   }

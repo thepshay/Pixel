@@ -60,6 +60,7 @@ class Carousel extends React.Component {
   render() {
     const {games, className, itemClassName, title, source} = this.props
     
+    
     const notFilled = games.some((ele) => !ele)
     if (!games || notFilled) {
       return null

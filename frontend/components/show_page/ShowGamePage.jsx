@@ -11,10 +11,9 @@ class ShowGame extends React.Component {
   render() {
     const { game } = this.props;
 
-    if (!game.extended_about) {
+    if (!game) {
       return null;
     }
-
 
     return (
       <div className='show-page'>

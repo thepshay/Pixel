@@ -2,14 +2,20 @@ import React from "react";
 
 class AboutSection extends React.Component {
 
-  spaceText = (text) => {
-    return text.split('\n');
-  }
-
+  
   render() {
-    const {game} = this.props;
 
-    const paragraphs = this.spaceText(game.extended_about)
+    const {game} = this.props;
+    
+    if (!game.extended_about) {
+      return null
+    }
+    
+    const spaceText = (text) => {
+      return text.split('\n');
+    }
+
+    const paragraphs = spaceText(game.extended_about)
 
     return (
       <div className="about-container">
