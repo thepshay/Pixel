@@ -1,5 +1,6 @@
 class CartItem < ApplicationRecord
-
-  belongs_to :user, foreign_key: :user_id, class_name: :User
-  belongs_to :game, foreign_key: :game_id, class_name: :Game
+  validates :user_id, :game_id, presence: true
+  validates :user_id, uniqueness: {scope: :game_id, message: 'Can only add one game to cart'}
+  belongs_to :user
+  belongs_to :game
 end

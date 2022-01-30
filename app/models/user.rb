@@ -8,7 +8,7 @@ class User < ApplicationRecord
   attr_reader :password
 
   has_one_attached :photo
-  has_many :cart_items, foreign_key: :user_id, class_name: :CartItem
+  has_many :cart_items
   has_many :cart_games, through: :cart_items, source: :game
 
   def self.find_by_credentials(username, password)
