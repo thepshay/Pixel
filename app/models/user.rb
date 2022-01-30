@@ -4,8 +4,12 @@ class User < ApplicationRecord
   validates :password, length: {minimum: 6}, allow_nil: true
 
   after_initialize :ensure_session_token 
-
+  
   attr_reader :password
+
+  has_one_attached :photo
+  has_many :cart_items, foreign_key: :user_id, class_name: :CartItem
+  has_many :cart_games, through: :cart_items, source: :game
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
@@ -35,6 +39,4 @@ class User < ApplicationRecord
   def ensure_session_token 
     self.session_token ||= SecureRandom::urlsafe_base64
   end
-
-  has_one_attached :photo
 end
