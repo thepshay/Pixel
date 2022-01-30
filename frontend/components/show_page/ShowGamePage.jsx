@@ -11,7 +11,7 @@ class ShowGame extends React.Component {
   render() {
     const { game } = this.props;
 
-    if (!game) {
+    if (!game.extended_about) {
       return null;
     }
 

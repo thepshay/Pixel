@@ -30,7 +30,7 @@ class GenreSidebar extends React.Component {
         <ul className="genre-list">
           {genres.map((genre, index) => {
             return (
-              <li className="genre-name">
+              <li key={index} className="genre-name">
                 <Link to={`/genre/${genre}`}>{this.changeToTitle(genre)}</Link>
               </li>
             )

@@ -48,11 +48,11 @@ class GameList extends React.Component {
         <ul>
           {games.map((game, index) => {
             return (
-              <Link to={source === 'home' ? `game/${game.id}` : `../game/${game.id}`}>
+              <Link to={source === 'home' ? `game/${game.id}` : `../game/${game.id}`} key={game.id} >
                 <GameListItem 
                   className={(index === this.state.currGame && infoBox) ? 'game-list-item active' : 'game-list-item'}
                   game={game} 
-                  key={game.id} 
+                  
                   onMouseEnter={(e) => this.setCurrGame(e, index)}
                   gap={(index === this.state.currGame && infoBox)}
                 />

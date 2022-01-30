@@ -57,8 +57,6 @@ class Carousel extends React.Component {
   render() {
     const {games, className, itemClassName, title, source} = this.props
     
-    console.log(games)
-
     const filled = games.some((ele) => !ele)
     if (!games || filled) {
       return null

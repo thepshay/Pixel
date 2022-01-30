@@ -11,7 +11,6 @@ class GameDisplay extends React.Component {
 
   changeDisplayIndex(e, index) {
     this.setState({currIndex: index})
-    console.log(this.state.currIndex)
   }
 
   render() {
