@@ -27,6 +27,7 @@ class Carousel extends React.Component {
   componentDidMount() {
     const notFilled = this.props.games.some((ele) => !ele)
     if (notFilled) {
+      
       this.props.fetchAllGames();
     }
   }

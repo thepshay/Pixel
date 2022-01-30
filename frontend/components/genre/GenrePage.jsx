@@ -5,7 +5,7 @@ import GameListContainer from '../game_list/GameListContainer';
 class GenrePage extends React.Component {
 
   componentDidMount() {
-    if (!this.props.genreId) {
+    if (!this.props.genreGameId) {
       this.props.fetchAllGames()
     }
   }

@@ -5,6 +5,7 @@ import GameDisplay from './GameDisplay';
 class ShowGame extends React.Component {
 
   componentDidMount() {
+    
     this.props.fetchGame(this.props.gameId)
   }
 
