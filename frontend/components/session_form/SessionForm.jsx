@@ -11,6 +11,14 @@ class SessionForm extends React.Component{
     }
   }
 
+  componentDidMount() {
+    document.body.style = 'background: rgb(33, 36, 41);';
+  }
+
+  componentWillUnmount() {
+    document.body.style = 'background: #2A475E;';
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.setState({errors: ''});
@@ -30,11 +38,11 @@ class SessionForm extends React.Component{
   render() {
     const userForm = this.props.formType === 'signup' ? {
       title: 'CREATE YOUR ACCOUNT',
-      className: 'signup-container',
+      className: 'session-form signup-container',
       submitText: 'Sign Up'
     } : {
       title: 'SIGN IN',
-      className: 'login-container',
+      className: 'session-form login-container',
       submitText: 'Sign In'
     }
 

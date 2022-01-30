@@ -1,0 +1,15 @@
+div.session-form {
+
+  input {
+    margin-top: 5px;
+    background-color: $darkGray;
+    border: none;
+    height: 2rem;
+    border-radius: 5px;
+    color: $lightestGray;
+
+    &.focus {
+      border: 2px solid $lightestGray;
+    }
+  }
+}

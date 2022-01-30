@@ -26,7 +26,6 @@ class HomePage extends React.Component {
             source={'home'}
           />
         </div>
-        <Footer />
       </div>
     )
   }

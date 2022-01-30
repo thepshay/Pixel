@@ -25,6 +25,7 @@ class App extends React.Component {
             <Redirect to="/" />
           </Switch>
         </HashRouter>
+        <Footer />
       </div>
     )
   }
