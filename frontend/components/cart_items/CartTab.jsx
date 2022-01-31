@@ -8,10 +8,9 @@ class CartTab extends React.Component {
 
   render() {
     const { numItems } = this.props;
-
     return (
       <div className="cart-tab">
-        CART {numItems}
+        CART ({numItems})
       </div>
     )
   }

@@ -2,6 +2,7 @@ import React from 'react';
 import AboutSection from './AboutSection';
 import GameDisplay from './GameDisplay';
 import AddToCartDisplay from './AddToCartDisplay';
+import CartTabContainer from '../cart_items/CartTabContainer';
 
 class ShowGame extends React.Component {
 
@@ -20,7 +21,10 @@ class ShowGame extends React.Component {
     return (
       <div className='show-page'>
         <div className='show-main-content'>
-          <h1 className='game-title'>{game.title}</h1>
+          <div className="header-container">
+            <h1 className="title">{game.title}</h1>
+            <CartTabContainer />
+          </div>
           <GameDisplay 
             game={game}
           />

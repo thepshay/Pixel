@@ -6,11 +6,19 @@ div.show-page {
     width: fit-content;
     margin: 0 auto;
 
-    h1.game-title {
+    div.header-container {
       margin-top: 20px;
       margin-bottom: 10px;
-      font-size: 1.5rem;
-      color: $lightestGray;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      h1.title {
+        font-size: 1.5rem;
+        color: $lightestGray;
+      }
     }
+
   }
 }
