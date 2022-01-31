@@ -6,7 +6,7 @@ import AddToCartDisplay from './AddToCartDisplay';
 class ShowGame extends React.Component {
 
   componentDidMount() {
-    
+    window.scrollTo(0,0);
     this.props.fetchGame(this.props.gameId)
   }
 

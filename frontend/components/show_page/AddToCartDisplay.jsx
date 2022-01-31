@@ -17,7 +17,7 @@ class AddToCartDisplay extends React.Component {
     console.log(createCartItem)
     return (
       <div className="add-to-cart-container">
-        <h2>{`Buy ${game.title}`}</h2>
+        <h2 className="title">{`Buy ${game.title}`}</h2>
         <p className='windows'><i className="fab fa-windows"></i></p>
         <div className="action-container">
           <div className="price">{`$${game.price}`}</div>

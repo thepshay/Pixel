@@ -1,0 +1,51 @@
+div.add-to-cart-container {
+  margin-top: 30px;
+  width: 600px;
+  height: 70px;
+  border-radius: 5px;
+  background: linear-gradient(to right, rgba(200,200,200, 0.15) 20%, rgba(200,200,200, 0.4) 80%);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: $lightestGray;
+  padding: 15px;
+
+  h2.title {
+
+  }
+
+  p.windows {
+
+  }
+
+  div.action-container {
+    background: black;
+    position: absolute;
+    bottom: -15px;
+    right: 40px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+    
+    div.price {
+      padding: 11px 10px;
+      font-size: .9rem;
+    }
+
+    button.add-to-cart-btn {
+      color: $lightestGray;
+      background: linear-gradient(to right, hsl(79, 77%, 35%) 1%, hsl(79, 77%, 30%) 80%);
+      margin: 2px;
+      border: none;
+      cursor: pointer;
+      padding: 0 15px;
+      font-weight: bold;
+
+      &:hover {
+        background: linear-gradient(to right, hsl(79, 77%, 42%) 5%, hsl(79, 77%, 36%) 80%);
+      }
+    }
+  }
+}
