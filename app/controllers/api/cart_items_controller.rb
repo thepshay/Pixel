@@ -4,7 +4,7 @@ class Api::CartItemsController < ApplicationController
       @cart_items = current_user.cart_items
       render :index
     else 
-      render json: ['No user logged in']
+      render json: ['No user logged in'], status: 422
     end
   end
 
@@ -13,7 +13,7 @@ class Api::CartItemsController < ApplicationController
     if @cart_item.save
       render :show
     else 
-      render json: @cart_item.errors.full_messages
+      render json: @cart_item.errors.full_messages, status: 422
     end
   end
 
@@ -36,7 +36,7 @@ class Api::CartItemsController < ApplicationController
     if @items.destroy_all 
       render json: {}
     else 
-      render json: ['Unable to remove all items']
+      render json: ['Unable to remove all items'], status: 422
     end
   end
 
@@ -46,7 +46,7 @@ class Api::CartItemsController < ApplicationController
       @cart_items = current_user.cart_items
       render :index
     else
-      render json: ['Unable to delete item']
+      render json: ['Unable to delete item'], status: 422
     end
   end
 

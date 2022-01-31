@@ -1,6 +1,7 @@
 import React from 'react';
 import AboutSection from './AboutSection';
 import GameDisplay from './GameDisplay';
+import AddToCartDisplay from './AddToCartDisplay';
 
 class ShowGame extends React.Component {
 
@@ -10,7 +11,7 @@ class ShowGame extends React.Component {
   }
 
   render() {
-    const { game } = this.props;
+    const { game, createCartItem, currentUser } = this.props;
 
     if (!game) {
       return null;
@@ -22,6 +23,11 @@ class ShowGame extends React.Component {
           <h1 className='game-title'>{game.title}</h1>
           <GameDisplay 
             game={game}
+          />
+          <AddToCartDisplay
+            game={game}
+            createCartItem={createCartItem}
+            currentUser={currentUser}
           />
           <AboutSection 
             game={game}  

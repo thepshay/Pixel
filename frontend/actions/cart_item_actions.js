@@ -19,13 +19,6 @@ const receiveCartItem = (cartItem) => {
   }
 }
 
-const removeCartItem = (cartId) => {
-  return {
-    type: REMOVE_CART_ITEM,
-    cartId
-  }
-}
-
 const receiveCartErrors = (errors) => {
   return {
     type: RECEIVE_CART_ITEM_ERRORS,
