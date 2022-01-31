@@ -9,7 +9,6 @@ class User < ApplicationRecord
 
   has_one_attached :photo
   has_many :cart_items
-  has_many :cart_games, through: :cart_items, source: :game
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
