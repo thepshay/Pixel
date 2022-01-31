@@ -3,7 +3,7 @@ div.add-to-cart-container {
   width: 600px;
   height: 70px;
   border-radius: 5px;
-  background: linear-gradient(to right, rgba(200,200,200, 0.15) 20%, rgba(200,200,200, 0.4) 80%);
+  background: linear-gradient(to right, rgba(200,200,200, 0.20) 20%, rgba(200,200,200, 0.35) 80%);
   position: relative;
   display: flex;
   flex-direction: row;
@@ -13,7 +13,8 @@ div.add-to-cart-container {
   padding: 15px;
 
   h2.title {
-
+    font-size: 1.3rem;
+    font-weight: bold;
   }
 
   p.windows {

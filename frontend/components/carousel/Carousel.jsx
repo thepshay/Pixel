@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CartTabContainer from "../cart_items/CartTabContainer";
 
 import CarouselGameItem from './CarouselGameItem'
 
@@ -70,7 +71,10 @@ class Carousel extends React.Component {
     return (
       <div className={className}>
       
-        <h1 className="title">{title}</h1>
+        <div className="header-container">
+          <h1 className="title">{title}</h1>
+          <CartTabContainer />
+        </div>
         <button className="arrow left-btn" onClick={(e) => this.prevSlide(e)}>{'<'}</button>
         <button className="arrow right-btn" onClick={(e) => this.nextSlide(e)}>{'>'}</button>
 
