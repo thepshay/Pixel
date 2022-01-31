@@ -1,7 +1,9 @@
 import { RECEIVE_ALL_CART_ITEMS, RECEIVE_CART_ITEM } from "../actions/cart_item_actions";
+import { LOGOUT_CURRENT_USER } from "../actions/session_actions";
 
 const cartItemReducer = (state={}, action) => {
   Object.freeze(state);
+  console.log(action.cartItems)
 
   switch(action.type) {
     case RECEIVE_ALL_CART_ITEMS:
@@ -11,6 +13,8 @@ const cartItemReducer = (state={}, action) => {
         ...state,
         [action.cartItem.cart_id]: action.cartItem
       }
+    case LOGOUT_CURRENT_USER:
+      return {};
     default:
       return state;
   }

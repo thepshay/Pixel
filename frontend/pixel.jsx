@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchAllGames = GameAction.fetchAllGames;
   window.fetchGame = GameAction.fetchGame;
 
-  window.fetchAllCartItems = CartApiUtil.fetchAllCartItems;
-  window.postCartItem = CartApiUtil.postCartItem;
-  window.deleteCartItem = CartApiUtil.deleteCartItem;
+  // window.fetchAllCartItems = CartApiUtil.fetchAllCartItems;
+  // window.postCartItem = CartApiUtil.postCartItem;
+  // window.deleteCartItem = CartApiUtil.deleteCartItem;
 
   window.fetchAllCartItems = CartAction.fetchAllCartItems;
   window.createCartItem = CartAction.createCartItem;
-  window.deleteReport = CartAction.deleteReport;
+  window.deleteCartItem = CartAction.deleteCartItem;
 })
