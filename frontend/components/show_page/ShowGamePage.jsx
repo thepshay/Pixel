@@ -18,11 +18,7 @@ class ShowGame extends React.Component {
 
   render() {
     const { game, createCartItem, currentUser, cart } = this.props;
-
-
-    if (!game) {
-      return null;
-    }
+    if (!game) {return null;}
 
     const alreadyPurchased = Boolean(cart[game.id])
 

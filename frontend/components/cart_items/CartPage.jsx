@@ -1,5 +1,5 @@
 import React from "react";
-import CartListItem from "./CartListItem";
+import Cart from "./Cart";
 
 class CartPage extends React.Component {
 
@@ -9,28 +9,42 @@ class CartPage extends React.Component {
     } 
   }
 
+  calcTotal(array) {
+    let sum = 0;
+    array.forEach(item => {
+      sum += item.price
+    });
+    return sum
+  }
+
   render() {
     const {cart, deleteCartItem} = this.props
 
-    if (cart.length === 0) {
-      return null;
-    }
 
     //Sort the cart to display in order of added to cart. 
     const sortedCart = cart.sort((a,b) => (a.cart_id > b.cart_id) ? 1 : -1)
-
     return (
-      <ul>
-        {sortedCart.map((item, index) => {
-          return (
-            <CartListItem 
-              key={index} 
-              item={item} 
-              deleteCartItem={deleteCartItem}
-            />
-          )
-        })}
-      </ul>
+      <div className="cart-main-content">
+        <h1 className="title">YOUR SHOPPING CART</h1>
+        {cart.length > 0 &&
+          <Cart 
+            cart={sortedCart}
+            deleteCartItem={deleteCartItem}
+          />
+        }
+        <div className="cart-summary">
+          <div className="estimate">
+            <div>Estimated total</div>
+            <div>{`$${this.calcTotal(cart)}`}</div>
+          </div>
+          <button className="purchase-btn" onClick={() => deleteCartItem('all')}>
+            Purchase for myself
+          </button>
+        </div>
+        {cart.length > 0 &&
+          <div className="remove-all" onClick={() => deleteCartItem('all')}>Remove all items</div>
+        }
+      </div>
     )
   }
 }
