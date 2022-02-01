@@ -10,19 +10,25 @@ class CartPage extends React.Component {
   }
 
   render() {
-    const {cart} = this.props
+    const {cart, deleteCartItem} = this.props
 
     if (cart.length === 0) {
       return null;
     }
 
     //Sort the cart to display in order of added to cart. 
-    const sortedGames = cart.sort((a,b) => (a.cart_id > b.cart_id) ? 1 : -1)
+    const sortedCart = cart.sort((a,b) => (a.cart_id > b.cart_id) ? 1 : -1)
 
     return (
       <ul>
-        {sortedGames.map((game, index) => {
-          return <li key={index}>{game.title}</li>
+        {sortedCart.map((item, index) => {
+          return (
+            <CartListItem 
+              key={index} 
+              item={item} 
+              deleteCartItem={deleteCartItem}
+            />
+          )
         })}
       </ul>
     )
