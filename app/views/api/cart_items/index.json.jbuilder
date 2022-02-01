@@ -1,6 +1,6 @@
 @cart_items.each do |item|
-  json.set! item.id do 
-    game = item.game
+  game = item.game
+  json.set! game.id do 
     json.cart_id item.id
     json.game_id game.id
     json.title game.title

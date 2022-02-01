@@ -10,7 +10,7 @@ const cartItemReducer = (state={}, action) => {
     case RECEIVE_CART_ITEM:
       return {
         ...state,
-        [action.cartItem.cart_id]: action.cartItem
+        [action.cartItem.game_id]: action.cartItem
       }
     case LOGOUT_CURRENT_USER:
       return {};
