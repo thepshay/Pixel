@@ -29,8 +29,10 @@ class Carousel extends React.Component {
     const notFilled = this.props.games.some((ele) => !ele)
     if (notFilled) {
       this.props.fetchAllCartItems();
-      this.props.fetchAllGames();
     }
+    if (Object.keys(this.props.cart).length===0) {
+      this.props.fetchAllCartItems();
+    } 
   }
 
   nextSlide(e) {
@@ -61,7 +63,6 @@ class Carousel extends React.Component {
 
   render() {
     const {games, className, itemClassName, title, source, currentUser, cart} = this.props
-    
     
     const notFilled = games.some((ele) => !ele)
     if (!games || notFilled) {
