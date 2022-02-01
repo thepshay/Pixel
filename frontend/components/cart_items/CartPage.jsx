@@ -14,7 +14,7 @@ class CartPage extends React.Component {
     array.forEach(item => {
       sum += item.price
     });
-    return sum
+    return sum.toFixed(2)
   }
 
   continueShopping() {
