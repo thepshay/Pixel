@@ -2,6 +2,11 @@ div.cart-tab {
   color: hsl(79, 77%, 60%);
   margin-right: 15px;
   background: linear-gradient(to right, hsl(79, 77%, 35%) 1%, hsl(79, 77%, 30%) 80%);
-  padding: 4px 20px;
-  font-size: 0.85rem;
+  padding: 5px 20px;
+  font-size: 0.75rem;
+
+  &:hover {
+    color: $darkestGray;
+    background: $forestGreen;
+  }
 }
