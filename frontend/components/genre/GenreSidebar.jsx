@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import { changeToTitle } from '../../util/utilities';
 
 class GenreSidebar extends React.Component {
 
@@ -7,17 +8,6 @@ class GenreSidebar extends React.Component {
     if (this.props.genres.length === 0) {
       this.props.fetchAllGames();
     }
-  }
-
-  changeToTitle(str) {
-    const words = str.split('-');
-    return words.map(word => {
-      return this.capitalize(word)
-    }).join(' ');
-  }
-
-  capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
   render() {
@@ -35,7 +25,7 @@ class GenreSidebar extends React.Component {
           {genres.map((genre, index) => {
             return (
               <li key={index} className="genre-name">
-                <Link to={`/genre/${genre}`}>{this.changeToTitle(genre)}</Link>
+                <Link to={`/genre/${genre}`}>{changeToTitle(genre)}</Link>
               </li>
             )
           })}

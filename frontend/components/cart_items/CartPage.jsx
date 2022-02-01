@@ -1,9 +1,10 @@
 import React from "react";
+import CartListItem from "./CartListItem";
 
 class CartPage extends React.Component {
 
   componentDidMount() {
-    if (!this.props.cart) {
+    if (this.props.cart.length === 0) {
       this.props.fetchAllCartItems();
     } 
   }
@@ -11,7 +12,7 @@ class CartPage extends React.Component {
   render() {
     const {cart} = this.props
 
-    if (!cart) {
+    if (cart.length === 0) {
       return null;
     }
 
