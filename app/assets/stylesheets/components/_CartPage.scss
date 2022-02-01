@@ -37,17 +37,26 @@ div.cart-page {
         button.purchase {
           margin-left: auto;
           font-size: 1rem;
-          background: linear-gradient(to right, hsl(79, 77%, 35%) 1%, hsl(79, 77%, 30%) 60%);
-          color: hsl(79, 77%, 65%);
+          background: $gray;
+          color: $lightestGray;
           border: none;
           padding: 7px 10px;
           border-radius: 2px;
 
-          &:hover {
-            background: linear-gradient(to right, hsl(79, 77%, 30%) 1%, hsl(79, 77%, 30%) 50%);
-            color: $lightestGray
+          &.active {
+            background: linear-gradient(to right, hsl(79, 77%, 35%) 1%, hsl(79, 77%, 30%) 60%);
+            color: hsl(79, 77%, 65%);
+  
+
+            &:hover {
+              background: linear-gradient(to right, hsl(79, 77%, 30%) 1%, hsl(79, 77%, 30%) 50%);
+              color: $lightestGray
+            }
           }
+
         }
+
+
       }
 
     }

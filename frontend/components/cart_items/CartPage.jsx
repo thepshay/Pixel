@@ -39,9 +39,15 @@ class CartPage extends React.Component {
               <div>{`$${this.calcTotal(cart)}`}</div>
             </div>
             <div className="checkout">
-              <button className="purchase" onClick={() => deleteCartItem('all')}>
-                Purchase for myself
-              </button>
+              {cart.length > 0 ? (
+                <button className="purchase active" onClick={() => deleteCartItem('all')}>
+                  Purchase for myself
+                </button>
+              ) : (
+                <button className="purchase ">
+                  Purchase for myself
+                </button>
+              )}
             </div>
           </div>
           {cart.length > 0 &&
