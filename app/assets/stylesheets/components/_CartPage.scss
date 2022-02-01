@@ -8,7 +8,6 @@ div.cart-page {
     width: fit-content;
     padding-right: 350px;
     margin-top: 30px;
-    position: relative;
 
     h1.title {
       font-size: 2rem;
@@ -42,6 +41,7 @@ div.cart-page {
           border: none;
           padding: 7px 10px;
           border-radius: 2px;
+          cursor: pointer;
 
           &.active {
             background: linear-gradient(to right, hsl(79, 77%, 35%) 1%, hsl(79, 77%, 30%) 60%);
@@ -55,24 +55,42 @@ div.cart-page {
           }
 
         }
-
-
       }
-
     }
 
-    div.remove-all {
-      position: absolute;
-      bottom: -30px;
-      right: 362px;
-      cursor: pointer;
-      color: $lightGray;
-      font-size: 0.75rem;
-      text-decoration: underline;
+    div.extra-options {
+      width: 600px;
+      padding: 20px 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
 
-      &:hover {
+      button.continue {
+        font-size: 1rem;
+        background: $blue2;
         color: $lighterBlue;
-        text-decoration: none;
+        border: none;
+        padding: 7px 10px;
+        border-radius: 2px;
+        cursor: pointer;
+
+        &:hover {
+          color:$lightestGray;
+          background-color: hsl(202, 88%, 60%);
+        }
+      }
+
+      div.remove-all {
+        cursor: pointer;
+        color: $lightGray;
+        font-size: 0.75rem;
+        text-decoration: underline;
+
+        &:hover {
+          color: $lighterBlue;
+          text-decoration: none;
+        }
       }
     }
   }

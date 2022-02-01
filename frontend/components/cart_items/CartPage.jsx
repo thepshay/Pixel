@@ -17,6 +17,10 @@ class CartPage extends React.Component {
     return sum
   }
 
+  continueShopping() {
+    this.props.history.push('/');
+  }
+
   render() {
     const {cart, deleteCartItem} = this.props
 
@@ -50,9 +54,17 @@ class CartPage extends React.Component {
               )}
             </div>
           </div>
-          {cart.length > 0 &&
-            <div className="remove-all" onClick={() => deleteCartItem('all')}>Remove all items</div>
-          }
+          <div className="extra-options">
+            <button 
+              className="continue" 
+              onClick={() => this.continueShopping()}
+              >
+                Continue Shopping
+            </button>
+            {cart.length > 0 &&
+              <div className="remove-all" onClick={() => deleteCartItem('all')}>Remove all items</div>
+            }
+          </div>
         </div>
       </div>
     )
