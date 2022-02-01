@@ -60,7 +60,7 @@ class Carousel extends React.Component {
   }
 
   render() {
-    const {games, className, itemClassName, title, source} = this.props
+    const {games, className, itemClassName, title, source, currentUser} = this.props
     
     
     const notFilled = games.some((ele) => !ele)
@@ -68,12 +68,13 @@ class Carousel extends React.Component {
       return null
     }
 
+
     return (
       <div className={className}>
-      
+        
         <div className="header-container">
           <h1 className="title">{title}</h1>
-          <CartTabContainer />
+          {currentUser && <CartTabContainer />}
         </div>
         <button className="arrow left-btn" onClick={(e) => this.prevSlide(e)}>{'<'}</button>
         <button className="arrow right-btn" onClick={(e) => this.nextSlide(e)}>{'>'}</button>

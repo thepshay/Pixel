@@ -11,19 +11,28 @@ class ShowGame extends React.Component {
     this.props.fetchGame(this.props.gameId)
   }
 
+
   render() {
     const { game, createCartItem, currentUser } = this.props;
+    console.log(this.props)
 
     if (!game) {
       return null;
     }
 
+    const action = currentUser ? (
+      () => createCartItem({user_id: currentUser.id, game_id: game.id})
+    ) : (
+      () => this.props.history.push('/login')
+    )
+
+    console.log(currentUser)
     return (
       <div className='show-page'>
         <div className='show-main-content'>
           <div className="header-container">
             <h1 className="title">{game.title}</h1>
-            <CartTabContainer />
+            {currentUser && <CartTabContainer />}
           </div>
           <GameDisplay 
             game={game}
@@ -32,6 +41,7 @@ class ShowGame extends React.Component {
             game={game}
             createCartItem={createCartItem}
             currentUser={currentUser}
+            action={action}
           />
           <AboutSection 
             game={game}  

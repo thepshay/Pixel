@@ -10,6 +10,7 @@ const mapStateToProps = (state, ownProps) => {
   })
 
   return {
+    currentUser: state.session.currentUser,
     games: featuredGames,
     className: ownProps.className,
     itemClassName: ownProps.itemClassName,

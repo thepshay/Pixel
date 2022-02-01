@@ -1,18 +1,24 @@
 import React from "react";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
 class AddToCartDisplay extends React.Component {
 
-  handleClick(e, item) {
-    this.props.createCartItem(item)
-  }
+
+
+
 
   render() {
-    const {game, createCartItem, currentUser} = this.props
+    const {game, createCartItem, currentUser, action} = this.props
 
-    const item = {
-      user_id: currentUser.id,
-      game_id: game.id
+    // console.log(this.props)
+
+    if (currentUser) {
+      const item = {
+        user_id: currentUser.id,
+        game_id: game.id
+      }
     }
+    console.log()
 
     console.log(createCartItem)
     return (
@@ -23,7 +29,7 @@ class AddToCartDisplay extends React.Component {
           <div className="price">{`$${game.price}`}</div>
           <button 
             className="add-to-cart-btn"
-            onClick={(e) => this.handleClick(e, item)}>
+            onClick={action}>
             Add To Cart
           </button>
         </div>
