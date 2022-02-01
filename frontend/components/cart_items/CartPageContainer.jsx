@@ -5,7 +5,7 @@ import CartPage from './CartPage';
 
 const mapStateToProps = (state) => {
   return {
-    cart: state.entities.cart
+    cart: Object.values(state.entities.cart)
   }
 }
 
