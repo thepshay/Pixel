@@ -6,6 +6,10 @@ import GenreSidebarContainer from '../genre/GenreSidebarContainer';
 
 class HomePage extends React.Component {
 
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
+
   render() {
     return (
       <div className='home-page-container'>

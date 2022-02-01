@@ -3,24 +3,9 @@ import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
 class AddToCartDisplay extends React.Component {
 
-
-
-
-
   render() {
-    const {game, createCartItem, currentUser, action} = this.props
+    const {game, action} = this.props
 
-    // console.log(this.props)
-
-    if (currentUser) {
-      const item = {
-        user_id: currentUser.id,
-        game_id: game.id
-      }
-    }
-    console.log()
-
-    console.log(createCartItem)
     return (
       <div className="add-to-cart-container">
         <h2 className="title">{`Buy ${game.title}`}</h2>

@@ -39,8 +39,6 @@ class ShowGame extends React.Component {
           />
           <AddToCartDisplay
             game={game}
-            createCartItem={createCartItem}
-            currentUser={currentUser}
             action={action}
           />
           <AboutSection 
