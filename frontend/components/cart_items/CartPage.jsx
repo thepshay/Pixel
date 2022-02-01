@@ -24,26 +24,30 @@ class CartPage extends React.Component {
     //Sort the cart to display in order of added to cart. 
     const sortedCart = cart.sort((a,b) => (a.cart_id > b.cart_id) ? 1 : -1)
     return (
-      <div className="cart-main-content">
-        <h1 className="title">YOUR SHOPPING CART</h1>
-        {cart.length > 0 &&
-          <Cart 
-            cart={sortedCart}
-            deleteCartItem={deleteCartItem}
-          />
-        }
-        <div className="cart-summary">
-          <div className="estimate">
-            <div>Estimated total</div>
-            <div>{`$${this.calcTotal(cart)}`}</div>
+      <div className="cart-page">
+        <div className="cart-main-content">
+          <h1 className="title">YOUR SHOPPING CART</h1>
+          {cart.length > 0 &&
+            <Cart 
+              cart={sortedCart}
+              deleteCartItem={deleteCartItem}
+            />
+          }
+          <div className="cart-summary">
+            <div className="estimate">
+              <div>Estimated total</div>
+              <div>{`$${this.calcTotal(cart)}`}</div>
+            </div>
+            <div className="checkout">
+              <button className="purchase" onClick={() => deleteCartItem('all')}>
+                Purchase for myself
+              </button>
+            </div>
           </div>
-          <button className="purchase-btn" onClick={() => deleteCartItem('all')}>
-            Purchase for myself
-          </button>
+          {cart.length > 0 &&
+            <div className="remove-all" onClick={() => deleteCartItem('all')}>Remove all items</div>
+          }
         </div>
-        {cart.length > 0 &&
-          <div className="remove-all" onClick={() => deleteCartItem('all')}>Remove all items</div>
-        }
       </div>
     )
   }
