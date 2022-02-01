@@ -1,0 +1,57 @@
+div.cart-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.2);
+  color: $lightestGray;
+  width: 600px;
+  margin-bottom: 5px;
+
+  div.item-left {
+    display: flex;
+    flex-direction: row;
+
+    img.header-img {
+      width: 120px;
+      height: auto;
+    }
+
+    h2.title {
+      margin-left: 20px;
+      margin-top: 15px;
+    }
+  }
+
+  div.item-right {
+    display: flex;
+    flex-direction: row;
+
+    p.windows {
+      margin-top: 15px;
+      margin-right: 20px
+    }
+
+    div.price-container {
+      display: flex;
+      flex-direction: column;
+
+      div.price {
+        margin-top: 15px;
+        font-size: .9rem;
+      }
+
+      div.remove {
+        margin-top: 5px;
+        text-decoration: underline;
+        cursor: pointer;
+        color: $lightGray;
+        font-size: 0.75rem;
+
+        &:hover {
+          color: $lighterBlue
+        }
+      }
+    }
+  }
+}

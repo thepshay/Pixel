@@ -15,8 +15,8 @@ class CartListItem extends React.Component {
         <div className='item-right'>
           <p className='windows'><i className="fab fa-windows"></i></p>
           <div className='price-container'>
-            <div>{item.price}</div>
-            <div onClick={()=>deleteCartItem(item.cart_id)}>Remove</div>
+            <div className='price'>{`$${item.price}`}</div>
+            <div className='remove' onClick={()=>deleteCartItem(item.cart_id)}>Remove</div>
           </div>
         </div>
       </div>
