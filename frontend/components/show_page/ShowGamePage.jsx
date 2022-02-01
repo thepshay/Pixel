@@ -39,6 +39,7 @@ class ShowGame extends React.Component {
           <AddToCartDisplay
             game={game}
             action={action}
+            alreadyPurchased={Boolean(cart[game.id])}
           />
           <AboutSection 
             game={game}  
