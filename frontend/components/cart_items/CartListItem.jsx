@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class CartListItem extends React.Component {
 
@@ -9,8 +10,14 @@ class CartListItem extends React.Component {
     return (
       <div className='cart-item-container'>
         <div className='item-left'>
-          <img className='header-img' src={item.headerUrl} />
-          <h2 className='title'>{item.title}</h2>
+          <Link to={`/game/${item.game_id}`}>
+            <img className='header-img' src={item.headerUrl} />
+          </Link>
+          <div className='title-container'>
+            <Link to={`/game/${item.game_id}`}>
+              <h2 className='title'>{item.title}</h2>
+            </Link>
+          </div>
         </div>
         <div className='item-right'>
           <p className='windows'><i className="fab fa-windows"></i></p>
