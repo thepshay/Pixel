@@ -3,25 +3,38 @@ import AboutSection from './AboutSection';
 import GameDisplay from './GameDisplay';
 import AddToCartDisplay from './AddToCartDisplay';
 import CartTab from '../cart_items/CartTab';
+import { Link } from "react-router-dom";
 
 class ShowGame extends React.Component {
 
   componentDidMount() {
     window.scrollTo(0,0);
     this.props.fetchGame(this.props.gameId);
-    this.props.fetchAllCartItems();
+    if (Object.keys(this.props.cart).length===0) {
+      this.props.fetchAllCartItems();
+    } 
   }
 
 
   render() {
     const { game, createCartItem, currentUser, cart } = this.props;
 
-    if (!game || !cart) {
+
+    if (!game) {
       return null;
     }
 
+    const alreadyPurchased = Boolean(cart[game.id])
+
     const action = currentUser ? (
-      () => createCartItem({user_id: currentUser.id, game_id: game.id})
+      () => {
+        if (alreadyPurchased) {
+          this.props.history.push('/cart');
+        } else {
+          createCartItem({user_id: currentUser.id, game_id: game.id});
+          this.props.history.push('/cart');
+        }
+      }
     ) : (
       () => this.props.history.push('/login')
     )
@@ -31,7 +44,11 @@ class ShowGame extends React.Component {
         <div className='show-main-content'>
           <div className="header-container">
             <h1 className="title">{game.title}</h1>
-            {currentUser && <CartTab numItems={Object.keys(cart).length}/>}
+            {currentUser && 
+              <Link to='/cart'>
+                <CartTab numItems={Object.keys(cart).length}/>
+              </Link>
+            }
           </div>
           <GameDisplay 
             game={game}
@@ -39,7 +56,7 @@ class ShowGame extends React.Component {
           <AddToCartDisplay
             game={game}
             action={action}
-            alreadyPurchased={Boolean(cart[game.id])}
+            alreadyPurchased={alreadyPurchased}
           />
           <AboutSection 
             game={game}  

@@ -26,10 +26,9 @@ class Carousel extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllCartItems();
     const notFilled = this.props.games.some((ele) => !ele)
     if (notFilled) {
-      
+      this.props.fetchAllCartItems();
       this.props.fetchAllGames();
     }
   }
@@ -75,7 +74,11 @@ class Carousel extends React.Component {
         
         <div className="header-container">
           <h1 className="title">{title}</h1>
-          {currentUser && <CartTab  numItems={Object.keys(cart).length}/>}
+          {currentUser && 
+            <Link to='/cart'>
+              <CartTab  numItems={Object.keys(cart).length}/>
+            </Link>
+          }
         </div>
         <button className="arrow left-btn" onClick={(e) => this.prevSlide(e)}>{'<'}</button>
         <button className="arrow right-btn" onClick={(e) => this.nextSlide(e)}>{'>'}</button>

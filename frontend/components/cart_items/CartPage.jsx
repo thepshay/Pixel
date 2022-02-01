@@ -3,14 +3,13 @@ import React from "react";
 class CartPage extends React.Component {
 
   componentDidMount() {
-    this.props.fetchAllCartItems();
+    if (!this.props.cart) {
+      this.props.fetchAllCartItems();
+    } 
   }
 
   render() {
-
     const {cart} = this.props
-
-    console.log(cart)
 
     if (!cart) {
       return null;
