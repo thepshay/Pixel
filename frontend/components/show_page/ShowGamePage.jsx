@@ -2,21 +2,21 @@ import React from 'react';
 import AboutSection from './AboutSection';
 import GameDisplay from './GameDisplay';
 import AddToCartDisplay from './AddToCartDisplay';
-import CartTabContainer from '../cart_items/CartTabContainer';
+import CartTab from '../cart_items/CartTab';
 
 class ShowGame extends React.Component {
 
   componentDidMount() {
     window.scrollTo(0,0);
-    this.props.fetchGame(this.props.gameId)
+    this.props.fetchGame(this.props.gameId);
+    this.props.fetchAllCartItems();
   }
 
 
   render() {
-    const { game, createCartItem, currentUser } = this.props;
-    console.log(this.props)
+    const { game, createCartItem, currentUser, cart } = this.props;
 
-    if (!game) {
+    if (!game || !cart) {
       return null;
     }
 
@@ -26,13 +26,12 @@ class ShowGame extends React.Component {
       () => this.props.history.push('/login')
     )
 
-    console.log(currentUser)
     return (
       <div className='show-page'>
         <div className='show-main-content'>
           <div className="header-container">
             <h1 className="title">{game.title}</h1>
-            {currentUser && <CartTabContainer />}
+            {currentUser && <CartTab numItems={Object.keys(cart).length}/>}
           </div>
           <GameDisplay 
             game={game}

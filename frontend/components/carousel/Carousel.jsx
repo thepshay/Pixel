@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CartTabContainer from "../cart_items/CartTabContainer";
+import CartTab from "../cart_items/CartTab";
 
 import CarouselGameItem from './CarouselGameItem'
 
@@ -26,6 +26,7 @@ class Carousel extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchAllCartItems();
     const notFilled = this.props.games.some((ele) => !ele)
     if (notFilled) {
       
@@ -60,7 +61,7 @@ class Carousel extends React.Component {
   }
 
   render() {
-    const {games, className, itemClassName, title, source, currentUser} = this.props
+    const {games, className, itemClassName, title, source, currentUser, cart} = this.props
     
     
     const notFilled = games.some((ele) => !ele)
@@ -74,7 +75,7 @@ class Carousel extends React.Component {
         
         <div className="header-container">
           <h1 className="title">{title}</h1>
-          {currentUser && <CartTabContainer />}
+          {currentUser && <CartTab  numItems={Object.keys(cart).length}/>}
         </div>
         <button className="arrow left-btn" onClick={(e) => this.prevSlide(e)}>{'<'}</button>
         <button className="arrow right-btn" onClick={(e) => this.nextSlide(e)}>{'>'}</button>
