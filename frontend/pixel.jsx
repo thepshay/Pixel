@@ -11,6 +11,7 @@ import * as CartApiUtil from './util/cart_api_util'
 import * as CartAction from './actions/cart_item_actions'
 
 import * as LibraryApiUtil from './util/library_api_util'
+import * as LibraryAction from './actions/library_item_actions'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -48,6 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.createCartItem = CartAction.createCartItem;
   // window.deleteCartItem = CartAction.deleteCartItem;
 
-  window.fetchLibrary = LibraryApiUtil.fetchAllLibraryItems;
-  window.postLibrary = LibraryApiUtil.postLibraryItem;
+  // window.fetchLibrary = LibraryApiUtil.fetchAllLibraryItems;
+  // window.postLibrary = LibraryApiUtil.postLibraryItem;
+
+  window.fetchLibrary = LibraryAction.fetchAllLibraryItems;
+  window.createLibrary = LibraryAction.createLibraryItem; 
 })
