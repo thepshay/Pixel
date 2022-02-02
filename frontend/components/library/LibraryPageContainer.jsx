@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToPorps = (dispatch) => {
   return {
-    fetchAllLibraryItems: () => dispatch(fetchAllLibraryItems())
+    fetchAllLibraryItems: (userId) => dispatch(fetchAllLibraryItems(userId))
   }
 }
 

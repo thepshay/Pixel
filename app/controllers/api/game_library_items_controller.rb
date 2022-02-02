@@ -1,7 +1,7 @@
 class Api::GameLibraryItemsController < ApplicationController
 
   def index
-    @library_items = current_user.game_library_items
+    @library_items = User.find(params[:user_id]).game_library_items
     render :index
   end
 

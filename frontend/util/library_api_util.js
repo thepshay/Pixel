@@ -1,7 +1,8 @@
-export const fetchAllLibraryItems = () => {
+export const fetchAllLibraryItems = (userId) => {
   return $.ajax({
     method: 'GET',
-    url: 'api/game_library_items'
+    url: 'api/game_library_items',
+    data: { user_id: userId}
   })
 }
 

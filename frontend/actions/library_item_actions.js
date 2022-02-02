@@ -25,8 +25,8 @@ const receiveLibraryErrors = (errors) => {
   }
 }
 
-export const fetchAllLibraryItems = () => (dispatch) => {
-  return LibraryApiUtil.fetchAllLibraryItems()
+export const fetchAllLibraryItems = (userId) => (dispatch) => {
+  return LibraryApiUtil.fetchAllLibraryItems(userId)
     .then((items) => {
       dispatch(receiveAllLibraryItems(items))
     }, (errors) => {
