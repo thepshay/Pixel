@@ -8,8 +8,10 @@ import * as SessionApiUtil from './util/session_api_util'
 import * as SessionAction from './actions/session_actions'
 import * as GameAction from './actions/game_actions'
 import * as CartApiUtil from './util/cart_api_util'
-
 import * as CartAction from './actions/cart_item_actions'
+
+import * as LibraryApiUtil from './util/library_api_util'
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -42,7 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.postCartItem = CartApiUtil.postCartItem;
   // window.deleteCartItem = CartApiUtil.deleteCartItem;
 
-  window.fetchAllCartItems = CartAction.fetchAllCartItems;
-  window.createCartItem = CartAction.createCartItem;
-  window.deleteCartItem = CartAction.deleteCartItem;
+  // window.fetchAllCartItems = CartAction.fetchAllCartItems;
+  // window.createCartItem = CartAction.createCartItem;
+  // window.deleteCartItem = CartAction.deleteCartItem;
+
+  window.fetchLibrary = LibraryApiUtil.fetchAllLibraryItems;
+  window.postLibrary = LibraryApiUtil.postLibraryItem;
 })
