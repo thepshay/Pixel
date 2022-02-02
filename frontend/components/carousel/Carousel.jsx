@@ -28,9 +28,9 @@ class Carousel extends React.Component {
   componentDidMount() {
     const notFilled = this.props.games.some((ele) => !ele)
     if (notFilled) {
-      this.props.fetchAllCartItems();
+      this.props.fetchAllGames();
     }
-    if (Object.keys(this.props.cart).length===0) {
+    if (Object.keys(this.props.cart).length===0 && Boolean(this.props.currentUser)) {
       this.props.fetchAllCartItems();
     } 
   }
@@ -39,9 +39,9 @@ class Carousel extends React.Component {
     e.preventDefault();
     let newPos;
     if (this.state.currPos === this.props.displayGameId.length-1) {
-      newPos = 0
+      newPos = 0;
     } else {
-      newPos = this.state.currPos + 1
+      newPos = this.state.currPos + 1;
     }
     this.setState({currPos: newPos})
   }
@@ -66,9 +66,10 @@ class Carousel extends React.Component {
     
     const notFilled = games.some((ele) => !ele)
     if (!games || notFilled) {
-      return null
+      return null;
     }
 
+    console.log(currentUser)
 
     return (
       <div className={className}>
