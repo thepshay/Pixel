@@ -32,6 +32,7 @@ class Carousel extends React.Component {
     }
     if (Object.keys(this.props.cart).length===0 && Boolean(this.props.currentUser)) {
       this.props.fetchAllCartItems();
+      this.props.fetchAllLibraryItems(this.props.currentUser.id)
     } 
   }
 

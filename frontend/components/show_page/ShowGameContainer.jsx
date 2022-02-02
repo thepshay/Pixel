@@ -1,7 +1,6 @@
 import { connect } from "react-redux";
 import { createCartItem } from "../../actions/cart_item_actions";
 import { fetchGame } from "../../actions/game_actions";
-import { fetchAllLibraryItems } from '../../actions/library_item_actions'
 import {fetchAllCartItems} from '../../actions/cart_item_actions'
 import ShowGamePage from './ShowGamePage'
 
@@ -21,7 +20,6 @@ const mapDispatchToProps = (dispatch) => {
     fetchGame: (id) => dispatch(fetchGame(id)),
     createCartItem: (item) => dispatch(createCartItem(item)),
     fetchAllCartItems: () => dispatch(fetchAllCartItems()),
-    fetchAllLibraryItems: (userId) => dispatch(fetchAllLibraryItems(userId))
   }
 }
 

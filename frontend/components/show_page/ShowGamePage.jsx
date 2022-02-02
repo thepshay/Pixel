@@ -11,10 +11,6 @@ class ShowGame extends React.Component {
     window.scrollTo(0,0);
     this.props.fetchGame(this.props.gameId);
 
-    if (this.props.currentUser) {
-      this.props.fetchAllLibraryItems(this.props.currentUser.id)
-    }
-
     if (Object.keys(this.props.cart).length===0 && this.props.currentUser) {
       this.props.fetchAllCartItems();
     } 
@@ -29,9 +25,6 @@ class ShowGame extends React.Component {
 
     let inCart = true;
     if (currentUser && library[game.id]) {
-      console.log(Boolean(currentUser));
-      console.log(Boolean(library[game.id]))
-      console.log(library[game.id])
       inCart=false;
     }
 

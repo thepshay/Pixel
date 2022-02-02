@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import {fetchAllGames} from '../../actions/game_actions'
 import Carousel from './Carousel';
 import { fetchAllCartItems } from '../../actions/cart_item_actions';
+import { fetchAllLibraryItems } from '../../actions/library_item_actions'
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -23,7 +24,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllGames: () => dispatch(fetchAllGames()),
-    fetchAllCartItems: () => dispatch(fetchAllCartItems())
+    fetchAllCartItems: () => dispatch(fetchAllCartItems()),
+    fetchAllLibraryItems: (userId) => dispatch(fetchAllLibraryItems(userId))
   }
 }
 

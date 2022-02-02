@@ -25,16 +25,11 @@ class CartPage extends React.Component {
     this.props.deleteCartItem('all');
     let user_id
     this.props.cart.forEach((item) => {
-      console.log(item)
       const game_id = item.game_id;
       user_id = item.user_id;
-      const newLibraryItem = {
-        user_id, game_id
-      }
-      console.log(newLibraryItem);
+      const newLibraryItem = {user_id, game_id}
       this.props.createLibraryItem(newLibraryItem);
     });
-
     this.props.history.push(`library/${user_id}`);
   }
 

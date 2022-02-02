@@ -18,9 +18,6 @@ class UserDropdown extends React.Component {
         <li onClick={()=>logout(currentUser.id)}>
           Logout: <span>{currentUser.username}</span>
         </li>
-        <Link to='/library/2'><li>22222222</li></Link>
-        <Link to='/library/3'><li>33333333</li></Link>
-        <Link to='/library/4'><li>444444444</li></Link>
       </ul>
     )
   }
