@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resource :session, only:[:create, :destroy]
     resources :games, only:[:index, :show]
     resources :cart_items, only:[:index, :create, :destroy]
-    resources :game_library_items, only:[:index, :create, :destroy]
+    resources :game_library_items, only:[:index, :create]
   end
 
 end

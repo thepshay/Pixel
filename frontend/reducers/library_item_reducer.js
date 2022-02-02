@@ -3,7 +3,6 @@ import { LOGOUT_CURRENT_USER } from "../actions/session_actions";
 
 const libraryItemReducer = (state = {}, action) => {
   Object.freeze(state);
-  debugger
   switch(action.type) {
     case RECEIVE_ALL_LIBRARY_ITEMS:
       return action.libraryItems;

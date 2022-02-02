@@ -9,6 +9,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util'
 import GenrePageContainer from "./genre/GenrePageContainer";
 import ShowGameContainer from "./show_page/ShowGameContainer";
 import CartPageContainer from './cart_items/CartPageContainer'
+import LibraryPageContainer from "./library/LibraryPageContainer";
 
 class App extends React.Component {
 
@@ -23,6 +24,7 @@ class App extends React.Component {
             <Route exact path='/genre/:genreName' component={GenrePageContainer} />
             <Route exact path='/game/:gameId' component={ShowGameContainer} />
             <ProtectedRoute exact path='/cart' component={CartPageContainer} />
+            <ProtectedRoute exact path='/library' component={LibraryPageContainer} />
             <Route exact path='/' component={HomePage}/>
             <Redirect to="/" />
           </Switch>

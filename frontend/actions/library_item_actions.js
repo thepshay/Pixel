@@ -5,7 +5,6 @@ export const RECEIVE_LIBRARY_ERRORS = 'RECEIVE_LIBRARY_ERRORS'
 import * as LibraryApiUtil from '../util/library_api_util';
 
 const receiveAllLibraryItems = (libraryItems) => {
-  debugger
   return {
     type: RECEIVE_ALL_LIBRARY_ITEMS,
     libraryItems
@@ -27,7 +26,6 @@ const receiveLibraryErrors = (errors) => {
 }
 
 export const fetchAllLibraryItems = () => (dispatch) => {
-  debugger
   return LibraryApiUtil.fetchAllLibraryItems()
     .then((items) => {
       dispatch(receiveAllLibraryItems(items))

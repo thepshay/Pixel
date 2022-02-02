@@ -14,15 +14,6 @@ class Api::GameLibraryItemsController < ApplicationController
     end
   end
 
-  def destroy
-    @items = current_user.game_library_items
-    if @items.destroy_all 
-      render json: {}
-    else 
-      render json: ['Unable to remove all items'], status: 422
-    end
-  end
-
   private
   def library_params
     params.require(:game_library_item).permit(:user_id, :game_id, :hours)
