@@ -21,6 +21,23 @@ class CartPage extends React.Component {
     this.props.history.push('/');
   }
 
+  purchaseItems() {
+    this.props.deleteCartItem('all');
+    let user_id
+    this.props.cart.forEach((item) => {
+      console.log(item)
+      const game_id = item.game_id;
+      user_id = item.user_id;
+      const newLibraryItem = {
+        user_id, game_id
+      }
+      console.log(newLibraryItem);
+      this.props.createLibraryItem(newLibraryItem);
+    });
+
+    this.props.history.push(`library/${user_id}`);
+  }
+
   render() {
     const {cart, deleteCartItem} = this.props
 
@@ -44,7 +61,7 @@ class CartPage extends React.Component {
             </div>
             <div className="checkout">
               {cart.length > 0 ? (
-                <button className="purchase active" onClick={() => deleteCartItem('all')}>
+                <button className="purchase active" onClick={() => this.purchaseItems()}>
                   Purchase for myself
                 </button>
               ) : (
