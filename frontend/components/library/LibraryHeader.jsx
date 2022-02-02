@@ -8,7 +8,9 @@ class LibraryHeader extends React.Component {
     return (
       <div className="library-header">
         <img className='profile-pic' src={user.photoUrl} /> 
-        <h2 className="username">{user.username}</h2>
+        <div className="username-container">
+          <h2 className="username">{user.username}</h2>
+        </div>
       </div>
     )
   }
