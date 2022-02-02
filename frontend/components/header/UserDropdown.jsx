@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 class UserDropdown extends React.Component {
   
@@ -8,10 +9,15 @@ class UserDropdown extends React.Component {
 
     return (
       <ul className={className}>
+        <Link to='/cart'>
+          <li>Cart</li>
+        </Link>
+        <Link to='/library'>
+          <li>Library</li>
+        </Link>
         <li onClick={()=>logout(currentUser.id)}>
           Logout: <span>{currentUser.username}</span>
         </li>
-
       </ul>
     )
   }
