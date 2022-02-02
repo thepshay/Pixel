@@ -31,7 +31,6 @@ class LibraryPage extends React.Component {
     return (
       <div className="library-page">
         <div className="library-main-content">
-          <div>test</div>
           <LibraryHeader 
             user={user}
           />

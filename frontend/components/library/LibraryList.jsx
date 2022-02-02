@@ -6,9 +6,11 @@ class LibraryList extends React.Component {
   render() {
     const {library} = this.props
     return (
-      <ul>
+      <ul className="library-list">
         {Object.values(library).map((game,index) => {
-          return <li key={index}>{game.title}</li>
+          return (
+            <LibraryListItem key={index} game={game} />
+          )
         })}
       </ul>
     )
