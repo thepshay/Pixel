@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 User.delete_all
+Game.delete_all
+CartItem.delete_all
+GameLibraryItem.delete_all
 
 user1 = User.create({username: 'Demo User', password: 'demmo usser'})
 pfp1 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp1.jpg')
@@ -717,3 +720,22 @@ bye.photos.attach(io: bye_4, filename: 'bye_4.jpg')
 
 bye_5= open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/bye/bye_5.jpg')
 bye.photos.attach(io: bye_5, filename: 'bye_5.jpg')
+
+GameLibraryItem.create({user_id: 1, game_id: 6, hours: 43})
+GameLibraryItem.create({user_id: 1, game_id: 8, hours: 21})
+GameLibraryItem.create({user_id: 1, game_id: 9, hours: 18})
+GameLibraryItem.create({user_id: 1, game_id: 17, hours: 5})
+
+GameLibraryItem.create({user_id: 2, game_id: 1, hours: 443})
+GameLibraryItem.create({user_id: 2, game_id: 2, hours: 829})
+GameLibraryItem.create({user_id: 2, game_id: 4, hours: 54})
+
+GameLibraryItem.create({user_id: 3, game_id: 12, hours: 93})
+GameLibraryItem.create({user_id: 3, game_id: 16, hours: 2})
+GameLibraryItem.create({user_id: 3, game_id: 7, hours: 5})
+GameLibraryItem.create({user_id: 3, game_id: 3, hours: 23})
+
+GameLibraryItem.create({user_id: 4, game_id: 14, hours: 21})
+
+GameLibraryItem.create({user_id: 5, game_id: 15, hours: 23})
+GameLibraryItem.create({user_id: 5, game_id: 10, hours: 134})
