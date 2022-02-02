@@ -5,9 +5,6 @@ import LibraryList from "./LibraryList";
 class LibraryPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      user: null
-    }
   }
 
   componentDidMount() {
@@ -25,6 +22,7 @@ class LibraryPage extends React.Component {
   render() {
     const { library,user } = this.props;
   
+    console.log(this.props.userId)
     if (!user || Object.keys(library) === 0) {
       return null;
     }

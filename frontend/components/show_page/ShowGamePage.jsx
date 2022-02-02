@@ -10,17 +10,30 @@ class ShowGame extends React.Component {
   componentDidMount() {
     window.scrollTo(0,0);
     this.props.fetchGame(this.props.gameId);
-    if (Object.keys(this.props.cart).length===0) {
+
+    if (this.props.currentUser) {
+      this.props.fetchAllLibraryItems(this.props.currentUser.id)
+    }
+
+    if (Object.keys(this.props.cart).length===0 && this.props.currentUser) {
       this.props.fetchAllCartItems();
     } 
   }
 
 
   render() {
-    const { game, createCartItem, currentUser, cart } = this.props;
+    const { game, createCartItem, currentUser, cart, library } = this.props;
     if (!game) {return null;}
 
     const alreadyPurchased = Boolean(cart[game.id])
+
+    let inCart = true;
+    if (currentUser && library[game.id]) {
+      console.log(Boolean(currentUser));
+      console.log(Boolean(library[game.id]))
+      console.log(library[game.id])
+      inCart=false;
+    }
 
     const action = currentUser ? (
       () => {
@@ -49,11 +62,11 @@ class ShowGame extends React.Component {
           <GameDisplay 
             game={game}
           />
-          <AddToCartDisplay
+          {inCart && <AddToCartDisplay
             game={game}
             action={action}
             alreadyPurchased={alreadyPurchased}
-          />
+          />}
           <AboutSection 
             game={game}  
           />

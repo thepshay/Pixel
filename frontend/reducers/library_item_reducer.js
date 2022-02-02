@@ -11,8 +11,6 @@ const libraryItemReducer = (state = {}, action) => {
         ...state,
         [action.libraryItem.game_id]: action.libraryItem
       }
-    case LOGOUT_CURRENT_USER:
-      return {};
     default:
       return state;
   }
