@@ -12,7 +12,7 @@ import * as CartAction from './actions/cart_item_actions'
 
 import * as LibraryApiUtil from './util/library_api_util'
 import * as LibraryAction from './actions/library_item_actions'
-
+import {fetchUser} from './actions/user_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -57,4 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.fetchLibrary = LibraryAction.fetchAllLibraryItems;
   window.createLibrary = LibraryAction.createLibraryItem; 
+
+  window.fetchUser = fetchUser;
 })
