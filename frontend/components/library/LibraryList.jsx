@@ -5,9 +5,12 @@ class LibraryList extends React.Component {
 
   render() {
     const {library} = this.props
+    
+    const sortedLibrary = Object.values(library).sort((a,b) => (a.hours < b.hours) ? 1 : -1);
+
     return (
       <ul className="library-list">
-        {Object.values(library).map((game,index) => {
+        {sortedLibrary.map((game,index) => {
           return (
             <LibraryListItem key={index} game={game} />
           )
