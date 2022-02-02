@@ -6,7 +6,6 @@ class Cart extends React.Component {
 
   render() {
     const { cart, deleteCartItem } = this.props;
-    console.log(cart)
     return (
       <ul className="cart-list">
         {cart.map((item, index) => {

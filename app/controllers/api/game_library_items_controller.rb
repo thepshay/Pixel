@@ -1,6 +1,7 @@
 class Api::GameLibraryItemsController < ApplicationController
 
   def index
+    # debugger
     @library_items = User.find(params[:user_id]).game_library_items
     render :index
   end

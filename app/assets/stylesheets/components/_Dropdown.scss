@@ -4,6 +4,7 @@
   display: none;
   box-shadow: 2px 2px 5px 5px black;
   min-width: 100px;
+  z-index: 10;
 
   &.show {
     display:inline-block;

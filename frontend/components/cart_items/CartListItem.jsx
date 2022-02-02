@@ -5,7 +5,6 @@ class CartListItem extends React.Component {
 
   render() {
     const { item, deleteCartItem } = this.props
-    console.log(item.cart_id)
 
     return (
       <div className='cart-item-container'>

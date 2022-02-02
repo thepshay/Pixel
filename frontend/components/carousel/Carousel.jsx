@@ -69,8 +69,6 @@ class Carousel extends React.Component {
       return null;
     }
 
-    console.log(currentUser)
-
     return (
       <div className={className}>
         
@@ -88,7 +86,7 @@ class Carousel extends React.Component {
         {games.map((game, index) => {
           return (
             <div key={game.id} className={index === this.state.currPos ? `${itemClassName} active` : `${itemClassName}`}>
-                <Link to={source === 'home' ? `game/${game.id}` : `../game/${game.id}`}>
+                <Link to={source === 'home' ? `/game/${game.id}` : `/game/${game.id}`}>
                   <CarouselGameItem key={game.id} game={game}/>
                 </Link>
             </div> 

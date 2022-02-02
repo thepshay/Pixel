@@ -23,8 +23,8 @@ class App extends React.Component {
             <AuthRoute path="/signup" component={SignupFormContainer} />
             <Route exact path='/genre/:genreName' component={GenrePageContainer} />
             <Route exact path='/game/:gameId' component={ShowGameContainer} />
+            <Route exact path='/library/:userId' component={LibraryPageContainer} />
             <ProtectedRoute exact path='/cart' component={CartPageContainer} />
-            <ProtectedRoute exact path='/library' component={LibraryPageContainer} />
             <Route exact path='/' component={HomePage}/>
             <Redirect to="/" />
           </Switch>

@@ -8,6 +8,7 @@ const userReducer = (state={}, action) => {
     case RECEIVE_CURRENT_USER:
       return { [action.currentUser.id] : action.currentUser}
     case RECEIVE_USER:
+      // debugger
       return {
         ...state,
         [action.user.id] : action.user
