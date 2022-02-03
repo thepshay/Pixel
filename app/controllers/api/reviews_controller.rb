@@ -26,7 +26,7 @@ class Api::ReviewsController < ApplicationController
   def destroy
     review = Review.find(params[:id])
     if review.destroy
-      @reviews = Game.find(1).reviews
+      @reviews = Game.find(params[:game_id]).reviews
       render :index
     else
       render json: ['Unable to delete review'], status: 422
