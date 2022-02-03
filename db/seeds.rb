@@ -725,17 +725,44 @@ GameLibraryItem.create({user_id: 1, game_id: 6, hours: 43})
 GameLibraryItem.create({user_id: 1, game_id: 8, hours: 21})
 GameLibraryItem.create({user_id: 1, game_id: 9, hours: 18})
 GameLibraryItem.create({user_id: 1, game_id: 17, hours: 5})
+GameLibraryItem.create({user_id: 1, game_id: 11, hours: 5})
 
 GameLibraryItem.create({user_id: 2, game_id: 1, hours: 443})
 GameLibraryItem.create({user_id: 2, game_id: 2, hours: 829})
 GameLibraryItem.create({user_id: 2, game_id: 4, hours: 54})
+GameLibraryItem.create({user_id: 2, game_id: 11, hours: 15})
+
 
 GameLibraryItem.create({user_id: 3, game_id: 12, hours: 93})
 GameLibraryItem.create({user_id: 3, game_id: 16, hours: 2})
 GameLibraryItem.create({user_id: 3, game_id: 7, hours: 5})
 GameLibraryItem.create({user_id: 3, game_id: 3, hours: 23})
+GameLibraryItem.create({user_id: 3, game_id: 11, hours: 55})
+
 
 GameLibraryItem.create({user_id: 4, game_id: 14, hours: 21})
+GameLibraryItem.create({user_id: 4, game_id: 11, hours: 46})
+
 
 GameLibraryItem.create({user_id: 5, game_id: 15, hours: 23})
 GameLibraryItem.create({user_id: 5, game_id: 10, hours: 134})
+GameLibraryItem.create({user_id: 5, game_id: 11, hours: 16})
+
+Review.create({
+  user_id: 1, 
+  game_id: 11, 
+  recommend: true, 
+  body: 'I can dress my cat as a cowboy, give him drugs and make him fight a pink dinosaur... BEST GAME EVER!
+  '})
+
+Review.create({
+  user_id: 2, 
+  game_id: 11, 
+  recommend: true, 
+  body: 'this is probably one of the most video games ever made'})
+
+Review.create({
+  user_id: 3, 
+  game_id: 11, 
+  recommend: true, 
+  body: 'Jogo sempre foi 10/10 desde a versão do Switch. Com mod de SlowMo ficou 17/10.'})
