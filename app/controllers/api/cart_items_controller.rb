@@ -17,7 +17,7 @@ class Api::CartItemsController < ApplicationController
     if params[:id] == 'all'
       destroy_all
     else 
-      destory_one(params[:id])
+      destroy_one(params[:id])
     end
   end
 
@@ -36,7 +36,7 @@ class Api::CartItemsController < ApplicationController
     end
   end
 
-  def destory_one(id)
+  def destroy_one(id)
     @item = CartItem.find(id)
     if @item.destroy
       @cart_items = current_user.cart_items
