@@ -1,7 +1,7 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-    @reviews = Game.find(1).reviews
+    @reviews = Game.find(params[:game_id]).reviews
     render :index
   end
 
