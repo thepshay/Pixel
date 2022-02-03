@@ -3,7 +3,7 @@ import AboutSection from './AboutSection';
 import GameDisplay from './GameDisplay';
 import AddToCartDisplay from './AddToCartDisplay';
 import CartTab from '../cart_items/CartTab';
-
+import AddReviewContainer from '../review/AddReviewContainer';
 import ReviewSection from '../review/ReviewSection';
 
 import { Link } from "react-router-dom";
@@ -47,7 +47,7 @@ class ShowGame extends React.Component {
     const hasReview = Boolean((currentUser && reviews[currentUser.id]))
 
     let userActionDisplay;
-    if (!currentUser) {
+    if (!currentUser) { // if no user exists
       console.log(1)
       userActionDisplay = () => (
         <AddToCartDisplay
@@ -56,7 +56,7 @@ class ShowGame extends React.Component {
           inCart={false}
         />
       )
-    } else if (currentUser && !inLibrary) {
+    } else if (currentUser && !inLibrary) { // user exists, game not in library
       console.log(2)
       userActionDisplay = () => (
         <AddToCartDisplay
@@ -65,17 +65,20 @@ class ShowGame extends React.Component {
           inCart={inCart}
         />
       ) 
-    } else if (currentUser && inLibrary && !hasReview) {
+    } else if (currentUser && inLibrary && !hasReview) { // user exists, game in library, no review
       console.log(3)
       userActionDisplay = () => (
-        <div>Add a review</div>
+        <AddReviewContainer 
+          game={game}
+          currentUser={currentUser}
+        />
       )
-    } else if (currentUser && inLibrary && hasReview) {
+    } else if (currentUser && inLibrary && hasReview) { // user exists, game in library, review
       console.log(4)
       userActionDisplay = () => (
         <div>Edit Review</div>
       )
-    } else {
+    } else { // shouldn't be possible, but spaghetti will allow it
       console.log(5)
       console.log('Current User: ', currentUser);
       console.log('inLibrary: ', inLibrary);

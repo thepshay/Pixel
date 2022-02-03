@@ -1,5 +1,5 @@
 user = @review.user
-json.review_id @review.id
+json.id @review.id
 json.game_id @review.game_id
 json.user_id user.id
 json.username user.username
