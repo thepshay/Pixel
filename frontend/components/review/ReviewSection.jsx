@@ -9,7 +9,7 @@ class ReviewSection extends React.Component {
 
     return (
       <div className="reviews-container">
-        <div>CUSTOMER REVIEWS</div>
+        <h3 className="review-title">CUSTOMER REVIEWS</h3>
 
         <ul className="review-list">
           {Object.values(reviews).map((review, index) => {

@@ -1,0 +1,72 @@
+div.review-content {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  margin-bottom: 20px;
+  height: fit-content;
+  background-color: rgba(0,0,0, .35);
+  position: relative;
+
+  &::before {
+    content:"";
+    background: linear-gradient(to right, rgba(71, 191, 255, 1) 30%, rgba(255, 255, 255, 0) 70%);
+    display: block;
+    height: 1px;
+    width: 600px;
+    position: absolute;
+    top: 0;
+  }
+
+  div.user-info {
+    width: 200px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+
+    img.profile-pic {
+      height: 37px;
+      width: auto;
+      border: 2px solid $gray;
+    }
+
+    div.username {
+      margin-left: 10px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: $lightGray;
+    }
+  }
+
+  div.review-info {
+    width: 400px;
+    padding-top: 8px;
+    margin-left: 10px;
+
+    div.review-header{
+      display: flex;
+      flex-direction: row;
+      height: 40px;
+      background-color: rgba(0,0,0, .5);
+      width: 385px;
+    }
+
+    div.recommend {
+      margin-left: 10px;
+      padding-top: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: $lightestGray;
+    }
+
+    div.review-body {
+      
+      p.review {
+        margin: 20px 0;
+        margin-right: 10px;
+        font-size: 0.8rem;
+        color: $lightestGray;
+        line-height: 1.3;
+      }
+    }
+  }
+}
