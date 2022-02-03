@@ -4,7 +4,7 @@ import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 class AddToCartDisplay extends React.Component {
 
   render() {
-    const {game, action, alreadyPurchased} = this.props
+    const {game, action, inCart} = this.props
 
     return (
       <div className="add-to-cart-container">
@@ -15,7 +15,7 @@ class AddToCartDisplay extends React.Component {
           <button 
             className="add-to-cart-btn"
             onClick={action}>
-            {alreadyPurchased ? 'In Cart' : 'Add to Cart'}
+            {inCart ? 'In Cart' : 'Add to Cart'}
           </button>
         </div>
       </div>

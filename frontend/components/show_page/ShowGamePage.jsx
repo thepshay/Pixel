@@ -20,30 +20,70 @@ class ShowGame extends React.Component {
     } 
   }
 
+  addToCart(inCart) {
+    const { createCartItem, game} = this.props;
+
+    return () => {
+      if (inCart) {
+        this.props.history.push('/cart');
+      } else {
+        createCartItem({user_id: currentUser.id, game_id: game.id});
+        this.props.history.push('/cart');
+      }
+    }
+  }
+
+  goToLogin() {
+    return () => this.props.history.push('/login')
+  }
+
 
   render() {
-    const { game, createCartItem, currentUser, cart, library, reviews } = this.props;
+    const { game, currentUser, cart, library, reviews } = this.props;
     if (!game) {return null;}
 
-    const alreadyPurchased = Boolean(cart[game.id])
+    const inCart = Boolean(cart[game.id])
+    const inLibrary = Boolean((currentUser && library[game.id]))
+    const hasReview = Boolean((currentUser && reviews[currentUser.id]))
 
-    let inCart = true;
-    if (currentUser && library[game.id]) {
-      inCart=false;
+    let userActionDisplay;
+    if (!currentUser) {
+      console.log(1)
+      userActionDisplay = () => (
+        <AddToCartDisplay
+          game={game}
+          action={this.goToLogin()}
+          inCart={false}
+        />
+      )
+    } else if (currentUser && !inLibrary) {
+      console.log(2)
+      userActionDisplay = () => (
+        <AddToCartDisplay
+          game={game}
+          action={this.addToCart(inCart)}
+          inCart={inCart}
+        />
+      ) 
+    } else if (currentUser && inLibrary && !hasReview) {
+      console.log(3)
+      userActionDisplay = () => (
+        <div>Add a review</div>
+      )
+    } else if (currentUser && inLibrary && hasReview) {
+      console.log(4)
+      userActionDisplay = () => (
+        <div>Edit Review</div>
+      )
+    } else {
+      console.log(5)
+      console.log('Current User: ', currentUser);
+      console.log('inLibrary: ', inLibrary);
+      console.log('hasReview: ', hasReview);
+      userActionDisplay = () => (
+        <div>Something went wrong</div>
+      )
     }
-
-    const action = currentUser ? (
-      () => {
-        if (alreadyPurchased) {
-          this.props.history.push('/cart');
-        } else {
-          createCartItem({user_id: currentUser.id, game_id: game.id});
-          this.props.history.push('/cart');
-        }
-      }
-    ) : (
-      () => this.props.history.push('/login')
-    )
 
     return (
       <div className='show-page'>
@@ -59,11 +99,7 @@ class ShowGame extends React.Component {
           <GameDisplay 
             game={game}
           />
-          {inCart && <AddToCartDisplay
-            game={game}
-            action={action}
-            alreadyPurchased={alreadyPurchased}
-          />}
+          {userActionDisplay()}
           <AboutSection 
             game={game}  
           />
