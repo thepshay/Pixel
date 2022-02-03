@@ -3,6 +3,9 @@ import AboutSection from './AboutSection';
 import GameDisplay from './GameDisplay';
 import AddToCartDisplay from './AddToCartDisplay';
 import CartTab from '../cart_items/CartTab';
+
+import ReviewSection from '../review/ReviewSection';
+
 import { Link } from "react-router-dom";
 
 class ShowGame extends React.Component {
@@ -10,6 +13,7 @@ class ShowGame extends React.Component {
   componentDidMount() {
     window.scrollTo(0,0);
     this.props.fetchGame(this.props.gameId);
+    this.props.fetchAllReviews(this.props.gameId)
 
     if (Object.keys(this.props.cart).length===0 && this.props.currentUser) {
       this.props.fetchAllCartItems();
@@ -18,7 +22,7 @@ class ShowGame extends React.Component {
 
 
   render() {
-    const { game, createCartItem, currentUser, cart, library } = this.props;
+    const { game, createCartItem, currentUser, cart, library, reviews } = this.props;
     if (!game) {return null;}
 
     const alreadyPurchased = Boolean(cart[game.id])
@@ -62,6 +66,9 @@ class ShowGame extends React.Component {
           />}
           <AboutSection 
             game={game}  
+          />
+          <ReviewSection
+            reviews={reviews}
           />
         </div>
       </div>

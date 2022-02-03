@@ -1,4 +1,5 @@
 export const fetchAllReviews = (gameId) => {
+  // debugger
   return $.ajax({
     method: 'GET',
     url: 'api/reviews',
