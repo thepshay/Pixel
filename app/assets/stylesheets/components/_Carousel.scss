@@ -26,6 +26,11 @@
     z-index: 5;
     transform: translateY(-35%);
     cursor: pointer;
+
+    i {
+      font-size: 2rem;
+      color: $lightestGray;
+    }
   }
 
   .left-btn {

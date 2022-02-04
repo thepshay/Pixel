@@ -17,9 +17,21 @@
     margin: 0 auto;
     position: relative;
     
-      h1 {
-        color: $lightestGray;
-        font-size: 24px;
+      div.home {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        h1.logo {
+          color: $lightestGray;
+          font-size: 24px;
+        }
+
+        img.icon {
+          height: 40px;
+          width: 100%;
+          margin-right: 5px;
+        }
       }
     
       // when user is not logged in

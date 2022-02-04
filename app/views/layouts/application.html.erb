@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link rel="icon" type="image/x-icon" href="<%= image_url('icon.png') %>" />
 
     <!-- if current user exists sends current user to react store -->
     <% if logged_in? %>
@@ -20,6 +21,7 @@
     <script type="text/javascript">
       window.joinPc = "<%= image_url('join_pc.png') %>";
       window.steamCash = "<%= image_url('steam-cash.png') %>"
+      window.icon = "<%= image_url('icon.png') %>"
     </script>
   
     <!-- fav icon -->

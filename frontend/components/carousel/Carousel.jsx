@@ -81,8 +81,12 @@ class Carousel extends React.Component {
             </Link>
           }
         </div>
-        <button className="arrow left-btn" onClick={(e) => this.prevSlide(e)}>{'<'}</button>
-        <button className="arrow right-btn" onClick={(e) => this.nextSlide(e)}>{'>'}</button>
+        <button className="arrow left-btn" onClick={(e) => this.prevSlide(e)}>
+          <i class="fas fa-chevron-left"></i>  
+        </button>
+        <button className="arrow right-btn" onClick={(e) => this.nextSlide(e)}>
+          <i class="fas fa-chevron-right"></i>
+        </button>
 
         {games.map((game, index) => {
           return (
