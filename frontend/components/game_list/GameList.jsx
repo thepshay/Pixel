@@ -25,7 +25,7 @@ class GameList extends React.Component {
   render() {
     const { className, games, infoBox, source } = this.props;
 
-    if (!games[0]) {
+    if (!games || !games[0]) {
       return null
     }
 

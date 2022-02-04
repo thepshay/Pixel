@@ -5,7 +5,8 @@ import ReviewForm from "./ReviewForm";
 const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: ownProps.currentUser,
-    title: `Write a review for ${ownProps.game.title}`,
+    title: ownProps.game.title,
+    type: 'add review',
     review: {
       user_id: ownProps.currentUser.id,
       game: ownProps.game.id,
