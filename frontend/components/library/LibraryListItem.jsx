@@ -16,6 +16,7 @@ class LibraryListItem extends React.Component {
             <h3 className="game-title">{game.title}</h3>
           </Link>
           <div className="hours-played">{`${game.hours} hrs on record`}</div>
+          <Link to={`/game/${game.game_id}`} className="review-link">Review</Link>
         </div>
       </li>
     )
