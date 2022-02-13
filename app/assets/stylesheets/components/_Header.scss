@@ -79,12 +79,13 @@
         }
 
 
-        .temp-img {
-          height: 20px;
-          width: 20px;
-          background-color: $lighterGray;
+        .profile-img {
+          height: 35px;
+          width: 35px;
+          border: 1px solid $gray;
           margin-left: 10px;
-          color:black
+          color:black;
+          box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.6);
         }
       }
 
