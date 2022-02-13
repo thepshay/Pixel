@@ -1,0 +1,28 @@
+div.review-form-container {
+  margin-top: 40px;
+
+  div.review-header {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, hsl(79, 77%, 35%) 1%, hsl(79, 77%, 30%) 10%, hsl(79, 77%, 25%) 40%);
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    div.in-library {
+      position: absolute;
+      left: -20px;
+      top: 10px;
+      background-color: $limeGreen;
+      color: $darkGray;
+      font-size: 0.7rem;
+      padding: 3px 5px;
+      box-shadow: 2px 2px 5px 1px $darkGray;
+    }
+
+    h3 {
+      margin-left: 80px;;
+      color: $limeGreen;
+    }
+  }
+}

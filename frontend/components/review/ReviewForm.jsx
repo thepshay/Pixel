@@ -41,7 +41,7 @@ class ReviewForm extends React.Component {
         </div>
         <div className="review-body">
           <div className="review-intro">
-            <div className="review-header">{reviewOptions.reviewTitle}</div>
+            <div className="review-title">{reviewOptions.reviewTitle}</div>
             <div className="review-info">
               <p>Please describe what you liked or disliked about this game and whether you recommend it to others.</p>
               <p>Please remember to be polite and follow the Rules and Guidelines</p>
