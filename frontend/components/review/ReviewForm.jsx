@@ -6,6 +6,20 @@ class ReviewForm extends React.Component {
     this.state = props.review
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.action(this.state);
+  }
+
+  handleRecommend(e, data) {
+    e.preventDefault();
+    this.setState({recommend: data})
+  }
+
+  updateBody() {
+    return (e) => this.setState({body: e.currentTarget.value})
+  }
+
   render() {
     const { currentUser, type, title} = this.props;
 
@@ -15,13 +29,13 @@ class ReviewForm extends React.Component {
       reviewTitle: `Edit review for ${title}`
     }
 
-    
+    console.log(this.state)
 
     return (
       <div className="review-form-container">
         <div className="review-header">
           <div className="in-library"> 
-            <i class="fas fa-bars"></i> IN LIBRARY
+            <i className="fas fa-bars"></i> IN LIBRARY
           </div>
           <h3>{`${title} is already in your Pixel library`}</h3>
         </div>
@@ -33,26 +47,21 @@ class ReviewForm extends React.Component {
               <p>Please remember to be polite and follow the Rules and Guidelines</p>
             </div>
           </div>
-          <form className="review-form">
+          <form className="review-form" onSubmit={(e) => this.handleSubmit(e)}>
             <img src={currentUser.photoUrl}/>
             <div className="review-inputs">
-              <textarea className="review-body" onChange={this.updateBody} />
+              <textarea className="review-body" onChange={this.updateBody()} />
               <div className="review-bottom">
                 <div className='recommend'>
                   <div className="recommend-title">Do you recommend this game?</div>
                   <div className="recommend-buttons">
-                    {this.state.recommend ? (
-                      <div className="recommend-buttons">
-                        <button className="rec-yes active">Yes</button>
-                        <button className="rec-yes">No</button>
-                      </div>
-                    ) : (
-                      <div className="recommend-buttons">
-                        <button className="rec-yes">Yes</button>
-                        <button className="rec-yes active">No</button>
-                      </div>
-                    )}
+                    <div className="recommend-buttons">
+                      <button onClick={(e) => this.handleRecommend(e, true)} className={this.state.recommend === true ? 'rec-yes active' : 'rec-yes'}>Yes</button>
+                      <button onClick={(e) => this.handleRecommend(e, false)} className={this.state.recommend === false ? 'rec-no active' : 'rec-no'}>No</button>
+                    </div>
+                  </div>
                 </div>
+                <button type='submit'>Post Review</button>
               </div>
             </div>
           </form>

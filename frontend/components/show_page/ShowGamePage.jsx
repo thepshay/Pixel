@@ -18,6 +18,10 @@ class ShowGame extends React.Component {
     if (Object.keys(this.props.cart).length===0 && this.props.currentUser) {
       this.props.fetchAllCartItems();
     } 
+
+    if (Object.keys(this.props.library).length===0 && this.props.currentUser) {
+      this.props.fetchAllLibraryItems(this.props.currentUser.id)
+    }
   }
 
   addToCart(inCart) {

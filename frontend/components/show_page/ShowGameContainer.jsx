@@ -4,6 +4,7 @@ import { fetchGame } from "../../actions/game_actions";
 import {fetchAllCartItems} from '../../actions/cart_item_actions'
 import ShowGamePage from './ShowGamePage'
 import { fetchAllReviews } from "../../actions/review_actions";
+import { fetchAllLibraryItems } from '../../actions/library_item_actions';
 
 const mapStateToProps= (state, ownProps) => {
 
@@ -22,7 +23,8 @@ const mapDispatchToProps = (dispatch) => {
     fetchGame: (id) => dispatch(fetchGame(id)),
     createCartItem: (item) => dispatch(createCartItem(item)),
     fetchAllCartItems: () => dispatch(fetchAllCartItems()),
-    fetchAllReviews: (gameId) => dispatch(fetchAllReviews(gameId))
+    fetchAllReviews: (gameId) => dispatch(fetchAllReviews(gameId)),
+    fetchAllLibraryItems: (userId) => dispatch(fetchAllLibraryItems(userId))
   }
 }
 

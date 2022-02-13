@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
     type: 'add review',
     review: {
       user_id: ownProps.currentUser.id,
-      game: ownProps.game.id,
+      game_id: ownProps.game.id,
       recommend: null,
       body: ''
     }
