@@ -39,7 +39,7 @@ class Header extends React.Component {
             className={this.state.show ? 'user-dropdown show' : 'user-dropdown'}/>
         </div>
         <Link to={`/library/${currentUser.id}`}>
-          <img className="temp-img" src={currentUser.photoUrl} />
+          <img className="profile-img" src={currentUser.photoUrl} />
         </Link>
       </div>
     )

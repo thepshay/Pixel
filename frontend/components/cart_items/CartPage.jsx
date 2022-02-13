@@ -35,7 +35,7 @@ class CartPage extends React.Component {
 
   render() {
     const {cart, deleteCartItem} = this.props
-
+    const totalPrice = this.calcTotal(cart);
 
     //Sort the cart to display in order of added to cart. 
     const sortedCart = cart.sort((a,b) => (a.cart_id > b.cart_id) ? 1 : -1)
@@ -50,17 +50,25 @@ class CartPage extends React.Component {
             />
           }
           <div className="cart-summary">
-            <div className="estimate">
+            <div className="estimate-container">
               <div>Estimated total</div>
-              <div>{`$${this.calcTotal(cart)}`}</div>
+              {totalPrice > 0 ? 
+                <div className="total-price"><span>{`$${totalPrice}`}</span> $0</div> :
+                <div className='total-price'>$0</div>
+              }
             </div>
+            {totalPrice > 0 && 
+              <div className="discount-container">
+                <div>Not a real site discount: -{`$${totalPrice}`}</div>
+              </div>
+            }
             <div className="checkout">
               {cart.length > 0 ? (
                 <button className="purchase active" onClick={() => this.purchaseItems()}>
                   Purchase for myself
                 </button>
               ) : (
-                <button className="purchase ">
+                <button className="purchase">
                   Purchase for myself
                 </button>
               )}
