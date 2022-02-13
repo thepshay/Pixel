@@ -24,6 +24,10 @@
       margin-top: 12px;
       font-size: .75rem;
       color:  $lighterBlue;
+
+      &:hover {
+        color: $lightestGray;
+      }
     }
   }
 }

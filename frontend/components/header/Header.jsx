@@ -39,7 +39,7 @@ class Header extends React.Component {
             className={this.state.show ? 'user-dropdown show' : 'user-dropdown'}/>
         </div>
         <Link to={`/library/${currentUser.id}`}>
-          <img className="temp-img" src={currentUser.photoUrl} />
+          <img className="profile-img" src={currentUser.photoUrl} />
         </Link>
       </div>
     )
@@ -56,7 +56,10 @@ class Header extends React.Component {
       <div className="header">
         <div className="header-content">
           <Link to='/'>
-            <h1>Logo :)</h1>
+            <div className="home">
+              <img className='icon' src={window.icon} />
+              <h1 className="logo">Pixel</h1>
+            </div>
           </Link>
           {currentUser ? loggedInDiv() : notLoggedInDiv()}
         </div>

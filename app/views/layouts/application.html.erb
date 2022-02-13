@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link rel="icon" type="image/x-icon" href="<%= image_url('icon.png') %>" />
 
     <!-- if current user exists sends current user to react store -->
     <% if logged_in? %>
@@ -22,6 +23,7 @@
       window.steamCash = "<%= image_url('steam-cash.png') %>"
       window.thumbsUp = "<%= image_url('thumbs-up.png') %>"
       window.thumbsDown = "<%= image_url('thumbs-down.png') %>"
+      window.icon = "<%= image_url('icon.png') %>"
     </script>
   
     <!-- fav icon -->
