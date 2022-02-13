@@ -23,5 +23,11 @@ div.session-form {
     cursor: pointer;
     border-radius: 2px;
     background: linear-gradient(45deg, $skyBlueLight 5%, $skyBlueDark 95%);
+    box-shadow: 1px 1px 15px 1px $darkestGray;
+
+    &:hover {
+      background: linear-gradient(45deg, 	hsl(201, 100%, 72%) 5%, 	hsl(225, 76%, 50%) 95%);
+      box-shadow: 3px 3px 10px 3px $darkestGray;
+    }
   }
 }
