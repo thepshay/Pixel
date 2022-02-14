@@ -37,27 +37,35 @@ class ReviewForm extends React.Component {
           <div className="in-library"> 
             <i className="fas fa-bars"></i> IN LIBRARY
           </div>
-          <h3>{`${title} is already in your Pixel library`}</h3>
+          <h2>{`${title} is already in your Pixel library`}</h2>
         </div>
         <div className="review-body">
           <div className="review-intro">
-            <div className="review-title">{reviewOptions.reviewTitle}</div>
+            <h3 className="review-title">{reviewOptions.reviewTitle}</h3>
             <div className="review-info">
               <p>Please describe what you liked or disliked about this game and whether you recommend it to others.</p>
               <p>Please remember to be polite and follow the Rules and Guidelines</p>
             </div>
           </div>
           <form className="review-form" onSubmit={(e) => this.handleSubmit(e)}>
-            <img src={currentUser.photoUrl}/>
+            <img className='current-pfp' src={currentUser.photoUrl}/>
             <div className="review-inputs">
               <textarea className="review-body" onChange={this.updateBody()} />
               <div className="review-bottom">
                 <div className='recommend'>
-                  <div className="recommend-title">Do you recommend this game?</div>
+                  <h3 className="recommend-title">Do you recommend this game?</h3>
                   <div className="recommend-buttons">
                     <div className="recommend-buttons">
-                      <button onClick={(e) => this.handleRecommend(e, true)} className={this.state.recommend === true ? 'rec-yes active' : 'rec-yes'}>Yes</button>
-                      <button onClick={(e) => this.handleRecommend(e, false)} className={this.state.recommend === false ? 'rec-no active' : 'rec-no'}>No</button>
+                      <button onClick={(e) => this.handleRecommend(e, true)} className={this.state.recommend === true ? 'rec-yes active' : 'rec-yes'}>
+                        <i className="fas fa-thumbs-up"></i>
+                        <i className="fas fa-check"></i>
+                        Yes
+                      </button>
+                      <button onClick={(e) => this.handleRecommend(e, false)} className={this.state.recommend === false ? 'rec-no active' : 'rec-no'}>
+                        <i className="fas fa-thumbs-down"></i>
+                        <i className="fas fa-check"></i>                        
+                        No
+                      </button>
                     </div>
                   </div>
                 </div>

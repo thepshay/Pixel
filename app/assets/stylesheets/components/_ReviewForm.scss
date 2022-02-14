@@ -1,14 +1,13 @@
 div.review-form-container {
   margin-top: 40px;
-
   div.review-header {
     width: 100%;
     height: 40px;
-    background: linear-gradient(to right, hsl(79, 77%, 35%) 1%, hsl(79, 77%, 30%) 10%, hsl(79, 77%, 25%) 40%);
+    background: linear-gradient(to right, hsl(79, 77%, 32%) 1%, hsl(79, 77%, 30%) 10%, hsl(79, 77%, 25%) 40%);
     position: relative;
     display: flex;
     align-items: center;
-
+    
     div.in-library {
       position: absolute;
       left: -20px;
@@ -19,10 +18,85 @@ div.review-form-container {
       padding: 3px 5px;
       box-shadow: 2px 2px 5px 1px $darkGray;
     }
-
-    h3 {
-      margin-left: 80px;;
+    
+    h2 {
       color: $limeGreen;
+      margin-left: 80px;;
     }
   }
+  
+  div.review-body {
+    padding: 15px;
+    padding-right: 20px;
+    background: linear-gradient(-45deg, rgba(75 ,75, 75, .4) 65%, rgba(50 ,50, 50, .4) 95%);
+
+    div.review-intro {
+      h3.review-title {
+        font-size: 1.25rem;
+        color: $lighterBlue;
+        margin-bottom: 7px;
+        font-weight: 100;
+      }
+
+      div.review-info {
+        margin-bottom: 15px;
+
+        p {
+          font-size: 0.9rem;
+          color: $lightGray;
+          margin-bottom: 3px;
+        }
+      }
+
+    }
+    form.review-form {
+      display: flex;
+      flex-direction: row;
+
+      img.current-pfp {
+        width: 95px;
+        height: 95px;
+        margin-right: 15px;
+      }
+
+      div.review-inputs {
+        flex: 1;
+
+        textarea.review-body {
+          width: 100%;
+          min-height: 150px;
+          border-radius: 5px;
+          background: $darkBlue;
+          color: $lighterGray;
+          padding: 10px;
+
+          &:focus {
+            outline: none !important;
+            border: 2px solid $lighterBlue;
+          }
+        }
+
+        div.review-bottom {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          div.recommend {
+            h3.recommend-title {
+              color: $lightGray;
+              margin-bottom: 5px;
+              font-size: 0.9rem;
+            }
+
+            div.recommend-buttons {
+              
+            }
+          }
+        }
+      }
+    }
+    
+  }
+
 }

@@ -12,19 +12,23 @@ class GameList extends React.Component {
   }
 
   componentDidMount() {
+
     const notFilled = this.props.games.some((ele) => !ele)
+    console.log(notFilled);
+    console.log(this.props.games)
     if (notFilled) {
+      console.log('hello')
       this.props.fetchAllGames();
     }
   }
-
+  
   setCurrGame(e, game) {
     this.setState({currGame: game})
   }
-
+  
   render() {
     const { className, games, infoBox, source } = this.props;
-
+    
     if (!games || !games[0]) {
       return null
     }
