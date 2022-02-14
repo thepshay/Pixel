@@ -55,21 +55,19 @@ class ReviewForm extends React.Component {
                 <div className='recommend'>
                   <h3 className="recommend-title">Do you recommend this game?</h3>
                   <div className="recommend-buttons">
-                    <div className="recommend-buttons">
-                      <button onClick={(e) => this.handleRecommend(e, true)} className={this.state.recommend === true ? 'rec-yes active' : 'rec-yes'}>
-                        <i className="fas fa-thumbs-up"></i>
-                        <i className="fas fa-check"></i>
-                        Yes
-                      </button>
-                      <button onClick={(e) => this.handleRecommend(e, false)} className={this.state.recommend === false ? 'rec-no active' : 'rec-no'}>
-                        <i className="fas fa-thumbs-down"></i>
-                        <i className="fas fa-check"></i>                        
-                        No
-                      </button>
-                    </div>
+                    <button onClick={(e) => this.handleRecommend(e, true)} className={this.state.recommend === true ? 'rec-yes active' : 'rec-yes'}>
+                      <i className="fas fa-thumbs-up"></i>
+                      <i className="fas fa-check"></i>
+                      Yes
+                    </button>
+                    <button onClick={(e) => this.handleRecommend(e, false)} className={this.state.recommend === false ? 'rec-no active' : 'rec-no'}>
+                      <i className="fas fa-thumbs-down"></i>
+                      <i className="fas fa-check"></i>                        
+                      No
+                    </button>
                   </div>
                 </div>
-                <button type='submit'>Post Review</button>
+                <button className="submit-review" type='submit'>Post Review</button>
               </div>
             </div>
           </form>

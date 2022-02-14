@@ -56,7 +56,8 @@ div.review-form-container {
       img.current-pfp {
         width: 95px;
         height: 95px;
-        margin-right: 15px;
+        margin-right: 20px;
+        border: 1px solid $gray;
       }
 
       div.review-inputs {
@@ -81,6 +82,7 @@ div.review-form-container {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          align-items: center;
 
           div.recommend {
             h3.recommend-title {
@@ -90,7 +92,64 @@ div.review-form-container {
             }
 
             div.recommend-buttons {
-              
+
+              button.rec-yes,
+              button.rec-no {
+                padding: 5px 17px;
+                color: $lighterBlue;
+                background-color: rgba( 103, 193, 245, 0.2 );
+                border: none;
+                border-radius: 3px;
+                margin-right: 5px;
+                cursor: pointer;
+                position: relative;
+
+                i.fa-thumbs-up,
+                i.fa-thumbs-down {
+                  font-size: 1.25rem;  
+                  margin-right: 5px;
+                }
+
+                i.fa-check {
+                  display: none;
+                }
+
+                &:hover {
+                  color: $lightestGray;
+                  background: linear-gradient(125deg, hsl(188, 67%, 50%) 10%, hsl(188, 67%, 43%) 30%);
+                }
+
+                &.active {
+                  background-color: rgba( 103, 193, 245, 0.75 );
+                  i.fa-thumbs-up,
+                  i.fa-thumbs-down {
+                    color: rgba(0 ,0 ,0, 0.25)
+                  }
+
+                  i.fa-check {
+                    display: block;
+                    position: absolute;
+                    top: 6px;
+                    left: 16px;
+                    font-size: 1.15rem; 
+                    color: $lightestGray;
+                  }
+                }
+              }
+            }
+          }
+
+          button.submit-review {
+            color: $darkestGray;
+            padding: 9px 16px;
+            margin-right: 5px;
+            border-radius: 3px;
+            border: none;
+            background: rgba(193,228,249,1);
+            cursor: pointer;
+
+            &:hover {
+              background: linear-gradient(to top, hsl(202, 88%, 65%) 30%, hsl(202, 88%, 82%) 95%);
             }
           }
         }
