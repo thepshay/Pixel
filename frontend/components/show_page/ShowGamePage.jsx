@@ -8,6 +8,7 @@ import ReviewSection from '../review/ReviewSection';
 
 import { Link } from "react-router-dom";
 import ReviewedSummaryContainer from '../review/ReviewSummaryContainer';
+import EditReviewContainer from '../review/EditReviewContainer';
 
 class ShowGame extends React.Component {
   constructor(props) {
@@ -52,6 +53,10 @@ class ShowGame extends React.Component {
     this.setState({editForm: true})
   }
 
+  changeToSummary() {
+    this.setState({editForm: false})
+  }
+
 
   render() {
     const { game, currentUser, cart, library, reviews } = this.props;
@@ -92,7 +97,14 @@ class ShowGame extends React.Component {
       console.log(4)
       userActionDisplay = () => {
         if (this.state.editForm) {
-          return <div>You been sticky bugged</div>
+          return (
+            <EditReviewContainer 
+              game={game}
+              currentUser={currentUser}
+              review={reviews[currentUser.id]}
+              changeToSummary={() => this.changeToSummary()}
+            />
+          )
         } else {
           return (
             <ReviewedSummaryContainer

@@ -10,6 +10,9 @@ class ReviewForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state);
+    if (this.props.type === 'edit review') {
+      this.props.changeToSummary();
+    }
   }
 
   handleRecommend(e, data) {
@@ -25,9 +28,11 @@ class ReviewForm extends React.Component {
     const { currentUser, type, title} = this.props;
 
     const reviewOptions = (type === 'add review') ? {
-      reviewTitle: `Write a review for ${title}`
+      reviewTitle: `Write a review for ${title}`,
+      button: 'Post Review'
     } : {
-      reviewTitle: `Edit review for ${title}`
+      reviewTitle: `Edit review for ${title}`,
+      button: 'Edit Review'
     }
 
     console.log(this.state)
@@ -46,7 +51,7 @@ class ReviewForm extends React.Component {
           <form className="review-form" onSubmit={(e) => this.handleSubmit(e)}>
             <img className='current-pfp' src={currentUser.photoUrl}/>
             <div className="review-inputs">
-              <textarea className="review-body" onChange={this.updateBody()} />
+              <textarea className="review-body" onChange={this.updateBody()} value={this.state.body}/>
               <div className="review-bottom">
                 <div className='recommend'>
                   <h3 className="recommend-title">Do you recommend this game?</h3>
@@ -63,7 +68,7 @@ class ReviewForm extends React.Component {
                     </button>
                   </div>
                 </div>
-                <button className="submit-review" type='submit'>Post Review</button>
+                <button className="submit-review" type='submit'>{reviewOptions.button}</button>
               </div>
             </div>
           </form>

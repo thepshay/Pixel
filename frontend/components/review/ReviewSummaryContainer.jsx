@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { updateReview, deleteReview } from '../../actions/review_actions';
+import { deleteReview } from '../../actions/review_actions';
 import ReviewSummary from "./ReviewSummary";
 
 const mapStateToProps = (state, ownProps) => {
@@ -13,7 +13,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    updateReview: (review) => dispatch(updateReview(review)),
     deleteReview: (reviewId, gameId) => dispatch(deleteReview(reviewId, gameId))
   }
 }
