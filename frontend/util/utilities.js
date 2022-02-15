@@ -9,14 +9,14 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-function formateDate(str) {
+export function formateDate(str) {
   const date = str.split('T')[0];
   const dateArr = date.split('-');
   const year = dateArr[0];
   const month = dateArr[1];
   const day = dateArr[2];
 
-  return `${monthToWriting(month)} ${day} ${year}`;
+  return `${monthToWriting(month)} ${day}, ${year}`;
 }
 
 function monthToWriting(str) {

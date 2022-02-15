@@ -7,9 +7,15 @@ import AddReviewContainer from '../review/AddReviewContainer';
 import ReviewSection from '../review/ReviewSection';
 
 import { Link } from "react-router-dom";
-import AlreadyReviewedContainer from '../review/AlreadyReviewedContainer';
+import ReviewedSummaryContainer from '../review/ReviewSummaryContainer';
 
 class ShowGame extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      editForm: false
+    }
+  }
 
   componentDidMount() {
     window.scrollTo(0,0);
@@ -40,6 +46,10 @@ class ShowGame extends React.Component {
 
   goToLogin() {
     return () => this.props.history.push('/login')
+  }
+
+  changeToEdit() {
+    this.setState({editForm: true})
   }
 
 
@@ -80,13 +90,20 @@ class ShowGame extends React.Component {
       )
     } else if (currentUser && inLibrary && hasReview) { // user exists, game in library, review
       console.log(4)
-      userActionDisplay = () => (
-        <AlreadyReviewedContainer
-          game={game}
-          review={reviews[currentUser.id]}
-          currentUser={currentUser}
-        />
-      )
+      userActionDisplay = () => {
+        if (this.state.editForm) {
+          return <div>You been sticky bugged</div>
+        } else {
+          return (
+            <ReviewedSummaryContainer
+              game={game}
+              review={reviews[currentUser.id]}
+              currentUser={currentUser}
+              changeToEdit={() => this.changeToEdit()}
+            />
+          )
+        }
+      }
     } else { // shouldn't be possible, but spaghetti will allow it
       console.log(5)
       console.log('Current User: ', currentUser);
