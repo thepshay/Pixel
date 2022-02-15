@@ -6,3 +6,4 @@ json.username user.username
 json.profile_pic url_for(user.photo)
 json.recommend @review.recommend
 json.body @review.body
+json.date review.created_at

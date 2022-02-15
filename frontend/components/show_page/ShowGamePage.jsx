@@ -7,6 +7,7 @@ import AddReviewContainer from '../review/AddReviewContainer';
 import ReviewSection from '../review/ReviewSection';
 
 import { Link } from "react-router-dom";
+import AlreadyReviewedContainer from '../review/AlreadyReviewedContainer';
 
 class ShowGame extends React.Component {
 
@@ -80,7 +81,11 @@ class ShowGame extends React.Component {
     } else if (currentUser && inLibrary && hasReview) { // user exists, game in library, review
       console.log(4)
       userActionDisplay = () => (
-        <div>Edit Review</div>
+        <AlreadyReviewedContainer
+          game={game}
+          review={reviews[currentUser.id]}
+          currentUser={currentUser}
+        />
       )
     } else { // shouldn't be possible, but spaghetti will allow it
       console.log(5)

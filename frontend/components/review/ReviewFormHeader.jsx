@@ -5,7 +5,7 @@ class ReviewFormHeader extends React.Component {
   render() {
     const { title } = this.props;
     return (
-      <div className="review-header">
+      <div className="review-form-header">
           <div className="in-library"> 
             <i className="fas fa-bars"></i> IN LIBRARY
           </div>
