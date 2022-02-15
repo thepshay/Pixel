@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewFormHeader from "./ReviewFormHeader";
 
 class ReviewForm extends React.Component {
   constructor(props) {
@@ -33,12 +34,7 @@ class ReviewForm extends React.Component {
 
     return (
       <div className="review-form-container">
-        <div className="review-header">
-          <div className="in-library"> 
-            <i className="fas fa-bars"></i> IN LIBRARY
-          </div>
-          <h2>{`${title} is already in your Pixel library`}</h2>
-        </div>
+        <ReviewFormHeader title={title} />
         <div className="review-body">
           <div className="review-intro">
             <h3 className="review-title">{reviewOptions.reviewTitle}</h3>
