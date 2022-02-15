@@ -16,8 +16,8 @@ class ReviewSummary extends React.Component {
     return (
       <div className='review-summary-container'>
         <ReviewFormHeader title={game.title} />
-        <div className='review-summary-body'>
-          <h3 className='review-summary-header'>{`You reviewed this game on ${formateDate(review.date)}`}</h3>
+        <div className='review-summary-content'>
+          <h3 className='review-summary-title'>{`You reviewed this game on ${formateDate(review.date)}`}</h3>
           <div className='review-summary'>
             <img
               className="review-summary-thumb" 

@@ -1,0 +1,60 @@
+div.review-summary-container {
+  margin-top: 40px;
+
+  div.review-summary-content {
+    padding: 15px;
+    padding-right: 20px;
+    background: linear-gradient(-45deg, rgba(75 ,75, 75, .4) 65%, rgba(50 ,50, 50, .4) 95%);
+
+    h3.review-summary-title {
+      font-size: 1.25rem;
+      color: $lighterBlue;
+      margin-bottom: 7px;
+      font-weight: 100;
+    }
+
+    div.review-summary {
+      display: flex;
+      flex-direction: row;
+      margin-top: 12px;
+
+      p.review-summary-body {
+        margin-left: 10px;
+        color: $lightGray;
+      }
+    }
+  }
+
+  div.review-summary-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    button {
+      color: $darkestGray;
+      padding: 9px 16px;
+      margin-right: 5px;
+      border-radius: 4px;
+      border: none;
+      border: 1px solid $darkestGray;
+      cursor: pointer;
+      
+      &.delete-review {
+        background-color: $gray;
+        color: $lightestGray;
+
+        &:hover {
+          background-color:hsl(359, 75%, 60%);
+        }
+      }
+
+      &.edit-review {
+        background: rgba(193,228,249,.8);
+
+        &:hover {
+          background: linear-gradient(to top, hsl(202, 88%, 60%) 60%, hsl(202, 88%, 68%) 95%);
+        }
+      }
+    }
+  }
+}
