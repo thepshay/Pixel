@@ -6,6 +6,7 @@ import sessionErrorsReducer from "./session_errors_reducer";
 import cartItemErrorsReducer from "./cart_item_errors_reducer";
 import libraryItemErrorsReducer from "./library_item_errors_reducer";
 import reviewErrorsReducer from "./review_errors_reducer";
+import modalReducer from "./modal_reducer";
 
 const rootReducer = combineReducers({
   entities: entitiesReducer,
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   cartErrors: cartItemErrorsReducer,
   libraryErrors: libraryItemErrorsReducer,
   reviewErrors: reviewErrorsReducer,
-  session: sessionReducer
+  session: sessionReducer,
+  modal: modalReducer
 });
 
 export default rootReducer;

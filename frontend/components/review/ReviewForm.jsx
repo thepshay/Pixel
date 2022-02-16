@@ -4,12 +4,28 @@ import ReviewFormHeader from "./ReviewFormHeader";
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = props.review
+    this.state = {
+      ...props.review,
+      errors: ''
+    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.state);
+    // console.log(this.props.errors)
+    // if (this.props.errors[0]) {
+    //   this.props.openModal('reviewError');
+    // } else {
+    //   this.props.action(this.state);
+    //   if (this.props.type === 'edit review') {
+    //     this.props.changeToSummary();
+    //   }
+    // }
+    this.setState({errors: ''});
+    this.props.action(this.state)
+      .fail(() => {
+        this.props.openModal('reviewError');
+      });
     if (this.props.type === 'edit review') {
       this.props.changeToSummary();
     }

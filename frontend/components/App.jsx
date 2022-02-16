@@ -10,6 +10,7 @@ import GenrePageContainer from "./genre/GenrePageContainer";
 import ShowGameContainer from "./show_page/ShowGameContainer";
 import CartPageContainer from './cart_items/CartPageContainer'
 import LibraryPageContainer from "./library/LibraryPageContainer";
+import Modal from "./modal/Modal";
 
 class App extends React.Component {
 
@@ -17,6 +18,7 @@ class App extends React.Component {
     return (
       <div className="main-content">
         <HeaderContainer />
+        <Modal />
         <HashRouter>
           <Switch>
             <AuthRoute path="/login" component={LoginFormContainer}  />

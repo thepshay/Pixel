@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch) => {
     createCartItem: (item) => dispatch(createCartItem(item)),
     fetchAllCartItems: () => dispatch(fetchAllCartItems()),
     fetchAllReviews: (gameId) => dispatch(fetchAllReviews(gameId)),
-    fetchAllLibraryItems: (userId) => dispatch(fetchAllLibraryItems(userId))
+    fetchAllLibraryItems: (userId) => dispatch(fetchAllLibraryItems(userId)),
   }
 }
 

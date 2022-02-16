@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { createReview } from "../../actions/review_actions";
 import ReviewForm from "./ReviewForm";
+import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -12,13 +13,15 @@ const mapStateToProps = (state, ownProps) => {
       game_id: ownProps.game.id,
       recommend: null,
       body: ''
-    }
+    },
+    errors: state.reviewErrors
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    action: (review) => dispatch(createReview(review))
+    action: (review) => dispatch(createReview(review)),
+    openModal: (modal) => dispatch(openModal(modal))
   }
 }
 
