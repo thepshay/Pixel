@@ -9,9 +9,7 @@ class LibraryPage extends React.Component {
 
   componentDidMount() {
     this.props.fetchUser(this.props.userId);
-    if (Object.keys(this.props.library).length === 0) {
-      this.props.fetchAllLibraryItems(this.props.userId)
-    }
+    this.props.fetchAllLibraryItems(this.props.userId)
   }
 
   componentDidUpdate(prevProps) {
@@ -23,10 +21,7 @@ class LibraryPage extends React.Component {
 
   render() {
     const { library,user } = this.props;
-  
-    if (!user || Object.keys(library) === 0) {
-      return null;
-    }
+    
     return (
       <div className="library-page">
         <div className="library-main-content">

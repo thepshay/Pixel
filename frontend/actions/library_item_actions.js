@@ -36,8 +36,8 @@ export const fetchAllLibraryItems = (userId) => (dispatch) => {
 
 export const createLibraryItem = (item) => (dispatch) => {
   return LibraryApiUtil.postLibraryItem(item)
-    .then((payload) => {
-      dispatch(receiveLibraryItem(payload))
+    .then((items) => {
+      dispatch(receiveAllLibraryItems(items))
     }, (errors) => {
       dispatch(receiveLibraryErrors(errors.responseJSON))
     })

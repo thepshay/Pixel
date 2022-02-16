@@ -7,8 +7,9 @@ class Api::GameLibraryItemsController < ApplicationController
 
   def create
     @library_item = GameLibraryItem.new(library_params)
+    @library_items = User.find(library_params[:user_id]).game_library_items
     if @library_item.save
-      render :show
+      render :index
     else
       render json: @library_item.errors.full_messages, status: 422
     end
