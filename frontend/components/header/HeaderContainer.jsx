@@ -5,7 +5,6 @@ import { logout } from '../../actions/session_actions';
 import Header from './Header';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps)
   return {
     currentUser: state.session.currentUser
   }

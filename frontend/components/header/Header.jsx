@@ -21,14 +21,13 @@ class Header extends React.Component {
   }
 
   logoutUser() {
-    this.props.logout(this.props.currentUser.id);
-    this.props.history.push('/');
+    this.props.logout(this.props.currentUser.id)
+      .then(this.props.history.push('/'));
   }
 
 
   render() {
     const { currentUser, logout } = this.props;
-    console.log(this.props)
 
     // Header display when user is logged in
     const loggedInDiv = () => (

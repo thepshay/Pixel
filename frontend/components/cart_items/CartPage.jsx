@@ -30,7 +30,6 @@ class CartPage extends React.Component {
       const newLibraryItem = {user_id, game_id}
       this.props.createLibraryItem(newLibraryItem);
     });
-    console.log(user_id)
     this.props.history.push(`library/${user_id}`);
   }
 

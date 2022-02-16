@@ -69,7 +69,8 @@ class Carousel extends React.Component {
     if (!games || notFilled) {
       return null;
     }
-
+    console.log(currentUser)
+    console.log('boolean', Boolean(currentUser))
     return (
       <div className={className}>
         
@@ -77,7 +78,7 @@ class Carousel extends React.Component {
           <h1 className="title">{title}</h1>
           {currentUser && 
             <Link to='/cart'>
-              <CartTab  numItems={Object.keys(cart).length}/>
+              <CartTab numItems={Object.keys(cart).length}/>
             </Link>
           }
         </div>

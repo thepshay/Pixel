@@ -33,7 +33,7 @@ class ShowGame extends React.Component {
   }
 
   addToCart(inCart) {
-    const { createCartItem, game} = this.props;
+    const { createCartItem, game, currentUser} = this.props;
 
     return () => {
       if (inCart) {
