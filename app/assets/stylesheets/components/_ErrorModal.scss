@@ -1,0 +1,54 @@
+div.review-error-container {
+  position: relative;
+  width: 700px;
+  height: 200px;
+  background: linear-gradient(125deg, hsl(218, 13%, 22%) 10%, hsl(218, 13%, 17%) 60%);
+  padding: 20px;
+
+  &::before {
+    content:"";
+    background: linear-gradient(to right, rgba(71, 191, 255, 1) 30%, rgba(71, 191, 255, .5) 70%);
+    display: block;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  h1.review-error-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: $lightestGray;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $lightGray;
+    margin-bottom: 5px;
+  }
+
+  div.review-error-button-container {
+    margin-top: 30px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    button {
+      color: $lightestGray;
+      font-size: 0.9rem;
+      padding: 7px 15px;
+      background: hsl(218, 13%, 22%);
+      border: none;
+      box-shadow: 1px 1px 5px 1px $darkestGray;
+      cursor: pointer;
+      border-radius: 2px;
+
+      &:hover {
+        background: hsl(218, 13%, 35%);
+      }
+    }
+  }
+}
