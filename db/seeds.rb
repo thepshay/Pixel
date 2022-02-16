@@ -12,24 +12,32 @@ CartItem.delete_all
 GameLibraryItem.delete_all
 
 user1 = User.create({username: 'Demo User', password: 'demmo usser'})
-pfp1 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp1.jpg')
+pfp1 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp05.png')
 user1.photo.attach(io: pfp1, filename: 'pfp1.jpg')
 
-user2 = User.create({username: 'user2', password:'123456'})
+user2 = User.create({username: 'harsha', password:'123456'})
 pfp2 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp2.jpg')
 user2.photo.attach(io: pfp2, filename: 'pfp2.jpg')
 
-user3 = User.create({username: 'user3', password:'123456'})
-pfp3 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp6.jpg')
+user3 = User.create({username: 'michelle', password:'123456'})
+pfp3 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp01.jpg')
 user3.photo.attach(io: pfp3, filename: 'pfp3.jpg')
 
-user4 = User.create({username: 'user4', password:'123456'})
-pfp4 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp4.jpg')
+user4 = User.create({username: 'jj', password:'123456'})
+pfp4 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp03.jpg')
 user4.photo.attach(io: pfp4, filename: 'pfp4.jpg')
 
-user5 = User.create({username: 'user5', password:'123456'})
-pfp5 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp5.jpg')
+user5 = User.create({username: 'presley', password:'123456'})
+pfp5 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp04.jpg')
 user5.photo.attach(io: pfp5, filename: 'pfp5.jpg')
+
+user6 = User.create({username: 'jack', password:'123456'})
+pfp6 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp5.jpg')
+user6.photo.attach(io: pfp6, filename: 'pfp5.jpg')
+
+user7 = User.create({username: 'daniel', password:'123456'})
+pfp7 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/00_profile_pic/pfp02.jpg')
+user7.photo.attach(io: pfp7, filename: 'pfp5.jpg') 
 
 mhw = Game.create({
   title: 'Monster Hunter: World',
@@ -69,6 +77,7 @@ mhw.photos.attach(io: mhw_4, filename: 'mhw_4.jpg')
 mhw_5 = open('https://pixel-made-dev.s3.us-west-1.amazonaws.com/mhw/mhw_5.jpg')
 mhw.photos.attach(io: mhw_5, filename: 'mhw_5.jpg')
 
+Review
 
 tf2 = Game.create({
   title: 'Team Fortress 2',
@@ -727,10 +736,64 @@ GameLibraryItem.create({user_id: 1, game_id: 9, hours: 18})
 GameLibraryItem.create({user_id: 1, game_id: 17, hours: 5})
 GameLibraryItem.create({user_id: 1, game_id: 11, hours: 5})
 
+Review.create({
+  user_id: 1, 
+  game_id: 6, 
+  recommend: true, 
+  body: 'great game, I wish japan was real though'})
+
+Review.create({
+  user_id: 1, 
+  game_id: 8, 
+  recommend: true, 
+  body: 'Senator Armstrong is so cool, I wish Americans were real.'})
+
+Review.create({
+  user_id: 1, 
+  game_id: 9, 
+  recommend: true, 
+  body: 'A game this good shouldnt exist, its just unfair'})
+
+Review.create({
+  user_id: 1, 
+  game_id: 17, 
+  recommend: true, 
+  body: 'The game gets easier as you get farther through it, since it\'s easier to not blink when your eyes are full of tears'})
+
+Review.create({
+  user_id: 1, 
+  game_id: 11, 
+  recommend: true, 
+  body: 'Not bad at all. Not worth because of very limited content'})
+
 GameLibraryItem.create({user_id: 2, game_id: 1, hours: 443})
 GameLibraryItem.create({user_id: 2, game_id: 2, hours: 829})
 GameLibraryItem.create({user_id: 2, game_id: 4, hours: 54})
 GameLibraryItem.create({user_id: 2, game_id: 11, hours: 15})
+
+Review.create({
+  user_id: 2, 
+  game_id: 1, 
+  recommend: true, 
+  body: 'the monsters bullied me'})
+
+Review.create({
+  user_id: 2, 
+  game_id: 2, 
+  recommend: false, 
+  body: 'WHERE ARE THE TF2 UPDATES'})
+
+Review.create({
+  user_id: 2, 
+  game_id: 4, 
+  recommend: true, 
+  body: 'i cant wait for silksone next year'})
+
+Review.create({
+  user_id: 2, 
+  game_id: 11, 
+  recommend: true, 
+  body: 'unga bunga longsword main'})
 
 
 GameLibraryItem.create({user_id: 3, game_id: 12, hours: 93})
@@ -739,30 +802,121 @@ GameLibraryItem.create({user_id: 3, game_id: 7, hours: 5})
 GameLibraryItem.create({user_id: 3, game_id: 3, hours: 23})
 GameLibraryItem.create({user_id: 3, game_id: 11, hours: 55})
 
-
-GameLibraryItem.create({user_id: 4, game_id: 14, hours: 21})
-GameLibraryItem.create({user_id: 4, game_id: 11, hours: 46})
-
-
-GameLibraryItem.create({user_id: 5, game_id: 15, hours: 23})
-GameLibraryItem.create({user_id: 5, game_id: 10, hours: 134})
-GameLibraryItem.create({user_id: 5, game_id: 11, hours: 16})
+Review.create({
+  user_id: 3, 
+  game_id: 12, 
+  recommend: true, 
+  body: 'What a fantastic game.'})
 
 Review.create({
-  user_id: 1, 
-  game_id: 11, 
+  user_id: 3, 
+  game_id: 16, 
   recommend: true, 
-  body: 'I can dress my cat as a cowboy, give him drugs and make him fight a pink dinosaur... BEST GAME EVER!
-  '})
+  body: 'Tears may or may not have been shed.'})
 
 Review.create({
-  user_id: 2, 
-  game_id: 11, 
+  user_id: 3, 
+  game_id: 7, 
   recommend: true, 
-  body: 'this is probably one of the most video games ever made'})
+  body: 'A beautiful emotional journey.'})
+
+Review.create({
+  user_id: 3, 
+  game_id: 3, 
+  recommend: true, 
+  body: 'An absolute must have. One of the best open world ever made.'})
 
 Review.create({
   user_id: 3, 
   game_id: 11, 
   recommend: true, 
-  body: 'Jogo sempre foi 10/10 desde a versão do Switch. Com mod de SlowMo ficou 17/10.'})
+  body: 'I can dress my cat as a cowboy.'})
+
+GameLibraryItem.create({user_id: 4, game_id: 14, hours: 21})
+GameLibraryItem.create({user_id: 4, game_id: 11, hours: 46})
+
+Review.create({
+  user_id: 4, 
+  game_id: 14, 
+  recommend: true, 
+  body: 'easy game hitless run'})
+
+Review.create({
+  user_id: 4, 
+  game_id: 11, 
+  recommend: true, 
+  body: 'longsword players are the real monsters'})
+
+GameLibraryItem.create({user_id: 5, game_id: 15, hours: 23})
+GameLibraryItem.create({user_id: 5, game_id: 10, hours: 234})
+GameLibraryItem.create({user_id: 5, game_id: 3, hours: 16})
+
+Review.create({
+  user_id: 5, 
+  game_id: 15, 
+  recommend: true, 
+  body: 'BOOKER DEWITT WOULD YOU KINDLY PLAY THIS GAME'})
+
+Review.create({
+  user_id: 5, 
+  game_id: 10, 
+  recommend: true, 
+  body: 'i spent 200+ hrs and still cant get past bc5... send help'})
+
+Review.create({
+  user_id: 5, 
+  game_id: 3, 
+  recommend: true, 
+  body: 'a man who never eats pork buns is never a whole man.'})
+
+GameLibraryItem.create({user_id: 6, game_id: 14, hours: 3})
+GameLibraryItem.create({user_id: 6, game_id: 6, hours: 5})
+GameLibraryItem.create({user_id: 6, game_id: 5, hours: 7})
+
+Review.create({
+  user_id: 6, 
+  game_id: 14, 
+  recommend: true, 
+  body: 'Sekiro: I Cried More Than Twice'})
+
+Review.create({
+  user_id: 6, 
+  game_id: 6, 
+  recommend: true, 
+  body: 'all my homies are listening to BAKA MITAI'})
+
+Review.create({
+  user_id: 6, 
+  game_id: 5, 
+  recommend: true, 
+  body: 'pls bring ps5 to pc'})
+
+
+GameLibraryItem.create({user_id: 7, game_id: 15, hours: 2})
+GameLibraryItem.create({user_id: 7, game_id: 2, hours: 3})
+GameLibraryItem.create({user_id: 7, game_id: 1, hours: 567})
+GameLibraryItem.create({user_id: 7, game_id: 5, hours: 6})
+
+Review.create({
+  user_id: 7, 
+  game_id: 15, 
+  recommend: true, 
+  body: 'Great complex story with a lot of mysteries'})
+
+Review.create({
+  user_id: 7, 
+  game_id: 2, 
+  recommend: true, 
+  body: 'hat collector'})
+  
+Review.create({
+  user_id: 7, 
+  game_id: 1, 
+  recommend: true, 
+  body: 'farm safi, its not much but its honest work'})
+
+Review.create({
+  user_id: 7, 
+  game_id: 5, 
+  recommend: true, 
+  body: 'Every scene with Kanji in it is Golden'})
