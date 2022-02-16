@@ -32,7 +32,7 @@ class ReviewSummary extends React.Component {
               Delete Review
             </button>
             <button className='edit-review' onClick={() => this.props.changeToEdit()}>
-              EditReview
+              Edit Review
             </button>
           </div>
         </div>

@@ -68,7 +68,6 @@ class ShowGame extends React.Component {
 
     let userActionDisplay;
     if (!currentUser) { // if no user exists
-      console.log(1)
       userActionDisplay = () => (
         <AddToCartDisplay
           game={game}
@@ -77,7 +76,6 @@ class ShowGame extends React.Component {
         />
       )
     } else if (currentUser && !inLibrary) { // user exists, game not in library
-      console.log(2)
       userActionDisplay = () => (
         <AddToCartDisplay
           game={game}
@@ -86,7 +84,6 @@ class ShowGame extends React.Component {
         />
       ) 
     } else if (currentUser && inLibrary && !hasReview) { // user exists, game in library, no review
-      console.log(3)
       userActionDisplay = () => (
         <AddReviewContainer 
           game={game}
@@ -94,7 +91,6 @@ class ShowGame extends React.Component {
         />
       )
     } else if (currentUser && inLibrary && hasReview) { // user exists, game in library, review
-      console.log(4)
       userActionDisplay = () => {
         if (this.state.editForm) {
           return (
@@ -117,10 +113,6 @@ class ShowGame extends React.Component {
         }
       }
     } else { // shouldn't be possible, but spaghetti will allow it
-      console.log(5)
-      console.log('Current User: ', currentUser);
-      console.log('inLibrary: ', inLibrary);
-      console.log('hasReview: ', hasReview);
       userActionDisplay = () => (
         <div>Something went wrong</div>
       )

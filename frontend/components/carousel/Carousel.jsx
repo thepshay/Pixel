@@ -69,8 +69,6 @@ class Carousel extends React.Component {
     if (!games || notFilled) {
       return null;
     }
-    console.log(currentUser)
-    console.log('boolean', Boolean(currentUser))
     return (
       <div className={className}>
         
