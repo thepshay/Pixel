@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 class ReviewItem extends React.Component {
 
@@ -7,8 +8,12 @@ class ReviewItem extends React.Component {
     return (
       <div className="review-content">
         <div className="user-info">
-          <img className='profile-pic' src={review.profile_pic} />
-          <div className="username">{review.username}</div>
+          <Link to={`/library/${review.user_id}`}>
+            <img className='profile-pic' src={review.profile_pic} />
+          </Link>
+          <Link to={`/library/${review.user_id}`}>
+            <div className="username">{review.username}</div>
+          </Link>
         </div>
         <div className="review-info">
           <div className="review-header">

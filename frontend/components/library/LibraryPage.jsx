@@ -8,6 +8,7 @@ class LibraryPage extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0,0);
     this.props.fetchUser(this.props.userId);
     this.props.fetchAllLibraryItems(this.props.userId)
   }
@@ -21,6 +22,10 @@ class LibraryPage extends React.Component {
 
   render() {
     const { library,user } = this.props;
+  
+    if (!user || Object.keys(library) === 0) {
+      return null;
+    }
     
     return (
       <div className="library-page">
