@@ -13,7 +13,7 @@ class ErrorModal extends React.Component {
 
     return (
       <div className="review-error-container">
-        
+        <i className="fas fa-xmark" onClick={(e) => this.handleClick(e)}></i>
         <h1 className="review-error-title">Write a review for {title}</h1>
         <p>Please describe what you liked or 
           disliked about this game and whether you recommend it to others.</p>

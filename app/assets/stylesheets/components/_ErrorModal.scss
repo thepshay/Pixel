@@ -31,7 +31,7 @@ div.review-error-container {
 
   div.review-error-button-container {
     margin-top: 30px;
-    margin-right: 20px;
+    margin-right: 10px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -49,6 +49,20 @@ div.review-error-container {
       &:hover {
         background: hsl(218, 13%, 35%);
       }
+    }
+  }
+
+  i.fa-xmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: $lightGray;
+    padding: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $lightestGray;
     }
   }
 }
