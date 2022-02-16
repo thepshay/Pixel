@@ -1,17 +1,19 @@
 import React from "react";
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import ErrorModal from "../review/ErrorModal";
+import ErrorModal from "./ErrorModal";
 
 class Modal extends React.Component {
   render() {
     const { modal, closeModal } = this.props;
+
+    console.log('props', this.props)
     if (!modal) return null;
 
     let component; 
-    switch (modal) {
+    switch (modal.type) {
       case 'reviewError':
-        component = <ErrorModal />
+        component = <ErrorModal title={modal.title}/>
         break;
       default:
         return null;
@@ -27,9 +29,10 @@ class Modal extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+  console.log('ownprops', ownProps)
   return {
-    modal: state.modal
+    modal: state.modal,
   }
 }
 

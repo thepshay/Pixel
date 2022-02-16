@@ -12,23 +12,15 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // console.log(this.props.errors)
-    // if (this.props.errors[0]) {
-    //   this.props.openModal('reviewError');
-    // } else {
-    //   this.props.action(this.state);
-    //   if (this.props.type === 'edit review') {
-    //     this.props.changeToSummary();
-    //   }
-    // }
-    this.setState({errors: ''});
     this.props.action(this.state)
+      .then(() => {
+        if (this.props.type === 'edit review') {
+          this.props.changeToSummary();
+        }
+      })
       .fail(() => {
-        this.props.openModal('reviewError');
+        this.props.openModal({type: 'reviewError', title: this.props.game.title});
       });
-    if (this.props.type === 'edit review') {
-      this.props.changeToSummary();
-    }
   }
 
   handleRecommend(e, data) {

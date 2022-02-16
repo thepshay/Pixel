@@ -4,7 +4,7 @@ class ErrorModal extends React.Component {
 
   render() {
     return (
-      <div>You dun goofed</div>
+      <div>{this.props.title}</div>
     )
   }
 }
