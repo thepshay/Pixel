@@ -1,7 +1,6 @@
 div.review-error-container {
   position: relative;
   width: 700px;
-  height: 200px;
   background: linear-gradient(125deg, hsl(218, 13%, 22%) 10%, hsl(218, 13%, 17%) 60%);
   padding: 20px;
 
@@ -45,6 +44,7 @@ div.review-error-container {
       box-shadow: 1px 1px 5px 1px $darkestGray;
       cursor: pointer;
       border-radius: 2px;
+      margin-bottom: 5px;
 
       &:hover {
         background: hsl(218, 13%, 35%);
