@@ -20,9 +20,15 @@ class Header extends React.Component {
     })
   }
 
+  logoutUser() {
+    this.props.logout(this.props.currentUser.id);
+    this.props.history.push('/');
+  }
+
 
   render() {
     const { currentUser, logout } = this.props;
+    console.log(this.props)
 
     // Header display when user is logged in
     const loggedInDiv = () => (
@@ -36,7 +42,9 @@ class Header extends React.Component {
           <UserDropdown 
             logout={logout} 
             currentUser={currentUser}
-            className={this.state.show ? 'user-dropdown show' : 'user-dropdown'}/>
+            className={this.state.show ? 'user-dropdown show' : 'user-dropdown'}
+            logoutUser={()=>this.logoutUser()}
+          />
         </div>
         <Link to={`/library/${currentUser.id}`}>
           <img className="profile-img" src={currentUser.photoUrl} />
