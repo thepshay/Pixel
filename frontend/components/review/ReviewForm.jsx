@@ -43,8 +43,6 @@ class ReviewForm extends React.Component {
       button: 'Edit Review'
     }
 
-    console.log(this.state)
-
     return (
       <div className="review-form-container">
         <ReviewFormHeader title={title} />

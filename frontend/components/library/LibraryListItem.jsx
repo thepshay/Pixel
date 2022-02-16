@@ -5,7 +5,6 @@ class LibraryListItem extends React.Component {
 
   render() {
     const {game} = this.props;
-    console.log(game)
     return (
       <li className='library-list-item'>
         <Link to={`/game/${game.game_id}`}>

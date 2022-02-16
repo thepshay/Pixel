@@ -913,7 +913,7 @@ Review.create({
   user_id: 7, 
   game_id: 1, 
   recommend: true, 
-  body: 'farm safi, its not much but its honest work'})
+  body: ">farm safi\n>collect orbs\n>repeat \n\n its not much but its honest work"})
 
 Review.create({
   user_id: 7, 

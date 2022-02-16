@@ -7,7 +7,6 @@ class Modal extends React.Component {
   render() {
     const { modal, closeModal } = this.props;
 
-    console.log('props', this.props)
     if (!modal) return null;
 
     let component; 
@@ -30,7 +29,6 @@ class Modal extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log('ownprops', ownProps)
   return {
     modal: state.modal,
   }
