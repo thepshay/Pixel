@@ -1,7 +1,7 @@
 import React from "react";
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import ErrorModal from "./ErrorModal";
+import ErrorModalContainer from "./ErrorModalContainer";
 
 class Modal extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class Modal extends React.Component {
     let component; 
     switch (modal.type) {
       case 'reviewError':
-        component = <ErrorModal title={modal.title}/>
+        component = <ErrorModalContainer title={modal.title}/>
         break;
       default:
         return null;
