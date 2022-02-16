@@ -26,7 +26,6 @@ const receiveReviewErrors = (errors) => {
 }
 
 export const fetchAllReviews = (gameId) => (dispatch) => {
-  // debugger
   return ReviewApiUtil.fetchAllReviews(gameId)
     .then((reviews) => {
       dispatch(receiveAllReviews(reviews))

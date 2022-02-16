@@ -6,14 +6,11 @@ import ErrorModal from "../review/ErrorModal";
 class Modal extends React.Component {
   render() {
     const { modal, closeModal } = this.props;
-    debugger
     if (!modal) return null;
 
     let component; 
-    debugger
     switch (modal) {
       case 'reviewError':
-        debugger
         component = <ErrorModal />
         break;
       default:
