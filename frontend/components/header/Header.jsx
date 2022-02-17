@@ -62,12 +62,25 @@ class Header extends React.Component {
     return (
       <div className="header">
         <div className="header-content">
-          <Link to='/'>
-            <div className="home">
-              <img className='icon' src={window.icon} />
-              <h1 className="logo">Pixel</h1>
-            </div>
-          </Link>
+          <div className="header-content">
+            <Link to='/'>
+              <div className="home">
+                <img className='icon' src={window.icon} />
+                <h1 className="logo">Pixel</h1>
+              </div>
+            </Link>
+            <ul className="header-links">
+              <li>
+                <a href='https://github.com/thepshay/Pixel' className="github-link links" target="_blank">GitHub</a>
+              </li>
+              <li>
+                <a href='https://www.linkedin.com/in/thepshay/' className="linkedin-link links" target="_blank">LinkedIn</a>
+              </li>
+              <li>
+                <a href='https://angel.co/u/perry-xie' className="github-link links" target="_blank">AngelList</a>
+              </li>
+            </ul>
+          </div>
           {currentUser ? loggedInDiv() : notLoggedInDiv()}
         </div>
       </div>
