@@ -26,12 +26,17 @@ else all other carousel items have `display: none`.
 ```
 
 ![carousel](https://user-images.githubusercontent.com/16026728/155015643-276170a0-6510-4ca8-890e-7b7dbb123115.gif)
+
 ### Cart 
 Users are able to add games to cart and purchases said items inside of cart. Purchased games will display on user's library. 
+
 ![cart](https://user-images.githubusercontent.com/16026728/155015714-34260de6-e6e7-4e9f-9262-d6f0912e2ccc.gif)
+
 ### Reviews 
 Users are able to leave review on games they have purchased. Users are then able to edit and delete their own reviews. 
+
 ![review](https://user-images.githubusercontent.com/16026728/155015746-db91a41f-08b3-4f82-a048-b4a4302d4da8.gif)
+
 
 ## Technology
 Pixel was built using
