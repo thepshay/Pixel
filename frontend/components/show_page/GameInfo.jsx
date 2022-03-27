@@ -8,7 +8,7 @@ class GameInfo extends React.Component {
 
     return (
       <div className="game-info-container">
-        <img className="header-img" src={game.headerUrl}/>
+        <img className="header-img" src={game.headerUrl} alt='game header'/>
         <p className="short-about">{game.short_about}</p>
         <div className="genre-container">
           <h5>Popular user-defined tags for this product:</h5>

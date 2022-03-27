@@ -10,7 +10,7 @@ class CartListItem extends React.Component {
       <div className='cart-item-container'>
         <div className='item-left'>
           <Link to={`/game/${item.game_id}`}>
-            <img className='header-img' src={item.headerUrl} />
+            <img className='header-img' src={item.headerUrl} alt={`${item.title}'s header image`}/>
           </Link>
           <div className='title-container'>
             <Link to={`/game/${item.game_id}`}>

@@ -19,7 +19,7 @@ class GenreSidebar extends React.Component {
 
     return (
       <div className="genre-sidebar">
-        <img className='steam-cash-img' src={window.steamCash} />
+        <img className='steam-cash-img' src={window.steamCash} alt={`Steam cash`}/>
         <h2 className="genre-title">BROWSE BY GENRE</h2>
         <ul className="genre-list">
           {genres.map((genre, index) => {

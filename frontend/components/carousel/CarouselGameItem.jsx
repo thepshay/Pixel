@@ -33,6 +33,7 @@ class CarouselGameItem extends React.Component {
                 <img className="screenshot-img"
                   key={game.id+index} 
                   src={screenshotUrl} 
+                  alt={`${game.title}'s screenshot image`}
                   onMouseEnter={(e) => this.changeToSelectedImg(e, screenshotUrl)}
                   onMouseLeave={() => this.changeBackToFeature()}
                 />

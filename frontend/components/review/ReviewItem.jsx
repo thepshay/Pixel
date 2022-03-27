@@ -9,7 +9,7 @@ class ReviewItem extends React.Component {
       <div className="review-content">
         <div className="user-info">
           <Link to={`/library/${review.user_id}`}>
-            <img className='profile-pic' src={review.profile_pic} />
+            <img className='profile-pic' src={review.profile_pic} alt='profile picture'/>
           </Link>
           <Link to={`/library/${review.user_id}`}>
             <div className="username">{review.username}</div>
@@ -20,6 +20,7 @@ class ReviewItem extends React.Component {
             <img
               className="thumb" 
               src={review.recommend ? window.thumbsUp : window.thumbsDown} 
+              alt={review.recommend ? 'thumbs up' : 'thumbs down'}
             />
             <div className="recommend">
               {review.recommend ? 'Recommended' : 'Not Recommended'}

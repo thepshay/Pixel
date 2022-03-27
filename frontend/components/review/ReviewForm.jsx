@@ -55,7 +55,7 @@ class ReviewForm extends React.Component {
             </div>
           </div>
           <form className="review-form" onSubmit={(e) => this.handleSubmit(e)}>
-            <img className='current-pfp' src={currentUser.photoUrl}/>
+            <img className='current-pfp' src={currentUser.photoUrl} alt='profile picture'/>
             <div className="review-inputs">
               <textarea className="review-body" onChange={this.updateBody()} value={this.state.body}/>
               <div className="review-bottom">

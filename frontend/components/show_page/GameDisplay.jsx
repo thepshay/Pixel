@@ -19,7 +19,7 @@ class GameDisplay extends React.Component {
     return (
       <div className='game-display'>
         <div className='img-container'>
-          <img className='main-img' src={game.photoUrls[this.state.currIndex]}/>
+          <img className='main-img' src={game.photoUrls[this.state.currIndex]} alt='display image'/>
           <ul className='screenshot-list'>
             {game.photoUrls.map((url, index) => {
               return (
@@ -30,6 +30,7 @@ class GameDisplay extends React.Component {
                   <img 
                     className={this.state.currIndex === index ? 'screenshot-img active' : 'screenshot-img'}
                     src={url}
+                    alt='game screenshots'
                   />
                 </li>
               )

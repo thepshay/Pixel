@@ -8,7 +8,7 @@ class LibraryListItem extends React.Component {
     return (
       <li className='library-list-item'>
         <Link to={`/game/${game.game_id}`}>
-          <img className='library-game-header' src={game.headerUrl} />
+          <img className='library-game-header' src={game.headerUrl} alt={`${game.title} header`}/>
         </Link>
         <div className="library-game-details">
           <Link to={`/game/${game.game_id}`}>

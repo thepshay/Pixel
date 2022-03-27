@@ -19,6 +19,7 @@ class InfoDisplay extends React.Component {
               className='display-screenshot' 
               src={screenshot} 
               key={game.id+index} 
+              alt={`${game.title} screenshot` }
             />
           )
         })}

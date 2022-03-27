@@ -22,6 +22,7 @@ class ReviewSummary extends React.Component {
             <img
               className="review-summary-thumb" 
               src={review.recommend ? window.thumbsUp : window.thumbsDown} 
+              alt={review.recommend ? 'thumbs up' : 'thumbs down'}
             />
             <p className='review-summary-body'>
               {review.body}
